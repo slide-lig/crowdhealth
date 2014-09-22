@@ -1,0 +1,5 @@
+package LangDetect;
+
+public class EnglishLanguageDetection {
+
+}

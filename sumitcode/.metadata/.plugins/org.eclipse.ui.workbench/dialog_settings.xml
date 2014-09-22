@@ -2,6 +2,8 @@
 <section name="Workbench">
 	<section name="WorkbenchPreferenceDialogSettings">
 		<item value="16" key="DIALOG_Y_ORIGIN"/>
-		<item value="-56" key="DIALOG_X_ORIGIN"/>
+		<item value="7" key="DIALOG_X_ORIGIN"/>
+	</section>
+	<section name="ImportExportAction">
 	</section>
 </section>

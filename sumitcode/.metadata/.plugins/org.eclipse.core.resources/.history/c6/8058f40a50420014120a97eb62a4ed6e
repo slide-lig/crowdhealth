@@ -1,0 +1,31 @@
+package LangDetect;
+
+
+
+import com.cybozu.labs.langdetect.Detector;
+import com.cybozu.labs.langdetect.DetectorFactory;
+import com.cybozu.labs.langdetect.LangDetectException;
+
+public class EnglishLanguageDetection extends java.lang.Object {
+	
+	
+	public void languageDetect()
+	{
+		try {
+			Detector detector = DetectorFactory.create();
+			DetectorFactory.loadProfile("/home/andreas/Downloads/langdetect-09-13-2011/profiles");
+			
+		} catch (LangDetectException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}

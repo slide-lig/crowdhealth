@@ -1,0 +1,21 @@
+package LangDetect;
+
+import com.cybozu.labs.langdetect.Detector;
+import com.cybozu.labs.langdetect.DetectorFactory;
+
+public class EnglishLanguageDetection extends java.lang.Object {
+	
+	Detector detectorFactory;
+	public void languageDetect()
+	{
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}

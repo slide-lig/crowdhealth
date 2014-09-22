@@ -1,0 +1,13 @@
+package LangDetect;
+
+import com.cybozu.labs.langdetect.Detector;
+
+public class EnglishLanguageDetection {
+	
+	DetectorFactory detectorFactory = new DetectorFactory();
+	det
+	
+	
+	
+	
+}
