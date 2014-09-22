@@ -1,0 +1,18 @@
+'''
+Created on Sep 21, 2014
+
+@author: andreas
+'''
+import sys
+import re
+import enchant
+d = enchant.Dict("en_US")
+a=d.check("peculiar")
+with open("/home/andreas/Nutrition Project/Datasets/1mbchunk.tsv") as f:
+    for line in f:
+        lasttab=line.rfind("\t")
+        tweettext =  line[lasttab:]
+        listofwordsintweettext=tweettext.split(" ")
+        for word in listofwordsintweettext:
+            if re.match("^[A-Za-z]*$", word):
+                print word

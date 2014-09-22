@@ -1,0 +1,15 @@
+package PrepareTweetstoPreprocess;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+
+public class RemoveNonEnglishTweets {
+	Pattern pattern = Pattern.compile("\\W.,;:'\"");
+	boolean containsSpecialCharacters(String string)
+	{
+		Matcher m = pattern.matcher(string);
+		return m.find();
+	}
+
+}

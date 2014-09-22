@@ -1,0 +1,10 @@
+'''
+Created on Sep 21, 2014
+
+@author: andreas
+'''
+import sys
+import enchant
+d = enchant.Dict("en_US")
+d.check("helo")
+print sys.api_version
