@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>jQuery on load() event examples</title>
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+</head>
+ 
+<body>
+<iframe id="my_iframe" src="http://www.w3schools.com/css/default.asp" scrolling="no" width="500" height="500"></iframe>
+ 
+<script type="text/javascript">
+ 
+$('iframe').load(function() {
+alert( 'Iframe ID: ' + $(this).attr("id") + '; ' + 'Iframe Width: ' +$(this).attr("width") );
+});
+ 
+</script>
+</body>
+</html>

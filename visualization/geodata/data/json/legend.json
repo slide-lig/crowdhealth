@@ -1,0 +1,88 @@
+{
+	"age":
+	[
+		{
+		"y"		: 60,
+	    "color"	: "#F5E6FA",
+	    "text"	: "< 18 years old"
+		},
+		{
+		"y"		: 90,
+		"color"	: "#CCAAFF",
+		"text"	: "18 - 24 years old"
+		},
+		{
+		"y"		: 120,
+		"color"	: "#CC77EE",
+		"text"	: "25 - 34 years old "
+		},
+        {
+		"y"		: 150,
+        "color"	: "#A319D1",
+        "text"	: "35 - 44 years old"
+        },
+        {
+		"y"		: 180,
+		"color"	: "#751975",
+        "text"	: "45 - 49 years old"
+        },
+        {
+		"y"		: 210,
+		"color"	: "#674476",
+        "text"	: "50 - 55 years old"
+        },
+        {
+		"y"		: 240,
+		"color"	: "#470047",
+        "text"	: " > 56 years old"
+        },
+        {
+        "y"		: 270,
+        "color"	: "#000000",
+        "text"	: "Age Not Mentioned"
+        }
+	],
+	"size":
+	[
+		        {
+				"x"		: 50,
+				"y"		: 330,
+				"r"		: 15,
+				"xt"	: 110,
+		        "text"	: "Small"
+		        },
+		        {
+				"x"		: 50,
+				"y"		: 380,
+				"r"		: 25,
+				"xt"	: 105,
+		        "text"	: "Medium"
+		        },
+		        {
+				"x"		: 50,
+				"y"		: 450,
+				"r"		: 35,
+				"xt"	: 120,
+		        "text"	: "Big"
+		        }
+	]
+	,
+		"line":
+		[
+			        {
+					"y1"		: 320,
+					"y2"		: 340,
+			        "sw"		: 1
+			        },
+			        {
+					"y1"		: 360,
+					"y2"		: 400,
+			        "sw"		: 2.6
+			        },
+			        {
+					"y1"		: 430,
+					"y2"		: 490,
+			        "sw"		: 5
+			        }
+         ]
+}

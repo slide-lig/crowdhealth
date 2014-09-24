@@ -1,0 +1,34 @@
+<html>
+    <meta charset="utf-8">
+    <title> Test</title>
+    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css">
+		<style>
+		.transparent { background:transparent; }
+		</style>
+    <!--Jquery libraries - Either online or valid src. -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/jquery-ui.min.js"></script>
+    <script>    
+	
+    function OpenModal()
+    {
+	
+        $divModal = $('<div id="externalSite2"><Iframe  src="ailnut.html" width="300" height="400" scrolling="no"></iframe></div>')
+        .dialog({       
+		dialogClass:'transparent',
+		position: 'center',
+        width:'auto',
+        height: 'auto',
+		modal: true,
+		title:'United States'
+      	});
+    $divModal.dialog('open');
+    return false;   
+    }
+    </script>
+</head>
+<body>
+<a href="#" onmouseover="javascript:OpenModal();">Open Modal</a>
+<div style="display:none;" id="divModal"  align="center"></div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+{
+	"tLegend":
+	[
+		{
+			"x"		:40,
+        	"y"		:340,
+        	"width"	:25,
+        	"height":30,
+        	"fill"	:0
+		},
+		{
+		"x"			:65,
+        "y"			:340,
+        "width"		:25,
+        "height"	:30,
+        "fill"		:1
+		},
+		{ 
+		"x"			:90,
+        "y"			:340,
+        "width"		:25,
+        "height"	:30,
+        "fill"		:2
+		},
+		{
+		"x"			:115,
+        "y"			:340,
+        "width"		:25,
+        "height"	:30,
+        "fill"		:3
+		},
+		{
+		 "x"		:135,
+         "y"		:340,
+         "width"	:25,
+         "height"	:30,
+         "fill"		:4
+		}
+	]
+}
+
+d3.json("data/json/legendTweet.json", function(error,legend) {
+                var leg = svg.selectAll("rects")
+                .data(legend.tLegend)
+                .enter()
+                .append("rect")
+                .attr("x", function(d) { return d.x; })
+                .attr("y",function(d) { return d.y; })
+                .attr("width",function(d) { return d.width; })
+                .attr("height",function(d) { return d.height; })
+                .style("fill",function(d) { return "color("+d.fill+")"; });
+        });

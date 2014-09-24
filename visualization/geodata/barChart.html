@@ -1,0 +1,48 @@
+<!--This code and supporting data are developed from original code taken 
+ from Mike Mbostock Blog/ Git about TopoJson and modified for particular 
+ research titled Analyzing Twitter for Public Health (LIG-HADAS)France-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- <h1><center>Public Health Bar Chart in Particular Country </center></h1>-->
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <style>
+            .chart div {
+            font: 9px sans-serif;
+            text-align: right;
+            padding: 3px;
+            margin: 1px;
+            color: white;
+            background-color:rgba(0,0,0,0.8);
+            
+            }
+        </style>
+    </head>
+    <body>
+        <script src="lib/d3.v3.min.js"></script>
+        <div class="chart"></div>
+		<script>
+            d3.csv("data/csv/us_nutrition.csv", function(error, data) {
+                   data.forEach(function(d) {
+                                d.tweet = +d.tweet;
+                                });
+
+            
+            var x = d3.scale.linear()
+                   .range([0, 8]);
+            
+            var color = d3.scale.category20b();
+                   
+            d3.select(".chart")
+                   .selectAll("div")
+                   .data(data)
+                   .enter().append("div")
+                   .style("height","5 px")
+                   .style("background-color","#31a354")
+                   .style("width", function(d) { return x(d.tweet) + "px"; })
+                   .text(function(d) { return d.nutrition+ " " + d.tweet; });
+            });
+                  </script>
+	</body>
+</html>

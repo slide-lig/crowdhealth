@@ -1,0 +1,7 @@
+helpfull link tooltips D3js
+
+http://bl.ocks.org/zmaril/2981335
+http://bl.ocks.org/biovisualize/2973775
+https://groups.google.com/forum/#!topic/d3-js/-1oLMKUez3M
+http://bl.ocks.org/ilyabo/1373263
+http://bl.ocks.org/rmarimon/1191530

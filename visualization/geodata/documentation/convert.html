@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSV to JSON Converter in HTML5 | TechSlides</title>
+<style>
+#drop {
+	border:5px solid #000;
+	margin-bottom:20px;
+	padding:10px;
+}
+</style>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-941940-28']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+<body>
+	<h1>Drag and Drop CSV to JSON Conversion</h1>
+	<p>Drop any a CSV file with headers and this will convert it and return a JSON file. <a href="http://techslides.com/convert-csv-to-json-in-javascript/">Back to Article</a></p>
+<div id="drop">
+	DROP!<button onclick="document.querySelector('input').click()">Or Select</button>
+	<input style="visibility: collapse; width: 0px;" type="file" onchange="upload(this.files[0])">
+</div>
+
+<div id="output"></div>
+
+<script type="text/javascript">
+
+var output = document.getElementById("output");
+
+
+//var csv is the CSV file with headers
+function csvJSON(csv){
+ 
+  var lines=csv.split("\n");
+ 
+  var result = [];
+ 
+  var headers=lines[0].split(",");
+ 
+  for(var i=1;i<lines.length;i++){
+ 
+	  var obj = {};
+	  var currentline=lines[i].split(",");
+ 
+	  for(var j=0;j<headers.length;j++){
+		  obj[headers[j]] = currentline[j];
+	  }
+ 
+	  result.push(obj);
+ 
+  }
+  
+  //return result; //JavaScript object
+  return JSON.stringify(result); //JSON
+}
+
+
+
+
+    /* Drag drop stuff */
+    window.ondragover = function(e) {e.preventDefault()}
+    window.ondrop = function(e) {
+	    e.preventDefault();
+	    console.log("Reading...");
+	    var length = e.dataTransfer.items.length;
+	    if(length > 1){
+	    	console.log("Please only drop 1 file.");
+	    } else {
+	    	upload(e.dataTransfer.files[0]);
+	    }
+	}
+
+    /* main upload function */
+    function upload(file) {
+    	if(file.type.match(/text\/csv/)){
+	    	oFReader = new FileReader();
+	        oFReader.onloadend = function() {
+
+	        	//console.log(csvJSON(this.result));
+
+	        	var json = csvJSON(this.result);
+
+	        	var blob = new Blob([json], {type: 'application/json'});
+	        	var url = URL.createObjectURL(blob);
+	        	output.innerHTML = '<a href="'+url+'">JSON file</a>';
+
+
+
+	        };
+	        oFReader.readAsText(file);
+        } else {
+        	console.log("This file does not seem to be a CSV.");
+        }
+    }
+</script>
+</body>
+</html>

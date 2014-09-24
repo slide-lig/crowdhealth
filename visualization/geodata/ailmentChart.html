@@ -1,0 +1,88 @@
+<!--This code and supporting data are developed from original code taken 
+ from Mike Mbostock Blog/ Git about TopoJson and modified for particular 
+ research titled Analyzing Twitter for Public Health (LIG-HADAS)France-->
+<!DOCTYPE html>
+<html>
+     <head>
+        <meta charset="utf-8">
+        <!--<h1><center>Public Health Donut Chart</center></h1>-->
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+		<style>
+		.arc {
+		  
+            background-color:rgb(0,0,0);
+            background-color:rgba(0,0,0,0.7);
+			color: "white";
+            opacity: 0.7;
+		}
+		.arc path {
+		    stroke: #fff;
+            color: "white";
+		}
+		</style>
+    </head>
+    <body align="left">
+        <script src="lib/d3.min.js"></script>
+		<script>
+//donut chart
+           var width = 270,
+           height = 270,
+           radius = Math.min(width, height) / 2;
+           var data = {};
+           var color = d3.scale.category20();
+           
+           
+           var arc = d3.svg.arc()
+           .outerRadius(radius - 100)
+           .innerRadius(radius - 50);
+           
+           var pie = d3.layout.pie()
+           .sort(null)
+           .value(function(d) { return d.tweet; });
+           
+           var svg = d3.select("body").append("svg")
+           .attr("width", 270)
+           .attr("height", 500)
+           .append("g")
+           .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+           
+           
+          /* g.selectAll("#cities").remove();
+
+		  if (d && state !== d) {
+		    var xyz = get_xyz(d);
+		    state = d;
+
+		    country_code = state.id.substring(0, 3).toLowerCase();
+		    state_name = state.properties.name;*/
+            var countryname="us";
+
+           d3.csv("data/csv/"+ countryname +"_ailments.csv", function(error, data) {
+                  data.forEach(function(d) {
+                               d.tweet = +d.tweet;
+                               });
+                  var txt;
+                  var g = svg.selectAll(".arc")
+                  .data(pie(data))
+                  .enter().append("g")		 
+                  .attr("class", "arc")
+				  .style("color","white");
+                  
+                  g.append("path")
+                  .each(function(d) { this._current = d; })
+				  .style("color","white")
+                  .style("fill", "#d6616b")
+                  .attr("d", arc);
+                  
+                  
+                  g.append("text")
+                  .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
+                  .attr("dy", ".35em")
+                  .style("color","white")
+                  .style("text-anchor", "middle")
+                  .text(function(d) { return d.data.ailment + " : " + d.data.tweet; });
+                  
+                  });
+				  </script>
+			    </body>
+			</html>
