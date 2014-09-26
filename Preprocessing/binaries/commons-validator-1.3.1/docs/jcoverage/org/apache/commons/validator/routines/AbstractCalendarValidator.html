@@ -1,0 +1,2131 @@
+<html>
+<head>
+<title>unit tests coverage</title>
+<link rel ="stylesheet" type="text/css" href="../../../../../style.css" title="Style">
+</head>
+<body>
+<span class="title">Coverage report</span>
+<p>
+  <table cellspacing="0" cellpadding="0" class="report">
+  <tr class="report">
+    <th class="report">&nbsp;</th>
+    <th class="report">%line</th>
+    <th class="report">%branch</th>
+  </tr>
+  <tr class="report">
+    <td class="reportText"><span class="text">org.apache.commons.validator.routines.AbstractCalendarValidator</span></td>
+    <td class="reportValue"><table class="percentGraph" cellpadding="0" cellspacing="0" align="right"><tr><td><span class="text">99%&nbsp;</span></td><td><table class="percentGraph" cellpadding="0" cellspacing="0"><tr><td class="percentCovered" width="99"></td><td class="percentUnCovered" width="1.0"></td></tr></table></td></tr></table></td>
+    <td class="reportValue"><table class="percentGraph" cellpadding="0" cellspacing="0" align="right"><tr><td><span class="text">97%&nbsp;</span></td><td><table class="percentGraph" cellpadding="0" cellspacing="0"><tr><td class="percentCovered" width="97"></td><td class="percentUnCovered" width="3.0"></td></tr></table></td></tr></table></td>
+  </tr>
+  </table>
+  <p>
+  <table cellspacing="0" cellpadding="0" class="src">
+    <tr>
+      <td class="numLine">&nbsp;1</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">/*</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;2</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * Licensed to the Apache Software Foundation (ASF) under one or more</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;3</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * contributor license agreements.  See the NOTICE file distributed with</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;4</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * this work for additional information regarding copyright ownership.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;5</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * The ASF licenses this file to You under the Apache License, Version 2.0</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;6</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * (the "License"); you may not use this file except in compliance with</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;7</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * the License.  You may obtain a copy of the License at</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;8</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;9</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *      http://www.apache.org/licenses/LICENSE-2.0</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;10</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;11</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * Unless required by applicable law or agreed to in writing, software</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;12</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * distributed under the License is distributed on an "AS IS" BASIS,</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;13</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;14</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * See the License for the specific language governing permissions and</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;15</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * limitations under the License.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;16</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;17</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">package</span> org.apache.commons.validator.routines;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;18</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;19</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.text.DateFormatSymbols;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;20</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.text.Format;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;21</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.text.DateFormat;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;22</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.text.SimpleDateFormat;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;23</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.util.Calendar;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;24</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.util.Locale;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;25</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.util.TimeZone;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;26</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;27</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;28</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;p&#62;Abstract class for Date/Time/Calendar validation.&#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;29</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;30</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;p&#62;This is a &#60;i&#62;base&#60;/i&#62; class for building Date / Time</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;31</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *    Validators using format parsing.&#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;32</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *    </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;33</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * @version $Revision: 478334 $ $Date: 2006-11-22 21:31:54 +0000 (Wed, 22 Nov 2006) $</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;34</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * @since Validator 1.3.0</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;35</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;36</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class</span> AbstractCalendarValidator <span class="keyword">extends</span> AbstractFormatValidator {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;37</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;38</td>
+      <td class="nbHitsCovered">&nbsp;27</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">int</span> dateStyle = -1;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;39</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;40</td>
+      <td class="nbHitsCovered">&nbsp;27</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">int</span> timeStyle = -1;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;41</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;42</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;43</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Construct an instance with the specified &#60;i&#62;strict&#60;/i&#62;, </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;44</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;i&#62;time&#60;/i&#62; and &#60;i&#62;date&#60;/i&#62; style parameters.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;45</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;46</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param strict &#60;code&#62;true&#60;/code&#62; if strict </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;47</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *        &#60;code&#62;Format&#60;/code&#62; parsing should be used.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;48</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param dateStyle the date style to use for Locale validation.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;49</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param timeStyle the time style to use for Locale validation.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;50</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;51</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> AbstractCalendarValidator(<span class="keyword">boolean</span> strict, <span class="keyword">int</span> dateStyle, <span <span class="keyword">class</span>="keyword">int</span> timeStyle) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;52</td>
+      <td class="nbHitsCovered">&nbsp;27</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">super</span>(strict);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;53</td>
+      <td class="nbHitsCovered">&nbsp;27</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>.dateStyle = dateStyle;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;54</td>
+      <td class="nbHitsCovered">&nbsp;27</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>.timeStyle = timeStyle;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;55</td>
+      <td class="nbHitsCovered">&nbsp;27</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;56</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;57</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;58</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;p&#62;Validate using the specified &#60;code&#62;Locale&#60;/code&#62;. </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;59</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;60</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param value The value validation is being performed on.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;61</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param pattern The pattern used to format the value.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;62</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param locale The locale to use for the Format, defaults to the default</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;63</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return &#60;code&#62;true&#60;/code&#62; if the value is valid.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;64</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;65</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">boolean</span> isValid(String value, String pattern, Locale locale) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;66</td>
+      <td class="nbHitsCovered">&nbsp;134</td>
+      <td class="src"><pre class="src">&nbsp;        Object parsedValue = parse(value, pattern, locale, (TimeZone)<span class="keyword">null</span>);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;67</td>
+      <td class="nbHitsCovered">&nbsp;134</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> (parsedValue == <span class="keyword">null</span> ? false : <span class="keyword">true</span>);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;68</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;69</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;70</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;71</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;p&#62;Format an object into a &#60;code&#62;String&#60;/code&#62; using</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;72</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * the default Locale.&#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;73</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;74</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param value The value validation is being performed on.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;75</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param timeZone The Time Zone used to format the date,</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;76</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *  system default if null (unless value is a &#60;code&#62;Calendar&#60;/code&#62;.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;77</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return The value formatted as a &#60;code&#62;String&#60;/code&#62;.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;78</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;79</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> String format(Object value, TimeZone timeZone) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;80</td>
+      <td class="nbHitsCovered">&nbsp;1</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> format(value, (String)<span class="keyword">null</span>, (Locale)<span <span class="keyword">class</span>="keyword">null</span>, timeZone);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;81</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;82</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;83</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;84</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;p&#62;Format an object into a &#60;code&#62;String&#60;/code&#62; using</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;85</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * the specified pattern.&#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;86</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;87</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param value The value validation is being performed on.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;88</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param pattern The pattern used to format the value.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;89</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param timeZone The Time Zone used to format the date,</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;90</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *  system default if null (unless value is a &#60;code&#62;Calendar&#60;/code&#62;.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;91</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return The value formatted as a &#60;code&#62;String&#60;/code&#62;.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;92</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;93</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> String format(Object value, String pattern, TimeZone timeZone) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;94</td>
+      <td class="nbHitsCovered">&nbsp;2</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> format(value, pattern, (Locale)<span class="keyword">null</span>, timeZone);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;95</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;96</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;97</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;98</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;p&#62;Format an object into a &#60;code&#62;String&#60;/code&#62; using</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;99</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * the specified Locale.&#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;100</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;101</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param value The value validation is being performed on.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;102</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param locale The locale to use for the Format.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;103</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param timeZone The Time Zone used to format the date,</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;104</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *  system default if null (unless value is a &#60;code&#62;Calendar&#60;/code&#62;.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;105</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return The value formatted as a &#60;code&#62;String&#60;/code&#62;.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;106</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;107</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> String format(Object value, Locale locale, TimeZone timeZone) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;108</td>
+      <td class="nbHitsCovered">&nbsp;1</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> format(value, (String)<span class="keyword">null</span>, locale, timeZone);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;109</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;110</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;111</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;112</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;p&#62;Format an object using the specified pattern and/or </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;113</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *    &#60;code&#62;Locale&#60;/code&#62;. </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;114</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;115</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param value The value validation is being performed on.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;116</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param pattern The pattern used to format the value.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;117</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param locale The locale to use for the Format.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;118</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return The value formatted as a &#60;code&#62;String&#60;/code&#62;.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;119</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;120</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> String format(Object value, String pattern, Locale locale) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;121</td>
+      <td class="nbHitsCovered">&nbsp;11</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> format(value, pattern, locale, (TimeZone)<span class="keyword">null</span>);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;122</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;123</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;124</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;125</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;p&#62;Format an object using the specified pattern and/or </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;126</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *    &#60;code&#62;Locale&#60;/code&#62;. </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;127</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;128</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param value The value validation is being performed on.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;129</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param pattern The pattern used to format the value.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;130</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param locale The locale to use for the Format.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;131</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param timeZone The Time Zone used to format the date,</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;132</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *  system default if null (unless value is a &#60;code&#62;Calendar&#60;/code&#62;.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;133</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return The value formatted as a &#60;code&#62;String&#60;/code&#62;.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;134</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;135</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> String format(Object value, String pattern, Locale locale, TimeZone timeZone) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;136</td>
+      <td class="nbHitsCovered">&nbsp;16</td>
+      <td class="src"><pre class="src">&nbsp;        DateFormat formatter = (DateFormat)getFormat(pattern, locale);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;137</td>
+      <td class="nbHitsCovered">&nbsp;16</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (timeZone != <span class="keyword">null</span>) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;138</td>
+      <td class="nbHitsCovered">&nbsp;5</td>
+      <td class="src"><pre class="src">&nbsp;            formatter.setTimeZone(timeZone);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;139</td>
+      <td class="nbHitsCovered">&nbsp;11</td>
+      <td class="src"><pre class="src">&nbsp;        } <span class="keyword">else</span> <span class="keyword">if</span> (value instanceof Calendar) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;140</td>
+      <td class="nbHitsCovered">&nbsp;8</td>
+      <td class="src"><pre class="src">&nbsp;            formatter.setTimeZone(((Calendar)value).getTimeZone());</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;141</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;142</td>
+      <td class="nbHitsCovered">&nbsp;16</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> format(value, formatter);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;143</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;144</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;145</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;146</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;p&#62;Format a value with the specified &#60;code&#62;DateFormat&#60;/code&#62;.&#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;147</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;148</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param value The value to be formatted.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;149</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param formatter The Format to use.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;150</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return The formatted value.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;151</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;152</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">protected</span> String format(Object value, Format formatter) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;153</td>
+      <td class="nbHitsCovered">&nbsp;16</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (value == <span class="keyword">null</span>) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;154</td>
+      <td class="nbHitsCovered">&nbsp;1</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> <span class="keyword">null</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;155</td>
+      <td class="nbHitsCovered">&nbsp;15</td>
+      <td class="src"><pre class="src">&nbsp;        } <span class="keyword">else</span> <span class="keyword">if</span> (value instanceof Calendar) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;156</td>
+      <td class="nbHitsCovered">&nbsp;13</td>
+      <td class="src"><pre class="src">&nbsp;            value = ((Calendar)value).getTime(); </pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;157</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;158</td>
+      <td class="nbHitsCovered">&nbsp;15</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> formatter.format(value);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;159</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;160</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;161</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;162</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;p&#62;Checks if the value is valid against a specified pattern.&#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;163</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;164</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param value The value validation is being performed on.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;165</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param pattern The pattern used to validate the value against, or the</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;166</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *        default for the &#60;code&#62;Locale&#60;/code&#62; if &#60;code&#62;null&#60;/code&#62;.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;167</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param locale The locale to use for the date format, system default if null.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;168</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param timeZone The Time Zone used to parse the date, system default if null.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;169</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return The parsed value if valid or &#60;code&#62;null&#60;/code&#62; if invalid.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;170</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;171</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">protected</span> Object parse(String value, String pattern, Locale locale, TimeZone timeZone) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;172</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;173</td>
+      <td class="nbHitsCovered">&nbsp;282</td>
+      <td class="src"><pre class="src">&nbsp;        value = (value == <span class="keyword">null</span> ? <span <span class="keyword">class</span>="keyword">null</span> : value.trim());</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;174</td>
+      <td class="nbHitsCovered">&nbsp;282</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (value == <span class="keyword">null</span> || value.length() == 0) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;175</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;            <span class="keyword">return</span> <span class="keyword">null</span>;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;176</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;177</td>
+      <td class="nbHitsCovered">&nbsp;282</td>
+      <td class="src"><pre class="src">&nbsp;        DateFormat formatter = (DateFormat)getFormat(pattern, locale);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;178</td>
+      <td class="nbHitsCovered">&nbsp;282</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (timeZone != <span class="keyword">null</span>) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;179</td>
+      <td class="nbHitsCovered">&nbsp;12</td>
+      <td class="src"><pre class="src">&nbsp;            formatter.setTimeZone(timeZone);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;180</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;181</td>
+      <td class="nbHitsCovered">&nbsp;282</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> parse(value, formatter);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;182</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;183</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;184</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;185</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;186</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;p&#62;Process the parsed value, performing any further validation </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;187</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *    and type conversion required.&#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;188</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;189</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param value The parsed object created.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;190</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param formatter The Format used to parse the value with.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;191</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return The parsed value converted to the appropriate type</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;192</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *         if valid or &#60;code&#62;null&#60;/code&#62; if invalid.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;193</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;194</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">protected</span> <span class="keyword">abstract</span> Object processParsedValue(Object value, Format formatter);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;195</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;196</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;197</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;p&#62;Returns a &#60;code&#62;DateFormat&#60;/code&#62; for the specified &#60;i&#62;pattern&#60;/i&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;198</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *    and/or &#60;code&#62;Locale&#60;/code&#62;.&#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;199</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;200</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param pattern The pattern used to validate the value against or</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;201</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *        &#60;code&#62;null&#60;/code&#62; to use the default for the &#60;code&#62;Locale&#60;/code&#62;.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;202</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param locale The locale to use for the currency format, system default if null.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;203</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return The &#60;code&#62;DateFormat&#60;/code&#62; to created.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;204</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;205</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">protected</span> Format getFormat(String pattern, Locale locale) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;206</td>
+      <td class="nbHitsCovered">&nbsp;298</td>
+      <td class="src"><pre class="src">&nbsp;        DateFormat formatter = <span class="keyword">null</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;207</td>
+      <td class="nbHitsCovered">&nbsp;298</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">boolean</span> usePattern = (pattern != <span class="keyword">null</span> &#38;&#38; pattern.length() &#62; 0);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;208</td>
+      <td class="nbHitsCovered">&nbsp;298</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (!usePattern) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;209</td>
+      <td class="nbHitsCovered">&nbsp;145</td>
+      <td class="src"><pre class="src">&nbsp;            formatter = (DateFormat)getFormat(locale);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;210</td>
+      <td class="nbHitsCovered">&nbsp;153</td>
+      <td class="src"><pre class="src">&nbsp;        } <span class="keyword">else</span> <span class="keyword">if</span> (locale == <span class="keyword">null</span>) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;211</td>
+      <td class="nbHitsCovered">&nbsp;139</td>
+      <td class="src"><pre class="src">&nbsp;            formatter = <span class="keyword">new</span> SimpleDateFormat(pattern);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;212</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        } <span class="keyword">else</span> {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;213</td>
+      <td class="nbHitsCovered">&nbsp;14</td>
+      <td class="src"><pre class="src">&nbsp;            DateFormatSymbols symbols = <span class="keyword">new</span> DateFormatSymbols(locale);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;214</td>
+      <td class="nbHitsCovered">&nbsp;14</td>
+      <td class="src"><pre class="src">&nbsp;            formatter = <span class="keyword">new</span> SimpleDateFormat(pattern, symbols);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;215</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;216</td>
+      <td class="nbHitsCovered">&nbsp;298</td>
+      <td class="src"><pre class="src">&nbsp;        formatter.setLenient(false);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;217</td>
+      <td class="nbHitsCovered">&nbsp;298</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> formatter;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;218</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;219</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;220</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;221</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;p&#62;Returns a &#60;code&#62;DateFormat&#60;/code&#62; for the specified Locale.&#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;222</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;223</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param locale The locale a &#60;code&#62;DateFormat&#60;/code&#62; is required for,</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;224</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *        system default if null.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;225</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return The &#60;code&#62;DateFormat&#60;/code&#62; to created.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;226</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;227</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">protected</span> Format getFormat(Locale locale) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;228</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;229</td>
+      <td class="nbHitsCovered">&nbsp;145</td>
+      <td class="src"><pre class="src">&nbsp;        DateFormat formatter = <span class="keyword">null</span>; </pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;230</td>
+      <td class="nbHitsCovered">&nbsp;145</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (dateStyle &#62;= 0 &#38;&#38; timeStyle &#62;= 0) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;231</td>
+      <td class="nbHitsCovered">&nbsp;2</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">if</span> (locale == <span class="keyword">null</span>) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;232</td>
+      <td class="nbHitsCovered">&nbsp;1</td>
+      <td class="src"><pre class="src">&nbsp;                formatter = DateFormat.getDateTimeInstance(dateStyle, timeStyle);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;233</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            } <span class="keyword">else</span> {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;234</td>
+      <td class="nbHitsCovered">&nbsp;1</td>
+      <td class="src"><pre class="src">&nbsp;                formatter = DateFormat.getDateTimeInstance(dateStyle, timeStyle, locale);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;235</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;236</td>
+      <td class="nbHitsCovered">&nbsp;143</td>
+      <td class="src"><pre class="src">&nbsp;        } <span class="keyword">else</span> <span class="keyword">if</span> (timeStyle &#62;= 0) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;237</td>
+      <td class="nbHitsCovered">&nbsp;41</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">if</span> (locale == <span class="keyword">null</span>) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;238</td>
+      <td class="nbHitsCovered">&nbsp;3</td>
+      <td class="src"><pre class="src">&nbsp;                formatter = DateFormat.getTimeInstance(timeStyle);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;239</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            } <span class="keyword">else</span> {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;240</td>
+      <td class="nbHitsCovered">&nbsp;38</td>
+      <td class="src"><pre class="src">&nbsp;                formatter = DateFormat.getTimeInstance(timeStyle, locale);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;241</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;242</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        } <span class="keyword">else</span> {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;243</td>
+      <td class="nbHitsCovered">&nbsp;102</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">int</span> useDateStyle = dateStyle &#62;= 0 ? dateStyle : DateFormat.SHORT;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;244</td>
+      <td class="nbHitsCovered">&nbsp;102</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">if</span> (locale == <span class="keyword">null</span>) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;245</td>
+      <td class="nbHitsCovered">&nbsp;13</td>
+      <td class="src"><pre class="src">&nbsp;                formatter = DateFormat.getDateInstance(useDateStyle);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;246</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            } <span class="keyword">else</span> {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;247</td>
+      <td class="nbHitsCovered">&nbsp;89</td>
+      <td class="src"><pre class="src">&nbsp;                formatter = DateFormat.getDateInstance(useDateStyle, locale);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;248</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;249</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;250</td>
+      <td class="nbHitsCovered">&nbsp;145</td>
+      <td class="src"><pre class="src">&nbsp;        formatter.setLenient(false);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;251</td>
+      <td class="nbHitsCovered">&nbsp;145</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> formatter;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;252</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;253</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;254</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;255</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;256</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;p&#62;Compares a calendar value to another, indicating whether it is</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;257</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *    equal, less then or more than at a specified level.&#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;258</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;259</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param value The Calendar value.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;260</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param compare The &#60;code&#62;Calendar&#60;/code&#62; to check the value against.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;261</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param field The field &#60;i&#62;level&#60;/i&#62; to compare to - e.g. specifying</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;262</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *        &#60;code&#62;Calendar.MONTH&#60;/code&#62; will compare the year and month</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;263</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *        portions of the calendar. </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;264</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return Zero if the first value is equal to the second, -1</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;265</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *         if it is less than the second or +1 if it is greater than the second.  </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;266</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;267</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">protected</span> <span class="keyword">int</span> compare(Calendar value, Calendar compare, <span <span class="keyword">class</span>="keyword">int</span> field) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;268</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;269</td>
+      <td class="nbHitsCovered">&nbsp;44</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">int</span> result = 0;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;270</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;271</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// Compare Year</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;272</td>
+      <td class="nbHitsCovered">&nbsp;44</td>
+      <td class="src"><pre class="src">&nbsp;        result = calculateCompareResult(value, compare, Calendar.YEAR);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;273</td>
+      <td class="nbHitsCovered">&nbsp;44</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (result != 0 || field == Calendar.YEAR) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;274</td>
+      <td class="nbHitsCovered">&nbsp;6</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> result;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;275</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;276</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;277</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// Compare Week of Year</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;278</td>
+      <td class="nbHitsCovered">&nbsp;38</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (field == Calendar.WEEK_OF_YEAR) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;279</td>
+      <td class="nbHitsCovered">&nbsp;10</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> calculateCompareResult(value, compare, Calendar.WEEK_OF_YEAR);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;280</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;281</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;282</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// Compare Day of the Year</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;283</td>
+      <td class="nbHitsCovered">&nbsp;28</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (field == Calendar.DAY_OF_YEAR) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;284</td>
+      <td class="nbHitsCovered">&nbsp;1</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> calculateCompareResult(value, compare, Calendar.DAY_OF_YEAR);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;285</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;286</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;287</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// Compare Month</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;288</td>
+      <td class="nbHitsCovered">&nbsp;27</td>
+      <td class="src"><pre class="src">&nbsp;        result = calculateCompareResult(value, compare, Calendar.MONTH);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;289</td>
+      <td class="nbHitsCovered">&nbsp;27</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (result != 0 || field == Calendar.MONTH) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;290</td>
+      <td class="nbHitsCovered">&nbsp;10</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> result;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;291</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;292</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;293</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// Compare Week of Month</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;294</td>
+      <td class="nbHitsCovered">&nbsp;17</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (field == Calendar.WEEK_OF_MONTH) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;295</td>
+      <td class="nbHitsCovered">&nbsp;1</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> calculateCompareResult(value, compare, Calendar.WEEK_OF_MONTH);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;296</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;297</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;298</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// Compare Date</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;299</td>
+      <td class="nbHitsCovered">&nbsp;16</td>
+      <td class="src"><pre class="src">&nbsp;        result = calculateCompareResult(value, compare, Calendar.DATE);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;300</td>
+      <td class="nbHitsCovered">&nbsp;16</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (result != 0 || (field == Calendar.DATE || </pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;301</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                          field == Calendar.DAY_OF_MONTH ||</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;302</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                          field == Calendar.DAY_OF_WEEK ||</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;303</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                          field == Calendar.DAY_OF_WEEK_IN_MONTH)) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;304</td>
+      <td class="nbHitsCovered">&nbsp;10</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> result;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;305</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;306</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;307</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// Compare Time fields</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;308</td>
+      <td class="nbHitsCovered">&nbsp;6</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> compareTime(value, compare, field);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;309</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;310</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;311</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;312</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;313</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;p&#62;Compares a calendar time value to another, indicating whether it is</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;314</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *    equal, less then or more than at a specified level.&#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;315</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;316</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param value The Calendar value.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;317</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param compare The &#60;code&#62;Calendar&#60;/code&#62; to check the value against.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;318</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param field The field &#60;i&#62;level&#60;/i&#62; to compare to - e.g. specifying</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;319</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *        &#60;code&#62;Calendar.MINUTE&#60;/code&#62; will compare the hours and minutes</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;320</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *        portions of the calendar. </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;321</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return Zero if the first value is equal to the second, -1</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;322</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *         if it is less than the second or +1 if it is greater than the second.  </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;323</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;324</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">protected</span> <span class="keyword">int</span> compareTime(Calendar value, Calendar compare, <span <span class="keyword">class</span>="keyword">int</span> field) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;325</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;326</td>
+      <td class="nbHitsCovered">&nbsp;24</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">int</span> result = 0;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;327</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;328</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// Compare Hour</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;329</td>
+      <td class="nbHitsCovered">&nbsp;24</td>
+      <td class="src"><pre class="src">&nbsp;        result = calculateCompareResult(value, compare, Calendar.HOUR_OF_DAY);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;330</td>
+      <td class="nbHitsCovered">&nbsp;24</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (result != 0 || (field == Calendar.HOUR || field == Calendar.HOUR_OF_DAY)) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;331</td>
+      <td class="nbHitsCovered">&nbsp;7</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> result;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;332</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;333</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;334</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// Compare Minute</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;335</td>
+      <td class="nbHitsCovered">&nbsp;17</td>
+      <td class="src"><pre class="src">&nbsp;        result = calculateCompareResult(value, compare, Calendar.MINUTE);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;336</td>
+      <td class="nbHitsCovered">&nbsp;17</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (result != 0 || field == Calendar.MINUTE) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;337</td>
+      <td class="nbHitsCovered">&nbsp;7</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> result;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;338</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;339</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;340</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// Compare Second</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;341</td>
+      <td class="nbHitsCovered">&nbsp;10</td>
+      <td class="src"><pre class="src">&nbsp;        result = calculateCompareResult(value, compare, Calendar.SECOND);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;342</td>
+      <td class="nbHitsCovered">&nbsp;10</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (result != 0 || field == Calendar.SECOND) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;343</td>
+      <td class="nbHitsCovered">&nbsp;6</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> result;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;344</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;345</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;346</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// Compare Milliseconds</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;347</td>
+      <td class="nbHitsCovered">&nbsp;4</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (field == Calendar.MILLISECOND) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;348</td>
+      <td class="nbHitsCovered">&nbsp;3</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> calculateCompareResult(value, compare, Calendar.MILLISECOND);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;349</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;350</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;351</td>
+      <td class="nbHitsCovered">&nbsp;1</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"Invalid field: "</span> + field);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;352</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;353</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;354</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;355</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;356</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;p&#62;Compares a calendar's quarter value to another, indicating whether it is</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;357</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *    equal, less then or more than the specified quarter.&#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;358</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;359</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param value The Calendar value.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;360</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param compare The &#60;code&#62;Calendar&#60;/code&#62; to check the value against.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;361</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param monthOfFirstQuarter The  month that the first quarter starts.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;362</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return Zero if the first quarter is equal to the second, -1</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;363</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *         if it is less than the second or +1 if it is greater than the second.  </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;364</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;365</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">protected</span> <span class="keyword">int</span> compareQuarters(Calendar value, Calendar compare, <span <span class="keyword">class</span>="keyword">int</span> monthOfFirstQuarter) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;366</td>
+      <td class="nbHitsCovered">&nbsp;25</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">int</span> valueQuarter   = calculateQuarter(value, monthOfFirstQuarter);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;367</td>
+      <td class="nbHitsCovered">&nbsp;25</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">int</span> compareQuarter = calculateQuarter(compare, monthOfFirstQuarter);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;368</td>
+      <td class="nbHitsCovered">&nbsp;25</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (valueQuarter &#60; compareQuarter) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;369</td>
+      <td class="nbHitsCovered">&nbsp;6</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> -1;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;370</td>
+      <td class="nbHitsCovered">&nbsp;19</td>
+      <td class="src"><pre class="src">&nbsp;        } <span class="keyword">else</span> <span class="keyword">if</span> (valueQuarter &#62; compareQuarter) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;371</td>
+      <td class="nbHitsCovered">&nbsp;9</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> 1;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;372</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        } <span class="keyword">else</span> {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;373</td>
+      <td class="nbHitsCovered">&nbsp;10</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> 0;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;374</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;375</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;376</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;377</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;378</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;p&#62;Calculate the quarter for the specified Calendar.&#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;379</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;380</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param calendar The Calendar value.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;381</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param monthOfFirstQuarter The  month that the first quarter starts.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;382</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return The calculated quarter.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;383</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;384</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">int</span> calculateQuarter(Calendar calendar, <span <span class="keyword">class</span>="keyword">int</span> monthOfFirstQuarter) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;385</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// Add Year</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;386</td>
+      <td class="nbHitsCovered">&nbsp;50</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">int</span> year = calendar.get(Calendar.YEAR);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;387</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;388</td>
+      <td class="nbHitsCovered">&nbsp;50</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">int</span> month = (calendar.get(Calendar.MONTH) + 1);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;389</td>
+      <td class="nbHitsCovered">&nbsp;50</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">int</span> relativeMonth = (month &#62;= monthOfFirstQuarter)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;390</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                          ? (month - monthOfFirstQuarter)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;391</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                          : (month + (12 - monthOfFirstQuarter));</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;392</td>
+      <td class="nbHitsCovered">&nbsp;50</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">int</span> quarter = ((relativeMonth / 3) + 1);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;393</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// adjust the year if the quarter doesn't start in January</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;394</td>
+      <td class="nbHitsCovered">&nbsp;50</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (month &#60; monthOfFirstQuarter) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;395</td>
+      <td class="nbHitsCovered">&nbsp;1</td>
+      <td class="src"><pre class="src">&nbsp;            --year;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;396</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;397</td>
+      <td class="nbHitsCovered">&nbsp;50</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> (year * 10) + quarter;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;398</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;399</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;400</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;401</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;p&#62;Compares the field from two calendars indicating whether the field for the</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;402</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *    first calendar is equal to, less than or greater than the field from the</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;403</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *    second calendar.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;404</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *    </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;405</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param value The Calendar value.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;406</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param compare The &#60;code&#62;Calendar&#60;/code&#62; to check the value against.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;407</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param field The field to compare for the calendars.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;408</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return Zero if the first calendar's field is equal to the seconds, -1</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;409</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *         if it is less than the seconds or +1 if it is greater than the seconds.  </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;410</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;411</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">int</span> calculateCompareResult(Calendar value, Calendar compare, <span <span class="keyword">class</span>="keyword">int</span> field) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;412</td>
+      <td class="nbHitsCovered">&nbsp;153</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">int</span> difference = value.get(field) - compare.get(field);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;413</td>
+      <td class="nbHitsCovered">&nbsp;153</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (d<span <span class="keyword">class</span>="keyword">if</span>ference &#60; 0) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;414</td>
+      <td class="nbHitsCovered">&nbsp;13</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> -1;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;415</td>
+      <td class="nbHitsCovered">&nbsp;140</td>
+      <td class="src"><pre class="src">&nbsp;        } <span class="keyword">else</span> <span class="keyword">if</span> (d<span <span class="keyword">class</span>="keyword">if</span>ference &#62; 0) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;416</td>
+      <td class="nbHitsCovered">&nbsp;17</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> 1;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;417</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        } <span class="keyword">else</span> {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;418</td>
+      <td class="nbHitsCovered">&nbsp;123</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> 0;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;419</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;420</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;421</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;}</pre></td>
+    </tr>
+  </table>
+<p><table cellpadding="0" cellspacing="0" class="report">  <tr class="report">    <td class="reportText"><span class="text">    This report is generated by <a href="http://www.jcoverage.com">jcoverage</a>, <a href="http://maven.apache.org">Maven</a> and <a href="http://maven.apache.org/reference/plugins/jcoverage/">Maven JCoverage Plugin</a>.    </span></td>  </tr></table>
+</body>
+</html>

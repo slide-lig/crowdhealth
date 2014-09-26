@@ -1,0 +1,1301 @@
+<html>
+<head>
+<title>unit tests coverage</title>
+<link rel ="stylesheet" type="text/css" href="../../../../style.css" title="Style">
+</head>
+<body>
+<span class="title">Coverage report</span>
+<p>
+  <table cellspacing="0" cellpadding="0" class="report">
+  <tr class="report">
+    <th class="report">&nbsp;</th>
+    <th class="report">%line</th>
+    <th class="report">%branch</th>
+  </tr>
+  <tr class="report">
+    <td class="reportText"><span class="text">org.apache.commons.validator.EmailValidator</span></td>
+    <td class="reportValue"><table class="percentGraph" cellpadding="0" cellspacing="0" align="right"><tr><td><span class="text">89%&nbsp;</span></td><td><table class="percentGraph" cellpadding="0" cellspacing="0"><tr><td class="percentCovered" width="89"></td><td class="percentUnCovered" width="11.0"></td></tr></table></td></tr></table></td>
+    <td class="reportValue"><table class="percentGraph" cellpadding="0" cellspacing="0" align="right"><tr><td><span class="text">89%&nbsp;</span></td><td><table class="percentGraph" cellpadding="0" cellspacing="0"><tr><td class="percentCovered" width="89"></td><td class="percentUnCovered" width="11.0"></td></tr></table></td></tr></table></td>
+  </tr>
+  </table>
+  <p>
+  <table cellspacing="0" cellpadding="0" class="src">
+    <tr>
+      <td class="numLine">&nbsp;1</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">/*</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;2</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * Licensed to the Apache Software Foundation (ASF) under one or more</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;3</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * contributor license agreements.  See the NOTICE file distributed with</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;4</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * this work for additional information regarding copyright ownership.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;5</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * The ASF licenses this file to You under the Apache License, Version 2.0</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;6</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * (the "License"); you may not use this file except in compliance with</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;7</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * the License.  You may obtain a copy of the License at</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;8</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;9</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *      http://www.apache.org/licenses/LICENSE-2.0</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;10</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;11</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * Unless required by applicable law or agreed to in writing, software</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;12</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * distributed under the License is distributed on an "AS IS" BASIS,</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;13</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;14</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * See the License for the specific language governing permissions and</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;15</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * limitations under the License.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;16</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;17</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">package</span> org.apache.commons.validator;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;18</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;19</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> org.apache.oro.text.perl.Perl5Util;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;20</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;21</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;22</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;p&#62;Perform email validations.&#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;23</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;24</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * This class is a Singleton; you can retrieve the instance via the getInstance() method.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;25</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;26</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;27</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * Based on a script by &#60;a href="mailto:stamhankar@hotmail.com"&#62;Sandeep V. Tamhankar&#60;/a&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;28</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * http://javascript.internet.com</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;29</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;30</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;31</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * This implementation is not guaranteed to catch all possible errors in an email address.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;32</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * For example, an address like nobody@noplace.somedog will pass validator, even though there</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;33</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * is no TLD "somedog"</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;34</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;/p&#62;.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;35</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;36</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * @version $Revision: 478560 $ $Date: 2006-11-23 13:09:27 +0000 (Thu, 23 Nov 2006) $</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;37</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * @since Validator 1.1</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;38</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;39</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">public</span> <span class="keyword">class</span> EmailValidator {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;40</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;41</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String SPECIAL_CHARS = <span class="string">"&#92;&#92;000-&#92;&#92;037&#92;&#92;(&#92;&#92;)&#60;&#62;@,;:'&#92;&#92;&#92;&#92;&#92;&#92;&#92;&#34&#92;&#92;.&#92;&#92;[&#92;&#92;]&#92;&#92;177"</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;42</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String VALID_CHARS = <span class="string">"[^&#92;&#92;s"</span> + SPECIAL_CHARS + <span class="string">"]"</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;43</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String QUOTED_USER = <span class="string">"(&#92;&#34[^&#92;&#34]*&#92;&#34)"</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;44</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String ATOM = VALID_CHARS + '+';</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;45</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String WORD = <span class="string">"(("</span> + VALID_CHARS + <span class="string">"|')+|"</span> + QUOTED_USER + <span class="string">")"</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;46</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;47</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">// Each pattern must be surrounded by /</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;48</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String LEGAL_ASCII_PATTERN = <span class="string">"/^[&#92;&#92;000-&#92;&#92;177]+$/"</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;49</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String EMAIL_PATTERN = <span class="string">"/^(.+)@(.+)$/"</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;50</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String IP_DOMAIN_PATTERN =</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;51</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="string">"/^&#92;&#92;[(&#92;&#92;d{1,3})[.](&#92;&#92;d{1,3})[.](&#92;&#92;d{1,3})[.](&#92;&#92;d{1,3})&#92;&#92;]$/"</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;52</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String TLD_PATTERN = <span class="string">"/^([a-zA-Z]+)$/"</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;53</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            </pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;54</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String USER_PATTERN = <span class="string">"/^&#92;&#92;s*"</span> + WORD + <span class="string">"(&#92;&#92;."</span> + WORD + <span class="string">")*$/"</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;55</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String DOMAIN_PATTERN = <span class="string">"/^"</span> + ATOM + <span class="string">"(&#92;&#92;."</span> + ATOM + <span class="string">")*&#92;&#92;s*$/"</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;56</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String ATOM_PATTERN = <span class="string">"/("</span> + ATOM + <span class="string">")/"</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;57</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;58</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;59</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Singleton instance of this class.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;60</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;61</td>
+      <td class="nbHitsCovered">&nbsp;1</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> EmailValidator EMAIL_VALIDATOR = <span class="keyword">new</span> EmailValidator();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;62</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;63</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;64</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Returns the Singleton instance of this validator.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;65</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return singleton instance of this validator.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;66</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;67</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">static</span> EmailValidator getInstance() {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;68</td>
+      <td class="nbHitsCovered">&nbsp;29</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> EMAIL_VALIDATOR;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;69</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;70</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;71</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;72</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Protected constructor for subclasses to use.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;73</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;74</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">protected</span> EmailValidator() {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;75</td>
+      <td class="nbHitsCovered">&nbsp;2</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">super</span>();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;76</td>
+      <td class="nbHitsCovered">&nbsp;2</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;77</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;78</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;79</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;p&#62;Checks if a field has a valid e-mail address.&#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;80</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;81</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param email The value validation is being performed on.  A &#60;code&#62;null&#60;/code&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;82</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * value is considered invalid.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;83</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return true if the email address is valid.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;84</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;85</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">boolean</span> isValid(String email) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;86</td>
+      <td class="nbHitsCovered">&nbsp;62</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (email == <span class="keyword">null</span>) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;87</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;            <span class="keyword">return</span> false;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;88</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;89</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;90</td>
+      <td class="nbHitsCovered">&nbsp;62</td>
+      <td class="src"><pre class="src">&nbsp;        Perl5Util matchAsciiPat = <span class="keyword">new</span> Perl5Util();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;91</td>
+      <td class="nbHitsCovered">&nbsp;62</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (!matchAsciiPat.match(LEGAL_ASCII_PATTERN, email)) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;92</td>
+      <td class="nbHitsCovered">&nbsp;1</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> false;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;93</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;94</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;95</td>
+      <td class="nbHitsCovered">&nbsp;61</td>
+      <td class="src"><pre class="src">&nbsp;        email = stripComments(email);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;96</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;97</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// Check the whole email address structure</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;98</td>
+      <td class="nbHitsCovered">&nbsp;61</td>
+      <td class="src"><pre class="src">&nbsp;        Perl5Util emailMatcher = <span class="keyword">new</span> Perl5Util();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;99</td>
+      <td class="nbHitsCovered">&nbsp;61</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (!emailMatcher.match(EMAIL_PATTERN, email)) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;100</td>
+      <td class="nbHitsCovered">&nbsp;1</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> false;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;101</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;102</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;103</td>
+      <td class="nbHitsCovered">&nbsp;60</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (email.endsWith(<span class="string">"."</span>)) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;104</td>
+      <td class="nbHitsCovered">&nbsp;2</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> false;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;105</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;106</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;107</td>
+      <td class="nbHitsCovered">&nbsp;58</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (!isValidUser(emailMatcher.group(1))) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;108</td>
+      <td class="nbHitsCovered">&nbsp;34</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> false;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;109</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;110</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;111</td>
+      <td class="nbHitsCovered">&nbsp;24</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (!isValidDomain(emailMatcher.group(2))) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;112</td>
+      <td class="nbHitsCovered">&nbsp;11</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> false;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;113</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;114</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;115</td>
+      <td class="nbHitsCovered">&nbsp;13</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> <span class="keyword">true</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;116</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;117</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;118</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;119</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Returns true if the domain component of an email address is valid.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;120</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param domain being validatied.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;121</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return true if the email address's domain is valid.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;122</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;123</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">protected</span> <span class="keyword">boolean</span> isValidDomain(String domain) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;124</td>
+      <td class="nbHitsCovered">&nbsp;24</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">boolean</span> symbolic = false;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;125</td>
+      <td class="nbHitsCovered">&nbsp;24</td>
+      <td class="src"><pre class="src">&nbsp;        Perl5Util ipAddressMatcher = <span class="keyword">new</span> Perl5Util();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;126</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;127</td>
+      <td class="nbHitsCovered">&nbsp;24</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (ipAddressMatcher.match(IP_DOMAIN_PATTERN, domain)) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;128</td>
+      <td class="nbHitsCovered">&nbsp;1</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">if</span> (!isValidIpAddress(ipAddressMatcher)) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;129</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;                <span class="keyword">return</span> false;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;130</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            } <span class="keyword">else</span> {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;131</td>
+      <td class="nbHitsCovered">&nbsp;1</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">return</span> <span class="keyword">true</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;132</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;133</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        } <span class="keyword">else</span> {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;134</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="comment">// Domain is symbolic name</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;135</td>
+      <td class="nbHitsCovered">&nbsp;23</td>
+      <td class="src"><pre class="src">&nbsp;            Perl5Util domainMatcher = <span class="keyword">new</span> Perl5Util();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;136</td>
+      <td class="nbHitsCovered">&nbsp;23</td>
+      <td class="src"><pre class="src">&nbsp;            symbolic = domainMatcher.match(DOMAIN_PATTERN, domain);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;137</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;138</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;139</td>
+      <td class="nbHitsCovered">&nbsp;23</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (symbolic) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;140</td>
+      <td class="nbHitsCovered">&nbsp;17</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">if</span> (!isValidSymbolicDomain(domain)) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;141</td>
+      <td class="nbHitsCovered">&nbsp;5</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">return</span> false;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;142</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;143</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        } <span class="keyword">else</span> {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;144</td>
+      <td class="nbHitsCovered">&nbsp;6</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> false;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;145</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;146</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;147</td>
+      <td class="nbHitsCovered">&nbsp;12</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> <span class="keyword">true</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;148</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;149</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;150</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;151</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Returns true if the user component of an email address is valid.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;152</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param user being validated</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;153</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return true if the user name is valid.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;154</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;155</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">protected</span> <span class="keyword">boolean</span> isValidUser(String user) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;156</td>
+      <td class="nbHitsCovered">&nbsp;58</td>
+      <td class="src"><pre class="src">&nbsp;        Perl5Util userMatcher = <span class="keyword">new</span> Perl5Util();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;157</td>
+      <td class="nbHitsCovered">&nbsp;58</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> userMatcher.match(USER_PATTERN, user);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;158</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;159</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;160</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;161</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Validates an IP address. Returns true if valid.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;162</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param ipAddressMatcher Pattren matcher</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;163</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return true if the ip address is valid.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;164</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;165</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">protected</span> <span class="keyword">boolean</span> isValidIpAddress(Perl5Util ipAddressMatcher) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;166</td>
+      <td class="nbHitsCovered">&nbsp;5</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">for</span> (<span class="keyword">int</span> i = 1; i &#60;= 4; i++) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;167</td>
+      <td class="nbHitsCovered">&nbsp;4</td>
+      <td class="src"><pre class="src">&nbsp;            String ipSegment = ipAddressMatcher.group(i);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;168</td>
+      <td class="nbHitsCovered">&nbsp;4</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">if</span> (ipSegment == <span class="keyword">null</span> || ipSegment.length() &#60;= 0) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;169</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;                <span class="keyword">return</span> false;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;170</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;171</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;172</td>
+      <td class="nbHitsCovered">&nbsp;4</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">int</span> iIpSegment = 0;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;173</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;174</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">try</span> {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;175</td>
+      <td class="nbHitsCovered">&nbsp;4</td>
+      <td class="src"><pre class="src">&nbsp;                iIpSegment = Integer.parseInt(ipSegment);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;176</td>
+      <td class="nbHitsCovered">&nbsp;4</td>
+      <td class="src"><pre class="src">&nbsp;            } <span class="keyword">catch</span>(NumberFormatException e) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;177</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;                <span class="keyword">return</span> false;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;178</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;179</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;180</td>
+      <td class="nbHitsCovered">&nbsp;4</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">if</span> (iIpSegment &#62; 255) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;181</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;                <span class="keyword">return</span> false;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;182</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;183</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;184</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;185</td>
+      <td class="nbHitsCovered">&nbsp;1</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> <span class="keyword">true</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;186</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;187</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;188</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;189</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Validates a symbolic domain name.  Returns true if it's valid.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;190</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param domain symbolic domain name</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;191</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return true if the symbolic domain name is valid.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;192</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;193</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">protected</span> <span class="keyword">boolean</span> isValidSymbolicDomain(String domain) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;194</td>
+      <td class="nbHitsCovered">&nbsp;17</td>
+      <td class="src"><pre class="src">&nbsp;        String[] domainSegment = <span class="keyword">new</span> String[10];</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;195</td>
+      <td class="nbHitsCovered">&nbsp;17</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">boolean</span> match = <span class="keyword">true</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;196</td>
+      <td class="nbHitsCovered">&nbsp;17</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">int</span> i = 0;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;197</td>
+      <td class="nbHitsCovered">&nbsp;17</td>
+      <td class="src"><pre class="src">&nbsp;        Perl5Util atomMatcher = <span class="keyword">new</span> Perl5Util();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;198</td>
+      <td class="nbHitsCovered">&nbsp;90</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">while</span> (match) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;199</td>
+      <td class="nbHitsCovered">&nbsp;56</td>
+      <td class="src"><pre class="src">&nbsp;            match = atomMatcher.match(ATOM_PATTERN, domain);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;200</td>
+      <td class="nbHitsCovered">&nbsp;56</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">if</span> (match) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;201</td>
+      <td class="nbHitsCovered">&nbsp;39</td>
+      <td class="src"><pre class="src">&nbsp;                domainSegment[i] = atomMatcher.group(1);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;202</td>
+      <td class="nbHitsCovered">&nbsp;39</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">int</span> l = domainSegment[i].length() + 1;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;203</td>
+      <td class="nbHitsCovered">&nbsp;39</td>
+      <td class="src"><pre class="src">&nbsp;                domain =</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;204</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        (l &#62;= domain.length())</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;205</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        ? <span class="string">""</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;206</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        : domain.substring(l);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;207</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;208</td>
+      <td class="nbHitsCovered">&nbsp;39</td>
+      <td class="src"><pre class="src">&nbsp;                i++;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;209</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            } </pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;210</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;211</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;212</td>
+      <td class="nbHitsCovered">&nbsp;17</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">int</span> len = i;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;213</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        </pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;214</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// Make sure there's a host name preceding the domain.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;215</td>
+      <td class="nbHitsCovered">&nbsp;17</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (len &#60; 2) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;216</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;            <span class="keyword">return</span> false;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;217</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;218</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        </pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;219</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// TODO: the tld should be checked against some sort of configurable </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;220</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// list</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;221</td>
+      <td class="nbHitsCovered">&nbsp;17</td>
+      <td class="src"><pre class="src">&nbsp;        String tld = domainSegment[len - 1];</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;222</td>
+      <td class="nbHitsCovered">&nbsp;17</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (tld.length() &#62; 1) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;223</td>
+      <td class="nbHitsCovered">&nbsp;16</td>
+      <td class="src"><pre class="src">&nbsp;            Perl5Util matchTldPat = <span class="keyword">new</span> Perl5Util();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;224</td>
+      <td class="nbHitsCovered">&nbsp;16</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">if</span> (!matchTldPat.match(TLD_PATTERN, tld)) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;225</td>
+      <td class="nbHitsCovered">&nbsp;4</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">return</span> false;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;226</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;227</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        } <span class="keyword">else</span> {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;228</td>
+      <td class="nbHitsCovered">&nbsp;1</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> false;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;229</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;230</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;231</td>
+      <td class="nbHitsCovered">&nbsp;12</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> <span class="keyword">true</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;232</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;233</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;234</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *   Recursively remove comments, and replace with a single space.  The simpler</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;235</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *   regexps in the Email Addressing FAQ are imperfect - they will miss escaped</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;236</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *   chars in atoms, for example.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;237</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *   Derived From    Mail::RFC822::Address</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;238</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param emailStr The email address</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;239</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return address with comments removed.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;240</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">    */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;241</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">protected</span> String stripComments(String emailStr)  {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;242</td>
+      <td class="nbHitsCovered">&nbsp;61</td>
+      <td class="src"><pre class="src">&nbsp;     String input = emailStr;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;243</td>
+      <td class="nbHitsCovered">&nbsp;61</td>
+      <td class="src"><pre class="src">&nbsp;     String result = emailStr;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;244</td>
+      <td class="nbHitsCovered">&nbsp;61</td>
+      <td class="src"><pre class="src">&nbsp;     String commentPat = <span class="string">"s/^((?:[^&#92;&#34&#92;&#92;&#92;&#92;]|&#92;&#92;&#92;&#92;.)*(?:&#92;&#34(?:[^&#92;&#34&#92;&#92;&#92;&#92;]|&#92;&#92;&#92;&#92;.)*&#92;&#34(?:[^&#92;&#34&#92;&#92;&#92;&#92;]|\111111&#92;&#92;&#92;&#92;.)*)*)&#92;&#92;((?:[^()&#92;&#92;&#92;&#92;]|&#92;&#92;&#92;&#92;.)*&#92;&#92;)/$1 /osx"</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;245</td>
+      <td class="nbHitsCovered">&nbsp;61</td>
+      <td class="src"><pre class="src">&nbsp;     Perl5Util commentMatcher = <span class="keyword">new</span> Perl5Util();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;246</td>
+      <td class="nbHitsCovered">&nbsp;61</td>
+      <td class="src"><pre class="src">&nbsp;     result = commentMatcher.substitute(commentPat,input);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;247</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;     <span class="comment">// This really needs to be =~ or Perl5Matcher comparison</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;248</td>
+      <td class="nbHitsCovered">&nbsp;122</td>
+      <td class="src"><pre class="src">&nbsp;     <span class="keyword">while</span> (!result.equals(input)) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;249</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        input = result;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;250</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        result = commentMatcher.substitute(commentPat,input);</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;251</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;     }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;252</td>
+      <td class="nbHitsCovered">&nbsp;61</td>
+      <td class="src"><pre class="src">&nbsp;     <span class="keyword">return</span> result;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;253</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;254</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;255</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;}</pre></td>
+    </tr>
+  </table>
+<p><table cellpadding="0" cellspacing="0" class="report">  <tr class="report">    <td class="reportText"><span class="text">    This report is generated by <a href="http://www.jcoverage.com">jcoverage</a>, <a href="http://maven.apache.org">Maven</a> and <a href="http://maven.apache.org/reference/plugins/jcoverage/">Maven JCoverage Plugin</a>.    </span></td>  </tr></table>
+</body>
+</html>

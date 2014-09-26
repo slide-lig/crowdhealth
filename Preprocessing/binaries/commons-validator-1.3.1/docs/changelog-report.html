@@ -1,0 +1,1558 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head><title>Changelog Report - Validator</title><style type="text/css" media="all">
+          @import url("./style/maven-base.css");
+          
+          @import url("./style/maven-theme.css");@import url("./style/project.css");</style><link rel="stylesheet" href="./style/print.css" type="text/css" media="print"></link><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></meta></head><body class="composite"><div id="banner"><a href="http://jakarta.apache.org" id="organizationLogo"><img alt="The Apache Software Foundation" src="http://jakarta.apache.org/images/original-jakarta-logo.gif"></img></a><a href="http://jakarta.apache.org/commons/validator/" id="projectLogo"><img alt="Validator" src="./images/logo.png"></img></a><div class="clear"><hr></hr></div></div><div id="breadcrumbs"><div class="xleft">Last published: 28 November 2006
+                <span class="separator">|</span> Doc for  1.3.1
+                </div><div class="xright">
+        
+        <a href="http://www.apache.org" class="externalLink" title="External Link">Apache</a>
+      
+        
+          
+            <span class="separator">|</span>
+          
+        
+        <a href="http://jakarta.apache.org" class="externalLink" title="External Link">Jakarta</a>
+      
+        
+          
+            <span class="separator">|</span>
+          
+        
+        <a href="http://jakarta.apache.org/commons/" class="externalLink" title="External Link">Commons</a>
+      </div><div class="clear"><hr></hr></div></div><div id="leftColumn"><div id="navcolumn"><div id="menuValidator"><h5>Validator</h5><ul><li class="none"><a href="index.html">Overview</a></li><li class="none"><a href="downloads.html">Download</a></li><li class="expanded"><a href="">Documentation</a><ul><li class="none"><a href="changes-report.html">Release Notes</a></li><li class="none"><a href="dependencies.html">Dependencies</a></li><li class="none"><a href="license.html">License</a></li><li class="none"><a href="apidocs/org/apache/commons/validator/package-summary.html#package_description">Framework</a></li><li class="none"><a href="apidocs/org/apache/commons/validator/routines/package-summary.html#package_description">Routines</a></li><li class="none"><a href="http://wiki.apache.org/jakarta-commons/Validator" class="externalLink" title="External Link">Wiki</a></li></ul></li><li class="expanded"><a href="">JavaDocs</a><ul><li class="none"><a href="http://jakarta.apache.org/commons/validator/api-release/" class="externalLink" title="External Link">Current Release</a></li><li class="none"><a href="http://jakarta.apache.org/commons/validator/api-1.3.0/" class="externalLink" title="External Link">1.3.0 Release</a></li><li class="none"><a href="http://jakarta.apache.org/commons/validator/api-1.2.0/" class="externalLink" title="External Link">1.2.0 Release</a></li><li class="none"><a href="http://jakarta.apache.org/commons/validator/api-1.1.4/" class="externalLink" title="External Link">1.1.4 Release</a></li><li class="none"><a href="http://jakarta.apache.org/commons/validator/api-1.0.2/" class="externalLink" title="External Link">1.0.2 Release</a></li></ul></li><li class="none"><a href="javascript/org/apache/commons/validator/javascript/index.html">JavaScript Doc</a></li></ul></div><div id="menuDevelopment"><h5>Development</h5><ul><li class="none"><a href="mail-lists.html">Mailing Lists</a></li><li class="none"><a href="issue-tracking.html">Issue Tracking</a></li><li class="none"><a href="apidocs/index.html">Latest JavaDoc</a></li><li class="none"><a href="cvs-usage.html">Source Repository</a></li><li class="none"><a href="building.html">Building</a></li></ul></div><div id="menuProject_Documentation"><h5>Project Documentation</h5><ul><li class="none"><a href="index.html">About</a></li><li class="collapsed"><a href="project-info.html">Project Info</a></li><li class="expanded"><a href="maven-reports.html">Project Reports</a><ul><li class="none"><a href="checkstyle-report.html">Checkstyle</a></li><li class="none"><a href="changes-report.html">Changes</a></li><li class="none"><strong><a href="changelog-report.html">Change Log</a></strong></li><li class="none"><a href="apidocs/index.html" class="newWindow" title="New Window" target="_blank">JavaDocs</a></li><li class="none"><a href="javadoc.html">JavaDoc Report</a></li><li class="none"><a href="javadoc-warnings-report.html">JavaDoc Warnings Report</a></li><li class="none"><a href="xref/index.html" class="newWindow" title="New Window" target="_blank">Source Xref</a></li><li class="none"><a href="xref-test/index.html" class="newWindow" title="New Window" target="_blank">Test Xref</a></li><li class="none"><a href="license.html">Project License</a></li><li class="none"><a href="junit-report.html">Unit Tests</a></li><li class="none"><a href="jcoverage/index.html">JCoverage</a></li></ul></li><li class="none"><a href="http://jakarta.apache.org/commons/charter.html" class="externalLink" title="External Link">Development Process</a></li></ul></div><div id="menuCommons"><h5>Commons</h5><ul><li class="none"><a href="http://jakarta.apache.org/commons/" class="externalLink" title="External Link">Home</a></li><li class="collapsed"><a href="http://jakarta.apache.org/commons/components.html" class="externalLink" title="External Link">Components</a></li><li class="collapsed"><a href="http://jakarta.apache.org/commons/sandbox/index.html" class="externalLink" title="External Link">Sandbox</a></li><li class="collapsed"><a href="http://jakarta.apache.org/commons/dormant/index.html" class="externalLink" title="External Link">Dormant</a></li><li class="none"><a href="http://jakarta.apache.org/commons/volunteering.html" class="externalLink" title="External Link">Volunteering</a></li><li class="none"><a href="http://jakarta.apache.org/commons/patches.html" class="externalLink" title="External Link">Contributing Patches</a></li><li class="none"><a href="http://jakarta.apache.org/commons/building.html" class="externalLink" title="External Link">Building Components</a></li><li class="none"><a href="http://jakarta.apache.org/commons/releases/index.html" class="externalLink" title="External Link">Releasing Components</a></li><li class="none"><a href="http://wiki.apache.org/jakarta-commons/FrontPage" class="externalLink" title="External Link">Wiki</a></li></ul></div><div id="legend"><h5>Legend</h5><ul><li class="externalLink">External Link</li><li class="newWindow">Opens in a new window</li></ul></div></div></div><div id="bodyColumn"><div class="contentBox"><div class="section"><a name="Changelog_Report"></a><h2>Changelog Report</h2>
+      <p>Total number of change sets: 1</p>
+      <div class="subsection"><a name="Changes_between_2006-03-24_and_2006-11-29"></a><h3>Changes between 2006-03-24 and 2006-11-29</h3>
+        <p>Total Commits: 39 Total Number of Files Changed: 331</p>
+        <table class="bodyTable">
+          <thead>
+            <tr class="a">
+              <th>Date</th>
+              <th>Author</th>
+              <th>File/Message</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="b">
+              <td>2006-11-28 22:26:19</td>
+              <td>Niall Pemberton</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/tags/VALIDATOR_1_3_1 (from /jakarta/commons/proper/validator/trunk:480252)" class="externalLink" title="External Link">/jakarta/commons/proper/validator/tags/VALIDATOR_1_3_1 (from /jakarta/commons/proper/validator/trunk:480252)</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/tags/VALIDATOR_1_3_1 (from /jakarta/commons/proper/validator/trunk:480252)?rev=480253&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 480253</a>
+                </p>Tag Validator 1.3.1</td>
+            </tr>
+            <tr class="a">
+              <td>2006-11-28 22:24:19</td>
+              <td>Niall Pemberton</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/build.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/build.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/build.xml?rev=480251&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 480251</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.xml?rev=480251&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 480251</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/changes.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml?rev=480251&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 480251</a>
+                </p>Update version number to 1.3.1</td>
+            </tr>
+            <tr class="b">
+              <td>2006-11-28 22:10:38</td>
+              <td>Niall Pemberton</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/RELEASE-NOTES.txt" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/RELEASE-NOTES.txt</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/RELEASE-NOTES.txt?rev=480235&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 480235</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.xml?rev=480235&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 480235</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/changes.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml?rev=480235&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 480235</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/navigation.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/navigation.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/navigation.xml?rev=480235&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 480235</a>
+                </p>Minor fixes to the Valdiator 1.3.1 release following feedback from Craig McClanahan and Rahul Akolkar - add note to the release notes about Jakarta ORO now being marked as optional - Fix the API version in the menu bar (from 1.0.4 to 1.0.2) - Switch test coverage plugin from cobertura (which requires JDK 1.4) to jcoverage (which runs on JDK 1.3)</td>
+            </tr>
+            <tr class="a">
+              <td>2006-11-27 01:23:27</td>
+              <td>Niall Pemberton</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/doap_validator.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/doap_validator.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/doap_validator.rdf?rev=479485&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 479485</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/changes.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml?rev=479485&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 479485</a>
+                </p>Add older version details to DOAP file and Changes Report</td>
+            </tr>
+            <tr class="b">
+              <td>2006-11-26 05:42:36</td>
+              <td>Niall Pemberton</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/maven.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/maven.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/maven.xml?rev=479282&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 479282</a>
+                </p>Create a versioned pom and generate md5 checksums for pom and jar</td>
+            </tr>
+            <tr class="a">
+              <td>2006-11-23 21:37:42</td>
+              <td>Niall Pemberton</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/RELEASE-NOTES.html" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/RELEASE-NOTES.html</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/RELEASE-NOTES.html?rev=478679&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478679</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/RELEASE-NOTES.txt (from /jakarta/commons/proper/validator/trunk/RELEASE-NOTES.html:478566)" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/RELEASE-NOTES.txt (from /jakarta/commons/proper/validator/trunk/RELEASE-NOTES.html:478566)</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/RELEASE-NOTES.txt (from /jakarta/commons/proper/validator/trunk/RELEASE-NOTES.html:478566)?rev=478679&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478679</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/build.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/build.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/build.xml?rev=478679&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478679</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/conf/share/MANIFEST.MF" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/conf/share/MANIFEST.MF</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/conf/share/MANIFEST.MF?rev=478679&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478679</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/maven.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/maven.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/maven.xml?rev=478679&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478679</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.properties" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/project.properties</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.properties?rev=478679&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478679</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.xml?rev=478679&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478679</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/building.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/building.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/building.xml?rev=478679&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478679</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/changes.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml?rev=478679&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478679</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/downloads.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/downloads.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/downloads.xml?rev=478679&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478679</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/index.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/index.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/index.xml?rev=478679&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478679</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/navigation.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/navigation.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/navigation.xml?rev=478679&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478679</a>
+                </p>Build and site improvements</td>
+            </tr>
+            <tr class="b">
+              <td>2006-11-23 21:36:23</td>
+              <td>Niall Pemberton</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ParameterTest-config.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ParameterTest-config.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ParameterTest-config.xml?rev=478677&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478677</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ValidatorTestSuite.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ValidatorTestSuite.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ValidatorTestSuite.java?rev=478677&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478677</a>
+                </p>Fix minor test issues</td>
+            </tr>
+            <tr class="a">
+              <td>2006-11-23 21:35:44</td>
+              <td>Niall Pemberton</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateByte.js" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateByte.js</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateByte.js?rev=478676&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478676</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateCreditCard.js" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateCreditCard.js</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateCreditCard.js?rev=478676&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478676</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateDate.js" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateDate.js</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateDate.js?rev=478676&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478676</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateEmail.js" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateEmail.js</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateEmail.js?rev=478676&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478676</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateFloat.js" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateFloat.js</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateFloat.js?rev=478676&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478676</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateFloatRange.js" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateFloatRange.js</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateFloatRange.js?rev=478676&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478676</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateIntRange.js" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateIntRange.js</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateIntRange.js?rev=478676&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478676</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateInteger.js" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateInteger.js</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateInteger.js?rev=478676&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478676</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateMask.js" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateMask.js</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateMask.js?rev=478676&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478676</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateMaxLength.js" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateMaxLength.js</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateMaxLength.js?rev=478676&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478676</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateMinLength.js" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateMinLength.js</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateMinLength.js?rev=478676&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478676</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateRequired.js" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateRequired.js</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateRequired.js?rev=478676&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478676</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateShort.js" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateShort.js</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateShort.js?rev=478676&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478676</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateUtilities.js" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateUtilities.js</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateUtilities.js?rev=478676&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478676</a>
+                </p>Add missing license headers</td>
+            </tr>
+            <tr class="b">
+              <td>2006-11-23 13:24:38</td>
+              <td>Niall Pemberton</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateUtilities.js" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateUtilities.js</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateUtilities.js?rev=478566&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478566</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/changes.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml?rev=478566&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478566</a>
+                </p>VALIDATOR-208 - JavaScript function jcv_isFieldPresent() causes error in IE5 using "undefined" - thanks to Leo Asanov</td>
+            </tr>
+            <tr class="a">
+              <td>2006-11-23 13:09:27</td>
+              <td>Niall Pemberton</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/EmailValidator.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/EmailValidator.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/EmailValidator.java?rev=478560&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478560</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/EmailTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/EmailTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/EmailTest.java?rev=478560&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478560</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/changes.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml?rev=478560&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478560</a>
+                </p>VALIDATOR-190 - EmailValidator allows control characters (ASCII 0-31 and 127) - thanks to Cott and Gabriel Belingueres</td>
+            </tr>
+            <tr class="b">
+              <td>2006-11-23 09:23:23</td>
+              <td>Niall Pemberton</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateByte.js" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateByte.js</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateByte.js?rev=478518&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478518</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateCreditCard.js" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateCreditCard.js</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateCreditCard.js?rev=478518&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478518</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateDate.js" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateDate.js</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateDate.js?rev=478518&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478518</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateEmail.js" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateEmail.js</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateEmail.js?rev=478518&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478518</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateFloat.js" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateFloat.js</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateFloat.js?rev=478518&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478518</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateFloatRange.js" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateFloatRange.js</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateFloatRange.js?rev=478518&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478518</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateIntRange.js" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateIntRange.js</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateIntRange.js?rev=478518&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478518</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateInteger.js" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateInteger.js</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateInteger.js?rev=478518&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478518</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateMask.js" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateMask.js</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateMask.js?rev=478518&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478518</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateMaxLength.js" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateMaxLength.js</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateMaxLength.js?rev=478518&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478518</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateMinLength.js" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateMinLength.js</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateMinLength.js?rev=478518&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478518</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateRequired.js" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateRequired.js</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateRequired.js?rev=478518&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478518</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateShort.js" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateShort.js</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/validateShort.js?rev=478518&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478518</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/changes.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml?rev=478518&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478518</a>
+                </p>VALIDATOR-210 - JavaScript Causes HTML Page to Contain Illegal HTML - thanks to Neil Sherman</td>
+            </tr>
+            <tr class="a">
+              <td>2006-11-23 05:42:30</td>
+              <td>Niall Pemberton</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/ValidatorResources.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/ValidatorResources.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/ValidatorResources.java?rev=478473&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478473</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/EntityImportTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/EntityImportTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/EntityImportTest.java?rev=478473&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478473</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/changes.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml?rev=478473&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478473</a>
+                </p>VALIDATOR-209 - Additional constructor for ValidatorResources that takes URL[] instead of String[] - thanks to Craig McClanahan</td>
+            </tr>
+            <tr class="b">
+              <td>2006-11-23 04:44:30</td>
+              <td>Niall Pemberton</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/doap_validator.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/doap_validator.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/doap_validator.rdf?rev=478462&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478462</a>
+                </p>Correct doap release info (Version &lt;--&gt; revision wrong way round)</td>
+            </tr>
+            <tr class="a">
+              <td>2006-11-22 23:57:07</td>
+              <td>Niall Pemberton</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.properties" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/project.properties</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.properties?rev=478396&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478396</a>
+                </p>Configure logging for maven</td>
+            </tr>
+            <tr class="b">
+              <td>2006-11-22 23:51:09</td>
+              <td>Niall Pemberton</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/ValidatorResources.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/ValidatorResources.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/ValidatorResources.java?rev=478392&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478392</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/CustomValidatorResourcesTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/CustomValidatorResourcesTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/CustomValidatorResourcesTest.java?rev=478392&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478392</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/custom" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/custom</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/custom?rev=478392&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478392</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/custom/CustomValidatorResources.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/custom/CustomValidatorResources.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/custom/CustomValidatorResources.java?rev=478392&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478392</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/changes.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml?rev=478392&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478392</a>
+                </p>VALIDATOR-195 - Fix loading of Digester rules for custom ValidatorResources implementations - thanks to Vijay Pandey</td>
+            </tr>
+            <tr class="a">
+              <td>2006-11-22 22:37:02</td>
+              <td>Niall Pemberton</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.xml?rev=478350&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478350</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/changes.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml?rev=478350&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478350</a>
+                </p>Update the release notes, add Henri to project, remove empty organization elements</td>
+            </tr>
+            <tr class="b">
+              <td>2006-11-22 22:25:19</td>
+              <td>Niall Pemberton</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/Validator.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/Validator.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/Validator.java?rev=478345&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478345</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ParameterTest-config.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ParameterTest-config.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ParameterTest-config.xml?rev=478345&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478345</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ParameterTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ParameterTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ParameterTest.java?rev=478345&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478345</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ParameterTestValidator.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ParameterTestValidator.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ParameterTestValidator.java?rev=478345&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478345</a>
+                </p>Fix for VALIDATOR-19 - Validator incorrectly storing itself under the FORM_PARAM key rather than the Form - patch supplied by Masahiro Honda</td>
+            </tr>
+            <tr class="a">
+              <td>2006-11-22 21:31:54</td>
+              <td>Niall Pemberton</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/NOTICE.txt" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/NOTICE.txt</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/NOTICE.txt?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/PROPOSAL.html" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/PROPOSAL.html</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/PROPOSAL.html?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/RELEASE-NOTES.html" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/RELEASE-NOTES.html</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/RELEASE-NOTES.html?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/STATUS.html" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/STATUS.html</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/STATUS.html?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/build.properties.sample" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/build.properties.sample</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/build.properties.sample?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/conf/share/LicenseCheckStyle.txt" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/conf/share/LicenseCheckStyle.txt</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/conf/share/LicenseCheckStyle.txt?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/conf/share/ValidatorCheckStyle.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/conf/share/ValidatorCheckStyle.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/conf/share/ValidatorCheckStyle.xml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/conf/share/validator_1_0.dtd" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/conf/share/validator_1_0.dtd</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/conf/share/validator_1_0.dtd?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/conf/share/validator_1_0_1.dtd" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/conf/share/validator_1_0_1.dtd</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/conf/share/validator_1_0_1.dtd?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/conf/share/validator_1_1.dtd" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/conf/share/validator_1_1.dtd</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/conf/share/validator_1_1.dtd?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/conf/share/validator_1_1_3.dtd" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/conf/share/validator_1_1_3.dtd</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/conf/share/validator_1_1_3.dtd?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/conf/share/validator_1_2_0.dtd" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/conf/share/validator_1_2_0.dtd</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/conf/share/validator_1_2_0.dtd?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/conf/share/validator_1_3_0.dtd" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/conf/share/validator_1_3_0.dtd</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/conf/share/validator_1_3_0.dtd?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/doap_validator.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/doap_validator.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/doap_validator.rdf?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/etc/jsdoc.bat" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/etc/jsdoc.bat</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/etc/jsdoc.bat?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/etc/jsdoc.sh" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/etc/jsdoc.sh</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/etc/jsdoc.sh?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/maven.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/maven.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/maven.xml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.properties" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/project.properties</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.properties?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.xml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/example/org/apache/commons/validator/example/ValidateBean.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/example/org/apache/commons/validator/example/ValidateBean.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/example/org/apache/commons/validator/example/ValidateBean.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/example/org/apache/commons/validator/example/ValidateExample.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/example/org/apache/commons/validator/example/ValidateExample.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/example/org/apache/commons/validator/example/ValidateExample.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/example/org/apache/commons/validator/example/applicationResources.properties" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/example/org/apache/commons/validator/example/applicationResources.properties</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/example/org/apache/commons/validator/example/applicationResources.properties?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/example/org/apache/commons/validator/example/validator-example.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/example/org/apache/commons/validator/example/validator-example.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/example/org/apache/commons/validator/example/validator-example.xml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/package.html" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/package.html</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/javascript/org/apache/commons/validator/javascript/package.html?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/Arg.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/Arg.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/Arg.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/CreditCardValidator.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/CreditCardValidator.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/CreditCardValidator.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/DateValidator.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/DateValidator.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/DateValidator.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/EmailValidator.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/EmailValidator.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/EmailValidator.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/Field.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/Field.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/Field.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/Form.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/Form.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/Form.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/FormSet.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/FormSet.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/FormSet.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/FormSetFactory.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/FormSetFactory.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/FormSetFactory.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/GenericTypeValidator.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/GenericTypeValidator.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/GenericTypeValidator.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/GenericValidator.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/GenericValidator.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/GenericValidator.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/ISBNValidator.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/ISBNValidator.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/ISBNValidator.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/Msg.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/Msg.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/Msg.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/UrlValidator.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/UrlValidator.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/UrlValidator.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/Validator.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/Validator.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/Validator.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/ValidatorAction.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/ValidatorAction.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/ValidatorAction.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/ValidatorException.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/ValidatorException.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/ValidatorException.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/ValidatorResources.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/ValidatorResources.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/ValidatorResources.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/ValidatorResult.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/ValidatorResult.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/ValidatorResult.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/ValidatorResults.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/ValidatorResults.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/ValidatorResults.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/Var.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/Var.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/Var.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/digester-rules.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/digester-rules.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/digester-rules.xml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/package.html" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/package.html</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/package.html?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/AbstractCalendarValidator.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/AbstractCalendarValidator.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/AbstractCalendarValidator.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/AbstractFormatValidator.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/AbstractFormatValidator.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/AbstractFormatValidator.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/AbstractNumberValidator.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/AbstractNumberValidator.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/AbstractNumberValidator.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/BigDecimalValidator.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/BigDecimalValidator.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/BigDecimalValidator.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/BigIntegerValidator.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/BigIntegerValidator.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/BigIntegerValidator.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/ByteValidator.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/ByteValidator.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/ByteValidator.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/CalendarValidator.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/CalendarValidator.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/CalendarValidator.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/CurrencyValidator.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/CurrencyValidator.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/CurrencyValidator.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/DateValidator.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/DateValidator.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/DateValidator.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/DoubleValidator.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/DoubleValidator.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/DoubleValidator.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/FloatValidator.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/FloatValidator.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/FloatValidator.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/IntegerValidator.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/IntegerValidator.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/IntegerValidator.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/LongValidator.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/LongValidator.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/LongValidator.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/PercentValidator.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/PercentValidator.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/PercentValidator.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/ShortValidator.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/ShortValidator.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/ShortValidator.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/TimeValidator.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/TimeValidator.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/TimeValidator.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/package.html" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/package.html</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/routines/package.html?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/util/Flags.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/util/Flags.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/util/Flags.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/util/ValidatorUtils.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/util/ValidatorUtils.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/util/ValidatorUtils.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/util/package.html" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/util/package.html</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/util/package.html?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ByteTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ByteTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ByteTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/CreditCardValidatorTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/CreditCardValidatorTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/CreditCardValidatorTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/DateTest-config.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/DateTest-config.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/DateTest-config.xml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/DateTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/DateTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/DateTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/DoubleTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/DoubleTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/DoubleTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/EmailTest-config.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/EmailTest-config.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/EmailTest-config.xml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/EmailTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/EmailTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/EmailTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/EntityImportTest-byteform.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/EntityImportTest-byteform.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/EntityImportTest-byteform.xml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/EntityImportTest-config.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/EntityImportTest-config.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/EntityImportTest-config.xml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/EntityImportTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/EntityImportTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/EntityImportTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ExceptionTest-config.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ExceptionTest-config.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ExceptionTest-config.xml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ExceptionTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ExceptionTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ExceptionTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ExtensionTest-config.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ExtensionTest-config.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ExtensionTest-config.xml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ExtensionTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ExtensionTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ExtensionTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/FieldTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/FieldTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/FieldTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/FloatTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/FloatTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/FloatTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/GenericValidatorTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/GenericValidatorTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/GenericValidatorTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ISBNValidatorTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ISBNValidatorTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ISBNValidatorTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/IntegerTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/IntegerTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/IntegerTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/LocaleTest-config.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/LocaleTest-config.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/LocaleTest-config.xml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/LocaleTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/LocaleTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/LocaleTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/LongTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/LongTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/LongTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/MultipleConfigFilesTest-1-config.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/MultipleConfigFilesTest-1-config.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/MultipleConfigFilesTest-1-config.xml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/MultipleConfigFilesTest-2-config.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/MultipleConfigFilesTest-2-config.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/MultipleConfigFilesTest-2-config.xml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/MultipleConfigFilesTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/MultipleConfigFilesTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/MultipleConfigFilesTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/MultipleTests-config.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/MultipleTests-config.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/MultipleTests-config.xml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/MultipleTests.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/MultipleTests.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/MultipleTests.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/NameBean.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/NameBean.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/NameBean.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/RequiredIfTest-config.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/RequiredIfTest-config.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/RequiredIfTest-config.xml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/RequiredIfTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/RequiredIfTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/RequiredIfTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/RequiredNameTest-config.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/RequiredNameTest-config.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/RequiredNameTest-config.xml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/RequiredNameTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/RequiredNameTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/RequiredNameTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/RetrieveFormTest-config.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/RetrieveFormTest-config.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/RetrieveFormTest-config.xml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/RetrieveFormTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/RetrieveFormTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/RetrieveFormTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ShortTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ShortTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ShortTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/TestCommon.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/TestCommon.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/TestCommon.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/TestNumber-config.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/TestNumber-config.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/TestNumber-config.xml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/TestNumber.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/TestNumber.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/TestNumber.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/TestPair.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/TestPair.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/TestPair.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/TestTypeValidator.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/TestTypeValidator.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/TestTypeValidator.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/TestValidator.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/TestValidator.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/TestValidator.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/TypeBean.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/TypeBean.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/TypeBean.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/TypeTest-config.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/TypeTest-config.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/TypeTest-config.xml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/TypeTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/TypeTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/TypeTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/UrlTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/UrlTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/UrlTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ValidatorResultsTest-config.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ValidatorResultsTest-config.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ValidatorResultsTest-config.xml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ValidatorResultsTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ValidatorResultsTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ValidatorResultsTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ValidatorTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ValidatorTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ValidatorTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ValidatorTestSuite.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ValidatorTestSuite.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ValidatorTestSuite.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ValueBean.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ValueBean.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/ValueBean.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/VarTest-config.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/VarTest-config.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/VarTest-config.xml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/VarTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/VarTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/VarTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/BaseCalendarValidatorTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/BaseCalendarValidatorTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/BaseCalendarValidatorTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/BaseNumberValidatorTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/BaseNumberValidatorTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/BaseNumberValidatorTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/BigDecimalValidatorTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/BigDecimalValidatorTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/BigDecimalValidatorTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/BigIntegerValidatorTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/BigIntegerValidatorTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/BigIntegerValidatorTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/ByteValidatorTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/ByteValidatorTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/ByteValidatorTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/CalendarValidatorTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/CalendarValidatorTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/CalendarValidatorTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/CurrencyValidatorTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/CurrencyValidatorTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/CurrencyValidatorTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/DateValidatorTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/DateValidatorTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/DateValidatorTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/DoubleValidatorTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/DoubleValidatorTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/DoubleValidatorTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/FloatValidatorTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/FloatValidatorTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/FloatValidatorTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/IntegerValidatorTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/IntegerValidatorTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/IntegerValidatorTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/LongValidatorTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/LongValidatorTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/LongValidatorTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/PercentValidatorTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/PercentValidatorTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/PercentValidatorTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/RoutinesTestSuite.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/RoutinesTestSuite.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/RoutinesTestSuite.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/ShortValidatorTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/ShortValidatorTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/ShortValidatorTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/TimeValidatorTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/TimeValidatorTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/routines/TimeValidatorTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/util/FlagsTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/util/FlagsTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/util/FlagsTest.java?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/building.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/building.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/building.xml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/changes.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/community.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/community.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/community.xml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/cvs-usage.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/cvs-usage.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/cvs-usage.xml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/downloads.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/downloads.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/downloads.xml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/faq.fml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/faq.fml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/faq.fml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/index.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/index.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/index.xml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/issue-tracking.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/issue-tracking.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/issue-tracking.xml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/navigation.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/navigation.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/navigation.xml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/tasks.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/tasks.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/tasks.xml?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/validator_2_0_0_proposal.dtd" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/validator_2_0_0_proposal.dtd</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/validator_2_0_0_proposal.dtd?rev=478334&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 478334</a>
+                </p>Comply with the new ASF Source Header and Copyright Notice Policy See http://www.apache.org/legal/src-headers.html</td>
+            </tr>
+            <tr class="b">
+              <td>2006-11-09 00:14:44</td>
+              <td>rahul</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/attributes/trunk/doap_attributes.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/attributes/trunk/doap_attributes.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/attributes/trunk/doap_attributes.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/beanutils/trunk/doap_beanutils.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/beanutils/trunk/doap_beanutils.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/beanutils/trunk/doap_beanutils.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/betwixt/trunk/doap_betwixt.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/betwixt/trunk/doap_betwixt.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/betwixt/trunk/doap_betwixt.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/chain/trunk/doap_chain.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/chain/trunk/doap_chain.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/chain/trunk/doap_chain.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/cli/trunk/doap_cli.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/cli/trunk/doap_cli.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/cli/trunk/doap_cli.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/codec/trunk/doap_codec.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/codec/trunk/doap_codec.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/codec/trunk/doap_codec.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/collections/trunk/doap_collections.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/collections/trunk/doap_collections.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/collections/trunk/doap_collections.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/configuration/trunk/doap_configuration.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/configuration/trunk/doap_configuration.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/configuration/trunk/doap_configuration.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/daemon/trunk/doap_daemon.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/daemon/trunk/doap_daemon.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/daemon/trunk/doap_daemon.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/dbcp/trunk/doap_dbcp.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/dbcp/trunk/doap_dbcp.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/dbcp/trunk/doap_dbcp.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/dbutils/trunk/doap_dbutils.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/dbutils/trunk/doap_dbutils.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/dbutils/trunk/doap_dbutils.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/digester/trunk/doap_digester.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/digester/trunk/doap_digester.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/digester/trunk/doap_digester.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/discovery/trunk/doap_discovery.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/discovery/trunk/doap_discovery.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/discovery/trunk/doap_discovery.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/el/trunk/doap_el.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/el/trunk/doap_el.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/el/trunk/doap_el.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/email/trunk/doap_email.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/email/trunk/doap_email.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/email/trunk/doap_email.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/fileupload/trunk/doap_fileupload.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/fileupload/trunk/doap_fileupload.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/fileupload/trunk/doap_fileupload.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/httpclient/trunk/doap_httpclient.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/httpclient/trunk/doap_httpclient.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/httpclient/trunk/doap_httpclient.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/io/trunk/doap_io.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/io/trunk/doap_io.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/io/trunk/doap_io.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/jelly/trunk/doap_jelly.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/jelly/trunk/doap_jelly.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/jelly/trunk/doap_jelly.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/jexl/trunk/doap_jexl.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/jexl/trunk/doap_jexl.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/jexl/trunk/doap_jexl.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/jxpath/trunk/doap_jxpath.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/jxpath/trunk/doap_jxpath.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/jxpath/trunk/doap_jxpath.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/lang/trunk/doap_lang.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/lang/trunk/doap_lang.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/lang/trunk/doap_lang.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/launcher/trunk/doap_launcher.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/launcher/trunk/doap_launcher.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/launcher/trunk/doap_launcher.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/logging/trunk/doap_logging.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/logging/trunk/doap_logging.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/logging/trunk/doap_logging.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/math/trunk/doap_math.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/math/trunk/doap_math.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/math/trunk/doap_math.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/modeler/trunk/doap_modeler.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/modeler/trunk/doap_modeler.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/modeler/trunk/doap_modeler.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/net/trunk/doap_net.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/net/trunk/doap_net.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/net/trunk/doap_net.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/pool/trunk/doap_pool.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/pool/trunk/doap_pool.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/pool/trunk/doap_pool.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/primitives/trunk/doap_primitives.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/primitives/trunk/doap_primitives.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/primitives/trunk/doap_primitives.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/transaction/trunk/doap_transaction.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/transaction/trunk/doap_transaction.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/transaction/trunk/doap_transaction.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/doap_validator.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/doap_validator.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/doap_validator.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/vfs/trunk/doap_vfs.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/vfs/trunk/doap_vfs.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/vfs/trunk/doap_vfs.rdf?rev=472712&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 472712</a>
+                </p>Missing SVN properties, possibly some large diffs, no functional change.</td>
+            </tr>
+            <tr class="a">
+              <td>2006-10-06 22:44:55</td>
+              <td>Henri Yandell</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/UrlValidator.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/UrlValidator.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/UrlValidator.java?rev=453784&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 453784</a>
+                </p>Adding _ and ; to the list of allowed characters within the path component of a URL. _ is definitely allowed and ; is allowed but there are restrictions on its use and we'll need to refactor UrlValidator to properly understand how a ; may be used for path parameterization. This is with reference to #VALIDATOR-204.</td>
+            </tr>
+            <tr class="b">
+              <td>2006-10-06 21:36:38</td>
+              <td>Henri Yandell</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/UrlTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/UrlTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/UrlTest.java?rev=453758&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 453758</a>
+                </p>Remove debug from #VALIDATOR-204</td>
+            </tr>
+            <tr class="a">
+              <td>2006-10-06 21:33:55</td>
+              <td>Henri Yandell</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/UrlTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/UrlTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/UrlTest.java?rev=453757&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 453757</a>
+                </p>Applying unit test for #VALIDATOR-204</td>
+            </tr>
+            <tr class="b">
+              <td>2006-10-05 19:29:09</td>
+              <td>Henri Yandell</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/UrlValidator.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/UrlValidator.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/UrlValidator.java?rev=453308&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 453308</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/UrlTest.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/UrlTest.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/test/org/apache/commons/validator/UrlTest.java?rev=453308&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 453308</a>
+                </p>Fixing ArrayOutOfBoundsException bug reported in #VALIDATOR-202. This fix is pretty simple - 'Create an array of size # of .s plus one', but the implementation of that isn't very beautiful.</td>
+            </tr>
+            <tr class="a">
+              <td>2006-09-13 13:24:58</td>
+              <td>Niall Pemberton</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/build.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/build.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/build.xml?rev=442959&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 442959</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/changes.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml?rev=442959&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 442959</a>
+                </p>Fix for VALIDATOR-199 - The ant build.xml doesn't include validator_1_1_3.dtd in the jar - reported by Tim Mulligan</td>
+            </tr>
+            <tr class="b">
+              <td>2006-08-18 15:02:45</td>
+              <td>Niall Pemberton</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/build.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/build.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/build.xml?rev=432586&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 432586</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/ValidatorAction.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/ValidatorAction.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/ValidatorAction.java?rev=432586&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 432586</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/changes.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml?rev=432586&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 432586</a>
+                </p>Fix for VALIDATOR-198 - example does not compile using ant build script. Also modify ValidatorAction to provide more obvious message for "class not found" - thanks to Matthias Fischer</td>
+            </tr>
+            <tr class="a">
+              <td>2006-08-10 06:09:05</td>
+              <td>Henri Yandell</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/chain/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/chain/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/chain/trunk/project.xml?rev=430245&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 430245</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/email/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/email/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/email/trunk/project.xml?rev=430245&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 430245</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/jelly/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/jelly/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/jelly/trunk/project.xml?rev=430245&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 430245</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/math/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/math/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/math/trunk/project.xml?rev=430245&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 430245</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/scxml/trunk/pom.xml" class="externalLink" title="External Link">/jakarta/commons/proper/scxml/trunk/pom.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/scxml/trunk/pom.xml?rev=430245&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 430245</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/scxml/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/scxml/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/scxml/trunk/project.xml?rev=430245&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 430245</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.xml?rev=430245&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 430245</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/vfs/trunk/pom.xml" class="externalLink" title="External Link">/jakarta/commons/proper/vfs/trunk/pom.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/vfs/trunk/pom.xml?rev=430245&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 430245</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/vfs/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/vfs/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/vfs/trunk/project.xml?rev=430245&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 430245</a>
+                </p>Switching viewcvs url to viewvc</td>
+            </tr>
+            <tr class="b">
+              <td>2006-07-15 01:09:04</td>
+              <td>Niall Pemberton</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.xml?rev=422103&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 422103</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/index.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/index.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/index.xml?rev=422103&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 422103</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/issue-tracking.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/issue-tracking.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/issue-tracking.xml?rev=422103&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 422103</a>
+                </p>Fix mailing list archive links and Jira --&gt; JIRA</td>
+            </tr>
+            <tr class="a">
+              <td>2006-07-14 13:23:12</td>
+              <td>Niall Pemberton</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/doap_validator.rdf" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/doap_validator.rdf</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/doap_validator.rdf?rev=421889&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 421889</a>
+                </p>Update doap details</td>
+            </tr>
+            <tr class="b">
+              <td>2006-07-11 04:29:17</td>
+              <td>Niall Pemberton</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/maven.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/maven.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/maven.xml?rev=420688&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 420688</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.properties" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/project.properties</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.properties?rev=420688&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 420688</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/building.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/building.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/building.xml?rev=420688&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 420688</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/cvs-usage.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/cvs-usage.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/cvs-usage.xml?rev=420688&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 420688</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/issue-tracking.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/issue-tracking.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/issue-tracking.xml?rev=420688&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 420688</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/navigation.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/navigation.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/navigation.xml?rev=420688&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 420688</a>
+                </p>Various build/site changes: - Change to use standard "target" directory rather than "m-target" - Improve issue tracking page - reorganise site navigation - use "maven.final.name" for amalgamated javascript</td>
+            </tr>
+            <tr class="a">
+              <td>2006-07-08 11:00:11</td>
+              <td>Niall Pemberton</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/chain/trunk/maven.xml" class="externalLink" title="External Link">/jakarta/commons/proper/chain/trunk/maven.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/chain/trunk/maven.xml?rev=420094&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 420094</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/fileupload/trunk/maven.xml" class="externalLink" title="External Link">/jakarta/commons/proper/fileupload/trunk/maven.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/fileupload/trunk/maven.xml?rev=420094&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 420094</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/scxml/trunk/maven.xml" class="externalLink" title="External Link">/jakarta/commons/proper/scxml/trunk/maven.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/scxml/trunk/maven.xml?rev=420094&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 420094</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/maven.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/maven.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/maven.xml?rev=420094&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 420094</a>
+                </p>Use "maven.final.name" for checksum generation</td>
+            </tr>
+            <tr class="b">
+              <td>2006-05-30 18:41:51</td>
+              <td>Niall Pemberton</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/Field.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/Field.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/Field.java?rev=410326&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 410326</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/changes.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml?rev=410326&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 410326</a>
+                </p>Fix for VALIDATOR-189 - Validating indexed properties fails when null - thanks to Thomas Bailey</td>
+            </tr>
+            <tr class="a">
+              <td>2006-05-30 15:14:36</td>
+              <td>Niall Pemberton</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.properties" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/project.properties</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.properties?rev=410292&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 410292</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/changes.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml?rev=410292&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 410292</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/downloads.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/downloads.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/downloads.xml?rev=410292&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 410292</a>
+                </p>Switch changes report from Bugzilla --&gt; Jira</td>
+            </tr>
+            <tr class="b">
+              <td>2006-05-24 04:16:39</td>
+              <td>Niall Pemberton</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/index.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/index.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/index.xml?rev=409053&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 409053</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/issue-tracking.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/issue-tracking.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/issue-tracking.xml?rev=409053&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 409053</a>
+                </p>Update Issue Tracking for Bugzilla --&gt; Jira migration</td>
+            </tr>
+            <tr class="a">
+              <td>2006-05-20 19:45:02</td>
+              <td>rdonkin</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.xml?rev=408071&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 408071</a>
+                </p>Corrected host name for site deployment.</td>
+            </tr>
+            <tr class="b">
+              <td>2006-05-16 06:48:03</td>
+              <td>Henri Yandell</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/attributes/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/attributes/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/attributes/trunk/project.xml?rev=406847&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 406847</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/beanutils/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/beanutils/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/beanutils/trunk/project.xml?rev=406847&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 406847</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/betwixt/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/betwixt/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/betwixt/trunk/project.xml?rev=406847&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 406847</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/chain/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/chain/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/chain/trunk/project.xml?rev=406847&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 406847</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/cli/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/cli/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/cli/trunk/project.xml?rev=406847&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 406847</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/codec/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/codec/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/codec/trunk/project.xml?rev=406847&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 406847</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/collections/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/collections/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/collections/trunk/project.xml?rev=406847&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 406847</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/commons-build/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/commons-build/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/commons-build/trunk/project.xml?rev=406847&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 406847</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/daemon/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/daemon/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/daemon/trunk/project.xml?rev=406847&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 406847</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/dbcp/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/dbcp/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/dbcp/trunk/project.xml?rev=406847&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 406847</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/dbutils/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/dbutils/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/dbutils/trunk/project.xml?rev=406847&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 406847</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/digester/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/digester/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/digester/trunk/project.xml?rev=406847&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 406847</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/discovery/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/discovery/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/discovery/trunk/project.xml?rev=406847&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 406847</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/el/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/el/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/el/trunk/project.xml?rev=406847&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 406847</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/email/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/email/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/email/trunk/project.xml?rev=406847&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 406847</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/fileupload/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/fileupload/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/fileupload/trunk/project.xml?rev=406847&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 406847</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/io/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/io/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/io/trunk/project.xml?rev=406847&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 406847</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/jexl/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/jexl/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/jexl/trunk/project.xml?rev=406847&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 406847</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/jxpath/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/jxpath/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/jxpath/trunk/project.xml?rev=406847&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 406847</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/lang/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/lang/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/lang/trunk/project.xml?rev=406847&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 406847</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/launcher/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/launcher/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/launcher/trunk/project.xml?rev=406847&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 406847</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/logging/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/logging/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/logging/trunk/project.xml?rev=406847&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 406847</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/math/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/math/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/math/trunk/project.xml?rev=406847&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 406847</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/modeler/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/modeler/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/modeler/trunk/project.xml?rev=406847&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 406847</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/net/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/net/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/net/trunk/project.xml?rev=406847&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 406847</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/pool/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/pool/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/pool/trunk/project.xml?rev=406847&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 406847</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/primitives/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/primitives/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/primitives/trunk/project.xml?rev=406847&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 406847</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/scxml/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/scxml/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/scxml/trunk/project.xml?rev=406847&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 406847</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/transaction/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/transaction/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/transaction/trunk/project.xml?rev=406847&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 406847</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.xml?rev=406847&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 406847</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/vfs/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/vfs/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/vfs/trunk/project.xml?rev=406847&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 406847</a>
+                </p>Switched url from bugzilla to jira</td>
+            </tr>
+            <tr class="a">
+              <td>2006-05-04 16:50:11</td>
+              <td>Martin Cooper</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/changes.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml?rev=399744&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 399744</a>
+                </p>Note recent fix.</td>
+            </tr>
+            <tr class="b">
+              <td>2006-05-04 05:27:39</td>
+              <td>Martin Cooper</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/ValidatorAction.java" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/ValidatorAction.java</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/src/share/org/apache/commons/validator/ValidatorAction.java?rev=399539&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 399539</a>
+                </p>Bugzilla #39393 - Thread-safety issue. Submitted by Takayuki Kaneko.</td>
+            </tr>
+            <tr class="a">
+              <td>2006-03-24 14:46:47</td>
+              <td>Niall Pemberton</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/build.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/build.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/build.xml?rev=388543&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 388543</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.xml?rev=388543&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 388543</a>
+                </p>Roll the version number.</td>
+            </tr>
+            <tr class="b">
+              <td>2006-03-24 13:06:41</td>
+              <td>Niall Pemberton</td>
+              <td>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/build.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/build.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/build.xml?rev=388508&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 388508</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/project.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/project.xml?rev=388508&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 388508</a>
+                </p>
+                <p>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml" class="externalLink" title="External Link">/jakarta/commons/proper/validator/trunk/xdocs/changes.xml</a>
+                  <a href="http://svn.apache.org/viewvc/jakarta/commons/proper/validator/trunk/xdocs/changes.xml?rev=388508&amp;content-type=text/vnd.viewcvs-markup" class="externalLink" title="External Link">v 388508</a>
+                </p>Update version number for Validator 1.3.0 release.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div></div></div><div class="clear"><hr></hr></div><div id="footer"><div class="xright">© 2002-2006, The Apache Software Foundation</div><div class="clear"><hr></hr></div></div></body></html>

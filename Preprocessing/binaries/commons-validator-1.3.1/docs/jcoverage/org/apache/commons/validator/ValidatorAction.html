@@ -1,0 +1,3986 @@
+<html>
+<head>
+<title>unit tests coverage</title>
+<link rel ="stylesheet" type="text/css" href="../../../../style.css" title="Style">
+</head>
+<body>
+<span class="title">Coverage report</span>
+<p>
+  <table cellspacing="0" cellpadding="0" class="report">
+  <tr class="report">
+    <th class="report">&nbsp;</th>
+    <th class="report">%line</th>
+    <th class="report">%branch</th>
+  </tr>
+  <tr class="report">
+    <td class="reportText"><span class="text">org.apache.commons.validator.ValidatorAction</span></td>
+    <td class="reportValue"><table class="percentGraph" cellpadding="0" cellspacing="0" align="right"><tr><td><span class="text">70%&nbsp;</span></td><td><table class="percentGraph" cellpadding="0" cellspacing="0"><tr><td class="percentCovered" width="70"></td><td class="percentUnCovered" width="30.0"></td></tr></table></td></tr></table></td>
+    <td class="reportValue"><table class="percentGraph" cellpadding="0" cellspacing="0" align="right"><tr><td><span class="text">91%&nbsp;</span></td><td><table class="percentGraph" cellpadding="0" cellspacing="0"><tr><td class="percentCovered" width="91"></td><td class="percentUnCovered" width="9.0"></td></tr></table></td></tr></table></td>
+  </tr>
+  </table>
+  <p>
+  <table cellspacing="0" cellpadding="0" class="src">
+    <tr>
+      <td class="numLine">&nbsp;1</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">/*</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;2</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * Licensed to the Apache Software Foundation (ASF) under one or more</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;3</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * contributor license agreements.  See the NOTICE file distributed with</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;4</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * this work for additional information regarding copyright ownership.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;5</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * The ASF licenses this file to You under the Apache License, Version 2.0</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;6</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * (the "License"); you may not use this file except in compliance with</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;7</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * the License.  You may obtain a copy of the License at</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;8</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;9</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *      http://www.apache.org/licenses/LICENSE-2.0</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;10</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;11</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * Unless required by applicable law or agreed to in writing, software</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;12</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * distributed under the License is distributed on an "AS IS" BASIS,</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;13</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;14</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * See the License for the specific language governing permissions and</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;15</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * limitations under the License.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;16</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;17</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">package</span> org.apache.commons.validator;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;18</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;19</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.io.BufferedReader;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;20</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.io.IOException;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;21</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.io.InputStream;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;22</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.io.InputStreamReader;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;23</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.io.Serializable;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;24</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.lang.reflect.InvocationTargetException;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;25</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.lang.reflect.Method;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;26</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.lang.reflect.Modifier;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;27</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.util.ArrayList;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;28</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.util.Collections;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;29</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.util.List;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;30</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.util.Map;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;31</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.util.StringTokenizer;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;32</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;33</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> org.apache.commons.logging.Log;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;34</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> org.apache.commons.logging.LogFactory;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;35</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> org.apache.commons.validator.util.ValidatorUtils;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;36</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;37</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;38</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * Contains the information to dynamically create and run a validation</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;39</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * method.  This is the class representation of a pluggable validator that can </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;40</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * be defined in an xml file with the &#38;lt;validator&#38;gt; element.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;41</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;42</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;strong&#62;Note&#60;/strong&#62;: The validation method is assumed to be thread safe.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;43</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;44</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * @version $Revision: 478334 $ $Date: 2006-11-22 21:31:54 +0000 (Wed, 22 Nov 2006) $</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;45</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;46</td>
+      <td class="nbHitsCovered">&nbsp;750</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">public</span> <span class="keyword">class</span> ValidatorAction implements Serializable {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;47</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    </pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;48</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;49</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Logger.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;50</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;51</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">transient</span> Log log = LogFactory.getLog(ValidatorAction.<span class="keyword">class</span>);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;52</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;53</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;54</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * The name of the validation.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;55</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;56</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> String name = <span class="keyword">null</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;57</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;58</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;59</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * The full class name of the class containing</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;60</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * the validation method associated with this action.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;61</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;62</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> String classname = <span class="keyword">null</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;63</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    </pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;64</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;65</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * The Class object loaded from the classname.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;66</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;67</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> Class validationClass = <span class="keyword">null</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;68</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;69</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;70</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * The full method name of the validation to be performed.  The method</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;71</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * must be thread safe.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;72</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;73</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> String method = <span class="keyword">null</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;74</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    </pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;75</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;76</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * The Method object loaded from the method name.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;77</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;78</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> Method validationMethod = <span class="keyword">null</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;79</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;80</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;81</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;82</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * The method signature of the validation method.  This should be a comma</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;83</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * delimited list of the full class names of each parameter in the correct </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;84</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * order that the method takes.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;85</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;86</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;87</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Note: &#60;code&#62;java.lang.Object&#60;/code&#62; is reserved for the</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;88</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * JavaBean that is being validated.  The &#60;code&#62;ValidatorAction&#60;/code&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;89</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * and &#60;code&#62;Field&#60;/code&#62; that are associated with a field's</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;90</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * validation will automatically be populated if they are</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;91</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * specified in the method signature.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;92</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;93</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;94</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> String methodParams =</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;95</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            Validator.BEAN_PARAM</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;96</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            + <span class="string">","</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;97</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            + Validator.VALIDATOR_ACTION_PARAM</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;98</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            + <span class="string">","</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;99</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            + Validator.FIELD_PARAM;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;100</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            </pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;101</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;102</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * The Class objects for each entry in methodParameterList.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;103</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span>        </pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;104</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> Class[] parameterClasses = <span class="keyword">null</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;105</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;106</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;107</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * The other &#60;code&#62;ValidatorAction&#60;/code&#62;s that this one depends on.  If </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;108</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * any errors occur in an action that this one depends on, this action will </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;109</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * not be processsed.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;110</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;111</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> String depends = <span class="keyword">null</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;112</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;113</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;114</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * The default error message associated with this action.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;115</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;116</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> String msg = <span class="keyword">null</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;117</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;118</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;119</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * An optional field to contain the name to be used if JavaScript is </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;120</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * generated.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;121</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;122</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> String jsFunctionName = <span class="keyword">null</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;123</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;124</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;125</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * An optional field to contain the class path to be used to retrieve the</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;126</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * JavaScript function.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;127</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;128</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> String jsFunction = <span class="keyword">null</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;129</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;130</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;131</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * An optional field to containing a JavaScript representation of the</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;132</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * java method assocated with this action.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;133</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;134</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> String javascript = <span class="keyword">null</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;135</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;136</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;137</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * If the java method matching the correct signature isn't static, the </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;138</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * instance is stored in the action.  This assumes the method is thread </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;139</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * safe.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;140</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;141</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> Object instance = <span class="keyword">null</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;142</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;143</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;144</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * An internal List representation of the other &#60;code&#62;ValidatorAction&#60;/code&#62;s</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;145</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * this one depends on (if any).  This List gets updated</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;146</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * whenever setDepends() gets called.  This is synchronized so a call to</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;147</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * setDepends() (which clears the List) won't interfere with a call to</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;148</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * isDependency().</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;149</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;150</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> List dependencyList = Collections.synchronizedList(<span class="keyword">new</span> ArrayList());</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;151</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;152</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;153</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * An internal List representation of all the validation method's </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;154</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * parameters defined in the methodParams String.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;155</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;156</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> List methodParameterList = <span class="keyword">new</span> ArrayList();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;157</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;158</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;159</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Gets the name of the validator action.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;160</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return Validator Action name.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;161</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;162</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> String getName() {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;163</td>
+      <td class="nbHitsCovered">&nbsp;372</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> name;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;164</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;165</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;166</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;167</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Sets the name of the validator action.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;168</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param name Validator Action name.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;169</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;170</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> setName(String name) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;171</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>.name = name;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;172</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;173</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;174</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;175</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Gets the class of the validator action.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;176</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return Class name of the validator Action.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;177</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;178</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> String getClassname() {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;179</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        <span class="keyword">return</span> classname;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;180</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;181</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;182</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;183</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Sets the class of the validator action.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;184</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param classname Class name of the validator Action.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;185</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;186</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> setClassname(String classname) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;187</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>.classname = classname;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;188</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;189</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;190</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;191</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Gets the name of method being called for the validator action.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;192</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return The method name.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;193</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;194</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> String getMethod() {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;195</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        <span class="keyword">return</span> method;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;196</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;197</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;198</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;199</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Sets the name of method being called for the validator action.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;200</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param method The method name.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;201</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;202</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> setMethod(String method) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;203</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>.method = method;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;204</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;205</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;206</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;207</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Gets the method parameters for the method.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;208</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return Method's parameters.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;209</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;210</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> String getMethodParams() {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;211</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        <span class="keyword">return</span> methodParams;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;212</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;213</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;214</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;215</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Sets the method parameters for the method.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;216</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param methodParams A comma separated list of parameters.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;217</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;218</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> setMethodParams(String methodParams) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;219</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>.methodParams = methodParams;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;220</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;221</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>.methodParameterList.clear();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;222</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;223</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;        StringTokenizer st = <span class="keyword">new</span> StringTokenizer(methodParams, <span class="string">","</span>);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;224</td>
+      <td class="nbHitsCovered">&nbsp;1490</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">while</span> (st.hasMoreTokens()) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;225</td>
+      <td class="nbHitsCovered">&nbsp;762</td>
+      <td class="src"><pre class="src">&nbsp;            String value = st.nextToken().trim();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;226</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;227</td>
+      <td class="nbHitsCovered">&nbsp;762</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">if</span> (value != <span class="keyword">null</span> &#38;&#38; value.length() &#62; 0) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;228</td>
+      <td class="nbHitsCovered">&nbsp;762</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">this</span>.methodParameterList.add(value);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;229</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;230</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;231</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;232</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;233</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;234</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Gets the dependencies of the validator action as a comma separated list </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;235</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * of validator names.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;236</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return The validator action's dependencies.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;237</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;238</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> String getDepends() {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;239</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        <span class="keyword">return</span> <span class="keyword">this</span>.depends;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;240</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;241</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;242</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;243</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Sets the dependencies of the validator action.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;244</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param depends A comma separated list of validator names.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;245</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;246</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> setDepends(String depends) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;247</td>
+      <td class="nbHitsCovered">&nbsp;2</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>.depends = depends;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;248</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;249</td>
+      <td class="nbHitsCovered">&nbsp;2</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>.dependencyList.clear();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;250</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;251</td>
+      <td class="nbHitsCovered">&nbsp;2</td>
+      <td class="src"><pre class="src">&nbsp;        StringTokenizer st = <span class="keyword">new</span> StringTokenizer(depends, <span class="string">","</span>);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;252</td>
+      <td class="nbHitsCovered">&nbsp;6</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">while</span> (st.hasMoreTokens()) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;253</td>
+      <td class="nbHitsCovered">&nbsp;2</td>
+      <td class="src"><pre class="src">&nbsp;            String depend = st.nextToken().trim();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;254</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;255</td>
+      <td class="nbHitsCovered">&nbsp;2</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">if</span> (depend != <span class="keyword">null</span> &#38;&#38; depend.length() &#62; 0) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;256</td>
+      <td class="nbHitsCovered">&nbsp;2</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">this</span>.dependencyList.add(depend);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;257</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;258</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;259</td>
+      <td class="nbHitsCovered">&nbsp;2</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;260</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;261</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;262</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Gets the message associated with the validator action.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;263</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return The message for the validator action.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;264</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;265</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> String getMsg() {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;266</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        <span class="keyword">return</span> msg;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;267</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;268</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;269</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;270</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Sets the message associated with the validator action.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;271</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param msg The message for the validator action.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;272</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;273</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> setMsg(String msg) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;274</td>
+      <td class="nbHitsCovered">&nbsp;360</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>.msg = msg;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;275</td>
+      <td class="nbHitsCovered">&nbsp;360</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;276</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;277</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;278</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Gets the Javascript function name.  This is optional and can</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;279</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * be used instead of validator action name for the name of the</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;280</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Javascript function/object.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;281</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return The Javascript function name.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;282</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;283</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> String getJsFunctionName() {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;284</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        <span class="keyword">return</span> jsFunctionName;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;285</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;286</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;287</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;288</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Sets the Javascript function name.  This is optional and can</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;289</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * be used instead of validator action name for the name of the</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;290</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Javascript function/object.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;291</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param jsFunctionName The Javascript function name.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;292</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;293</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> setJsFunctionName(String jsFunctionName) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;294</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        <span class="keyword">this</span>.jsFunctionName = jsFunctionName;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;295</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;    }</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;296</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;297</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;298</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Sets the fully qualified class path of the Javascript function.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;299</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;300</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * This is optional and can be used &#60;strong&#62;instead&#60;/strong&#62; of the setJavascript().</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;301</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Attempting to call both &#60;code&#62;setJsFunction&#60;/code&#62; and &#60;code&#62;setJavascript&#60;/code&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;302</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * will result in an &#60;code&#62;IllegalStateException&#60;/code&#62; being thrown. &#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;303</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;304</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * If &#60;strong&#62;neither&#60;/strong&#62; setJsFunction or setJavascript is set then </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;305</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * validator will attempt to load the default javascript definition.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;306</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;307</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;pre&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;308</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;b&#62;Examples&#60;/b&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;309</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *   If in the validator.xml :</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;310</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * #1:</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;311</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *      &#38;lt;validator name="tire"</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;312</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *            jsFunction="com.yourcompany.project.tireFuncion"&#38;gt;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;313</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *     Validator will attempt to load com.yourcompany.project.validateTireFunction.js from</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;314</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *     its class path.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;315</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * #2:</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;316</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *    &#38;lt;validator name="tire"&#38;gt;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;317</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *      Validator will use the name attribute to try and load</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;318</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *         org.apache.commons.validator.javascript.validateTire.js</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;319</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *      which is the default javascript definition.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;320</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;/pre&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;321</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param jsFunction The Javascript function's fully qualified class path.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;322</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;323</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> setJsFunction(String jsFunction) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;324</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        <span class="keyword">if</span> (javascript != <span class="keyword">null</span>) {</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;325</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalStateException(<span class="string">"Cannot call setJsFunction() after calling setJavascript()"</span>);</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;326</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;327</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;328</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        <span class="keyword">this</span>.jsFunction = jsFunction;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;329</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;    }</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;330</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;331</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;332</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Gets the Javascript equivalent of the java class and method</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;333</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * associated with this action.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;334</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return The Javascript validation.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;335</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;336</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> String getJavascript() {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;337</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        <span class="keyword">return</span> javascript;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;338</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;339</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;340</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;341</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Sets the Javascript equivalent of the java class and method</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;342</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * associated with this action.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;343</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param javascript The Javascript validation.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;344</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;345</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> setJavascript(String javascript) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;346</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        <span class="keyword">if</span> (jsFunction != <span class="keyword">null</span>) {</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;347</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalStateException(<span class="string">"Cannot call setJavascript() after calling setJsFunction()"</span>);</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;348</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;349</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;350</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        <span class="keyword">this</span>.javascript = javascript;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;351</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;    }</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;352</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;353</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;354</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Initialize based on set.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;355</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;356</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">protected</span> <span class="keyword">void</span> init() {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;357</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>.loadJavascriptFunction();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;358</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;359</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;360</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;361</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Load the javascript function specified by the given path.  For this</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;362</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * implementation, the &#60;code&#62;jsFunction&#60;/code&#62; property should contain a </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;363</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * fully qualified package and script name, separated by periods, to be </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;364</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * loaded from the class loader that created this instance.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;365</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;366</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * TODO if the path begins with a '/' the path will be intepreted as </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;367</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * absolute, and remain unchanged.  If this fails then it will attempt to </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;368</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * treat the path as a file path.  It is assumed the script ends with a </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;369</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * '.js'.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;370</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;371</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">protected</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> loadJavascriptFunction() {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;372</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;373</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (<span class="keyword">this</span>.javascriptAlreadyLoaded()) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;374</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;            <span class="keyword">return</span>;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;375</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;376</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;377</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (getLog().isTraceEnabled()) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;378</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;            getLog().trace(<span class="string">"  Loading function begun"</span>);</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;379</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;380</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;381</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (<span class="keyword">this</span>.jsFunction == <span class="keyword">null</span>) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;382</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">this</span>.jsFunction = <span <span class="keyword">class</span>="keyword">this</span>.generateJsFunction();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;383</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;384</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;385</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;        String javascriptFileName = <span class="keyword">this</span>.formatJavascriptFileName();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;386</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;387</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (getLog().isTraceEnabled()) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;388</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;            getLog().trace(<span class="string">"  Loading js function '"</span> + javascriptFileName + <span class="string">"'"</span>);</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;389</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;390</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;391</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>.javascript = <span <span class="keyword">class</span>="keyword">this</span>.readJavascriptFile(javascriptFileName);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;392</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;393</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (getLog().isTraceEnabled()) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;394</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;            getLog().trace(<span class="string">"  Loading javascript function completed"</span>);</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;395</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;396</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;397</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;398</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;399</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;400</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Read a javascript function from a file.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;401</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param javascriptFileName The file containing the javascript.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;402</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return The javascript function or null if it could not be loaded.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;403</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;404</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> String readJavascriptFile(String javascriptFileName) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;405</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;406</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (classLoader == <span class="keyword">null</span>) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;407</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;            classLoader = <span class="keyword">this</span>.getClass().getClassLoader();</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;408</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;409</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;410</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;        InputStream is = classLoader.getResourceAsStream(javascriptFileName);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;411</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (is == <span class="keyword">null</span>) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;412</td>
+      <td class="nbHitsCovered">&nbsp;174</td>
+      <td class="src"><pre class="src">&nbsp;            is = <span class="keyword">this</span>.getClass().getResourceAsStream(javascriptFileName);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;413</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;414</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;415</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (is == <span class="keyword">null</span>) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;416</td>
+      <td class="nbHitsCovered">&nbsp;174</td>
+      <td class="src"><pre class="src">&nbsp;            getLog().debug(<span class="string">"  Unable to read javascript name "</span>+javascriptFileName);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;417</td>
+      <td class="nbHitsCovered">&nbsp;174</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> <span class="keyword">null</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;418</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;419</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;420</td>
+      <td class="nbHitsCovered">&nbsp;190</td>
+      <td class="src"><pre class="src">&nbsp;        StringBuffer buffer = <span class="keyword">new</span> StringBuffer();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;421</td>
+      <td class="nbHitsCovered">&nbsp;190</td>
+      <td class="src"><pre class="src">&nbsp;        BufferedReader reader = <span class="keyword">new</span> BufferedReader(<span <span class="keyword">class</span>="keyword">new</span> InputStreamReader(is));</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;422</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">try</span> {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;423</td>
+      <td class="nbHitsCovered">&nbsp;190</td>
+      <td class="src"><pre class="src">&nbsp;            String line = <span class="keyword">null</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;424</td>
+      <td class="nbHitsCovered">&nbsp;19028</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">while</span> ((line = reader.readLine()) != <span class="keyword">null</span>) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;425</td>
+      <td class="nbHitsCovered">&nbsp;18648</td>
+      <td class="src"><pre class="src">&nbsp;                buffer.append(line + <span class="string">"\n"</span>);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;426</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;427</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;428</td>
+      <td class="nbHitsCovered">&nbsp;190</td>
+      <td class="src"><pre class="src">&nbsp;        } <span class="keyword">catch</span>(IOException e) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;429</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;            getLog().error(<span class="string">"Error reading javascript file."</span>, e);</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;430</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;431</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        } <span class="keyword">finally</span> {</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;432</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;            <span class="keyword">try</span> {</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;433</td>
+      <td class="nbHitsCovered">&nbsp;190</td>
+      <td class="src"><pre class="src">&nbsp;                reader.close();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;434</td>
+      <td class="nbHitsCovered">&nbsp;190</td>
+      <td class="src"><pre class="src">&nbsp;            } <span class="keyword">catch</span>(IOException e) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;435</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;                getLog().error(<span class="string">"Error closing stream to javascript file."</span>, e);</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;436</td>
+      <td class="nbHitsCovered">&nbsp;190</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;437</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;438</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        </pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;439</td>
+      <td class="nbHitsCovered">&nbsp;190</td>
+      <td class="src"><pre class="src">&nbsp;        String function = buffer.toString();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;440</td>
+      <td class="nbHitsCovered">&nbsp;190</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> function.equals(<span class="string">""</span>) ? <span class="keyword">null</span> : function;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;441</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;442</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;443</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;444</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return A filename suitable for passing to a </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;445</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * ClassLoader.getResourceAsStream() method.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;446</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;447</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> String formatJavascriptFileName() {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;448</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;        String name = <span class="keyword">this</span>.jsFunction.substring(1);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;449</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;450</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (!<span class="keyword">this</span>.jsFunction.startsWith(<span class="string">"/"</span>)) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;451</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;            name = jsFunction.replace('.', '/') + <span class="string">".js"</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;452</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;453</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;454</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> name;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;455</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;456</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;457</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;458</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return true if the javascript for this action has already been loaded.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;459</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;460</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">boolean</span> javascriptAlreadyLoaded() {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;461</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> (<span class="keyword">this</span>.javascript != <span class="keyword">null</span>);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;462</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;463</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;464</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;465</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Used to generate the javascript name when it is not specified.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;466</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;467</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> String generateJsFunction() {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;468</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;        StringBuffer jsName =</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;469</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">new</span> StringBuffer(<span class="string">"org.apache.commons.validator.javascript"</span>);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;470</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;471</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;        jsName.append(<span class="string">".validate"</span>);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;472</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;        jsName.append(name.substring(0, 1).toUpperCase());</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;473</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;        jsName.append(name.substring(1, name.length()));</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;474</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;475</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> jsName.toString();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;476</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;477</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;478</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;479</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Checks whether or not the value passed in is in the depends field.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;480</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param validatorName Name of the dependency to check.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;481</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return Whether the named validator is a dependant.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;482</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;483</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">boolean</span> isDependency(String validatorName) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;484</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        <span class="keyword">return</span> <span class="keyword">this</span>.dependencyList.contains(validatorName);</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;485</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;486</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;487</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;488</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Returns the dependent validator names as an unmodifiable</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;489</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;code&#62;List&#60;/code&#62;.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;490</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return List of the validator action's depedents.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;491</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;492</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> List getDependencyList() {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;493</td>
+      <td class="nbHitsCovered">&nbsp;167</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> Collections.unmodifiableList(<span class="keyword">this</span>.dependencyList);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;494</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;495</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;496</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;497</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Returns a string representation of the object.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;498</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return a string representation.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;499</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;500</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> String toString() {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;501</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        StringBuffer results = <span class="keyword">new</span> StringBuffer(<span class="string">"ValidatorAction: "</span>);</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;502</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        results.append(name);</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;503</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        results.append(<span class="string">"\n"</span>);</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;504</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;505</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        <span class="keyword">return</span> results.toString();</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;506</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;507</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    </pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;508</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;509</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Dynamically runs the validation method for this validator and returns </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;510</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * true if the data is valid.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;511</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param field</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;512</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param params A Map of class names to parameter values.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;513</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param results</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;514</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param pos The index of the list property to validate if it's indexed.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;515</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @throws ValidatorException</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;516</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;517</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">boolean</span> executeValidationMethod(</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;518</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        Field field,</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;519</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        Map params,</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;520</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        ValidatorResults results,</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;521</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">int</span> pos)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;522</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        throws ValidatorException {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;523</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;524</td>
+      <td class="nbHitsCovered">&nbsp;166</td>
+      <td class="src"><pre class="src">&nbsp;        params.put(Validator.VALIDATOR_ACTION_PARAM, <span class="keyword">this</span>);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;525</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;526</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">try</span> {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;527</td>
+      <td class="nbHitsCovered">&nbsp;166</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">if</span> (<span class="keyword">this</span>.validationMethod == <span class="keyword">null</span>) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;528</td>
+      <td class="nbHitsCovered">&nbsp;113</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">synchronized</span>(<span class="keyword">this</span>) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;529</td>
+      <td class="nbHitsCovered">&nbsp;113</td>
+      <td class="src"><pre class="src">&nbsp;                    ClassLoader loader = <span class="keyword">this</span>.getClassLoader(params);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;530</td>
+      <td class="nbHitsCovered">&nbsp;113</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="keyword">this</span>.loadValidationClass(loader);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;531</td>
+      <td class="nbHitsCovered">&nbsp;113</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="keyword">this</span>.loadParameterClasses(loader);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;532</td>
+      <td class="nbHitsCovered">&nbsp;113</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="keyword">this</span>.loadValidationMethod();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;533</td>
+      <td class="nbHitsCovered">&nbsp;113</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;534</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;535</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;536</td>
+      <td class="nbHitsCovered">&nbsp;166</td>
+      <td class="src"><pre class="src">&nbsp;            Object[] paramValues = <span class="keyword">this</span>.getParameterValues(params);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;537</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            </pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;538</td>
+      <td class="nbHitsCovered">&nbsp;166</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">if</span> (field.isIndexed()) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;539</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;                <span class="keyword">this</span>.handleIndexedField(field, pos, paramValues);</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;540</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;541</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;542</td>
+      <td class="nbHitsCovered">&nbsp;166</td>
+      <td class="src"><pre class="src">&nbsp;            Object result = <span class="keyword">null</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;543</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">try</span> {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;544</td>
+      <td class="nbHitsCovered">&nbsp;166</td>
+      <td class="src"><pre class="src">&nbsp;                result =</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;545</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    validationMethod.invoke(</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;546</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        getValidationClassInstance(),</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;547</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        paramValues);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;548</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;549</td>
+      <td class="nbHitsCovered">&nbsp;165</td>
+      <td class="src"><pre class="src">&nbsp;            } <span class="keyword">catch</span> (IllegalArgumentException e) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;550</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;                <span class="keyword">throw</span> <span class="keyword">new</span> ValidatorException(e.getMessage());</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;551</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            } <span class="keyword">catch</span> (IllegalAccessException e) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;552</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;                <span class="keyword">throw</span> <span class="keyword">new</span> ValidatorException(e.getMessage());</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;553</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            } <span class="keyword">catch</span> (InvocationTargetException e) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;554</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;555</td>
+      <td class="nbHitsCovered">&nbsp;1</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">if</span> (e.getTargetException() instanceof Exception) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;556</td>
+      <td class="nbHitsCovered">&nbsp;1</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="keyword">throw</span> (Exception) e.getTargetException();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;557</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;558</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;                } <span class="keyword">else</span> <span class="keyword">if</span> (e.getTargetException() instanceof Error) {</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;559</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;                    <span class="keyword">throw</span> (Error) e.getTargetException();</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;560</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;561</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;562</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;563</td>
+      <td class="nbHitsCovered">&nbsp;165</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">boolean</span> valid = <span class="keyword">this</span>.isValid(result);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;564</td>
+      <td class="nbHitsCovered">&nbsp;165</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">if</span> (!valid || (valid &#38;&#38; !onlyReturnErrors(params))) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;565</td>
+      <td class="nbHitsCovered">&nbsp;164</td>
+      <td class="src"><pre class="src">&nbsp;                results.add(field, <span class="keyword">this</span>.name, valid, result);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;566</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;567</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;568</td>
+      <td class="nbHitsCovered">&nbsp;165</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">if</span> (!valid) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;569</td>
+      <td class="nbHitsCovered">&nbsp;74</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">return</span> false;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;570</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;571</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;572</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="comment">// TODO This catch block remains for backward compatibility.  Remove</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;573</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="comment">// this for Validator 2.0 when exception scheme changes.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;574</td>
+      <td class="nbHitsCovered">&nbsp;91</td>
+      <td class="src"><pre class="src">&nbsp;        } <span class="keyword">catch</span> (Exception e) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;575</td>
+      <td class="nbHitsCovered">&nbsp;1</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">if</span> (e instanceof ValidatorException) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;576</td>
+      <td class="nbHitsCovered">&nbsp;1</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">throw</span> (ValidatorException) e;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;577</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;578</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;579</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;            getLog().error(</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;580</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="string">"Unhandled exception thrown during validation: "</span> + e.getMessage(),</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;581</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                e);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;582</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;583</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;            results.add(field, <span class="keyword">this</span>.name, false);</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;584</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;            <span class="keyword">return</span> false;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;585</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;586</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;587</td>
+      <td class="nbHitsCovered">&nbsp;91</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> <span class="keyword">true</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;588</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;589</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    </pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;590</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;591</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Load the Method object for the configured validation method name.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;592</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @throws ValidatorException</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;593</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;594</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">void</span> loadValidationMethod() throws ValidatorException {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;595</td>
+      <td class="nbHitsCovered">&nbsp;113</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (<span class="keyword">this</span>.validationMethod != <span class="keyword">null</span>) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;596</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;            <span class="keyword">return</span>;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;597</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;598</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;     </pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;599</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">try</span> {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;600</td>
+      <td class="nbHitsCovered">&nbsp;113</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">this</span>.validationMethod =</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;601</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">this</span>.validationClass.getMethod(<span <span class="keyword">class</span>="keyword">this</span>.method, <span <span class="keyword">class</span>="keyword">this</span>.parameterClasses);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;602</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;     </pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;603</td>
+      <td class="nbHitsCovered">&nbsp;113</td>
+      <td class="src"><pre class="src">&nbsp;        } <span class="keyword">catch</span> (NoSuchMethodException e) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;604</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;            <span class="keyword">throw</span> <span class="keyword">new</span> ValidatorException(<span class="string">"No such validation method: "</span> + </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;605</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                e.getMessage());</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;606</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;607</td>
+      <td class="nbHitsCovered">&nbsp;113</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;608</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    </pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;609</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;610</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Load the Class object for the configured validation class name.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;611</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param loader The ClassLoader used to load the Class object.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;612</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @throws ValidatorException</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;613</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;614</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">void</span> loadValidationClass(ClassLoader loader) </pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;615</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        throws ValidatorException {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;616</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        </pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;617</td>
+      <td class="nbHitsCovered">&nbsp;113</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (<span class="keyword">this</span>.validationClass != <span class="keyword">null</span>) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;618</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;            <span class="keyword">return</span>;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;619</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;620</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        </pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;621</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">try</span> {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;622</td>
+      <td class="nbHitsCovered">&nbsp;113</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">this</span>.validationClass = loader.loadClass(<span <span class="keyword">class</span>="keyword">this</span>.<span class="keyword">class</span>name);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;623</td>
+      <td class="nbHitsCovered">&nbsp;113</td>
+      <td class="src"><pre class="src">&nbsp;        } <span class="keyword">catch</span> (ClassNotFoundException e) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;624</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;            <span class="keyword">throw</span> <span class="keyword">new</span> ValidatorException(e.toString());</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;625</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;626</td>
+      <td class="nbHitsCovered">&nbsp;113</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;627</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    </pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;628</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;629</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Converts a List of parameter class names into their Class objects.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;630</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return An array containing the Class object for each parameter.  This </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;631</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * array is in the same order as the given List and is suitable for passing </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;632</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * to the validation method.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;633</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @throws ValidatorException if a class cannot be loaded.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;634</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;635</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">void</span> loadParameterClasses(ClassLoader loader)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;636</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        throws ValidatorException {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;637</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;638</td>
+      <td class="nbHitsCovered">&nbsp;113</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (<span class="keyword">this</span>.parameterClasses != <span class="keyword">null</span>) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;639</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;            <span class="keyword">return</span>;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;640</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;641</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        </pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;642</td>
+      <td class="nbHitsCovered">&nbsp;113</td>
+      <td class="src"><pre class="src">&nbsp;        Class[] parameterClasses = <span class="keyword">new</span> Class[<span class="keyword">this</span>.methodParameterList.size()];</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;643</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;644</td>
+      <td class="nbHitsCovered">&nbsp;364</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &#60; <span class="keyword">this</span>.methodParameterList.size(); i++) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;645</td>
+      <td class="nbHitsCovered">&nbsp;251</td>
+      <td class="src"><pre class="src">&nbsp;            String paramClassName = (String) <span class="keyword">this</span>.methodParameterList.get(i);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;646</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;647</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">try</span> {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;648</td>
+      <td class="nbHitsCovered">&nbsp;251</td>
+      <td class="src"><pre class="src">&nbsp;                parameterClasses[i] = loader.loadClass(paramClassName);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;649</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    </pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;650</td>
+      <td class="nbHitsCovered">&nbsp;251</td>
+      <td class="src"><pre class="src">&nbsp;            } <span class="keyword">catch</span> (ClassNotFoundException e) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;651</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;                <span class="keyword">throw</span> <span class="keyword">new</span> ValidatorException(e.getMessage());</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;652</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;653</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;654</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;655</td>
+      <td class="nbHitsCovered">&nbsp;113</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>.parameterClasses = parameterClasses;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;656</td>
+      <td class="nbHitsCovered">&nbsp;113</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;657</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    </pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;658</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;659</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Converts a List of parameter class names into their values contained in </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;660</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * the parameters Map.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;661</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param params A Map of class names to parameter values.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;662</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return An array containing the value object for each parameter.  This </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;663</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * array is in the same order as the given List and is suitable for passing </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;664</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * to the validation method.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;665</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;666</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> Object[] getParameterValues(Map params) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;667</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;668</td>
+      <td class="nbHitsCovered">&nbsp;166</td>
+      <td class="src"><pre class="src">&nbsp;        Object[] paramValue = <span class="keyword">new</span> Object[<span class="keyword">this</span>.methodParameterList.size()];</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;669</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;670</td>
+      <td class="nbHitsCovered">&nbsp;529</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &#60; <span class="keyword">this</span>.methodParameterList.size(); i++) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;671</td>
+      <td class="nbHitsCovered">&nbsp;363</td>
+      <td class="src"><pre class="src">&nbsp;            String paramClassName = (String) <span class="keyword">this</span>.methodParameterList.get(i);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;672</td>
+      <td class="nbHitsCovered">&nbsp;363</td>
+      <td class="src"><pre class="src">&nbsp;            paramValue[i] = params.get(paramClassName);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;673</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;674</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;675</td>
+      <td class="nbHitsCovered">&nbsp;166</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> paramValue;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;676</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;677</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    </pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;678</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;679</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Return an instance of the validation class or null if the validation </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;680</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * method is static so does not require an instance to be executed.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;681</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;682</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> Object getValidationClassInstance() throws ValidatorException {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;683</td>
+      <td class="nbHitsCovered">&nbsp;166</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (Mod<span <span class="keyword">class</span>="keyword">if</span>ier.isStatic(<span class="keyword">this</span>.validationMethod.getMod<span <span class="keyword">class</span>="keyword">if</span>iers())) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;684</td>
+      <td class="nbHitsCovered">&nbsp;166</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">this</span>.instance = <span class="keyword">null</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;685</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;686</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        } <span class="keyword">else</span> {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;687</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;            <span class="keyword">if</span> (<span class="keyword">this</span>.instance == <span class="keyword">null</span>) {</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;688</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">try</span> {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;689</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;                    <span class="keyword">this</span>.instance = <span <span class="keyword">class</span>="keyword">this</span>.validationClass.newInstance();</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;690</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;                } <span class="keyword">catch</span> (InstantiationException e) {</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;691</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;                    String msg =</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;692</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        <span class="string">"Couldn't create instance of "</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;693</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                            + <span class="keyword">this</span>.classname</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;694</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                            + <span class="string">".  "</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;695</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                            + e.getMessage();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;696</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;697</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;                    <span class="keyword">throw</span> <span class="keyword">new</span> ValidatorException(msg);</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;698</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;699</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                } <span class="keyword">catch</span> (IllegalAccessException e) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;700</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;                    String msg =</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;701</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        <span class="string">"Couldn't create instance of "</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;702</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                            + <span class="keyword">this</span>.classname</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;703</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                            + <span class="string">".  "</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;704</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                            + e.getMessage();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;705</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;706</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;                    <span class="keyword">throw</span> <span class="keyword">new</span> ValidatorException(msg);</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;707</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;708</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;709</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;710</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;711</td>
+      <td class="nbHitsCovered">&nbsp;166</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> <span class="keyword">this</span>.instance;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;712</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;713</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    </pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;714</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;715</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Modifies the paramValue array with indexed fields.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;716</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;717</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param field</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;718</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param pos</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;719</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param paramValues</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;720</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;721</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">void</span> handleIndexedField(Field field, <span class="keyword">int</span> pos, Object[] paramValues)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;722</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        throws ValidatorException {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;723</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;724</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        <span class="keyword">int</span> beanIndex = <span class="keyword">this</span>.methodParameterList.indexOf(Validator.BEAN_PARAM);</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;725</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        <span class="keyword">int</span> fieldIndex = <span class="keyword">this</span>.methodParameterList.indexOf(Validator.FIELD_PARAM);</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;726</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;727</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        Object indexedList[] = field.getIndexedProperty(paramValues[beanIndex]);</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;728</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;729</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// Set current iteration object to the parameter array</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;730</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        paramValues[beanIndex] = indexedList[pos];</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;731</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;732</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// Set field clone with the key modified to represent</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;733</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// the current field</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;734</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        Field indexedField = (Field) field.clone();</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;735</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        indexedField.setKey(</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;736</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            ValidatorUtils.replace(</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;737</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                indexedField.getKey(),</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;738</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                Field.TOKEN_INDEXED,</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;739</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="string">"["</span> + pos + <span class="string">"]"</span>));</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;740</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;741</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;        paramValues[fieldIndex] = indexedField;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;742</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;    }</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;743</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    </pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;744</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;745</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * If the result object is a &#60;code&#62;Boolean&#60;/code&#62;, it will return its </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;746</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * value.  If not it will return &#60;code&#62;false&#60;/code&#62; if the object is </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;747</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;code&#62;null&#60;/code&#62; and &#60;code&#62;true&#60;/code&#62; if it isn't.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;748</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;749</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">boolean</span> isValid(Object result) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;750</td>
+      <td class="nbHitsCovered">&nbsp;165</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (result instanceof Boolean) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;751</td>
+      <td class="nbHitsCovered">&nbsp;138</td>
+      <td class="src"><pre class="src">&nbsp;            Boolean valid = (Boolean) result;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;752</td>
+      <td class="nbHitsCovered">&nbsp;138</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> valid.booleanValue();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;753</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        } <span class="keyword">else</span> {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;754</td>
+      <td class="nbHitsCovered">&nbsp;27</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> (result != <span class="keyword">null</span>);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;755</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;756</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;757</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;758</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;759</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Returns the ClassLoader set in the Validator contained in the parameter</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;760</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Map.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;761</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;762</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> ClassLoader getClassLoader(Map params) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;763</td>
+      <td class="nbHitsCovered">&nbsp;113</td>
+      <td class="src"><pre class="src">&nbsp;        Validator v = (Validator) params.get(Validator.VALIDATOR_PARAM);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;764</td>
+      <td class="nbHitsCovered">&nbsp;113</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> v.getClassLoader();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;765</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;766</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    </pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;767</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;768</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Returns the onlyReturnErrors setting in the Validator contained in the </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;769</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * parameter Map.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;770</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;771</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">boolean</span> onlyReturnErrors(Map params) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;772</td>
+      <td class="nbHitsCovered">&nbsp;91</td>
+      <td class="src"><pre class="src">&nbsp;        Validator v = (Validator) params.get(Validator.VALIDATOR_PARAM);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;773</td>
+      <td class="nbHitsCovered">&nbsp;91</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> v.getOnlyReturnErrors();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;774</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;775</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;776</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;777</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Accessor method for Log instance.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;778</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;779</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * The Log instance variable is transient and</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;780</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * accessing it through this method ensures it</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;781</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * is re-initialized when this instance is</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;782</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * de-serialized.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;783</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;784</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return The Log instance.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;785</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;786</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> Log getLog() {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;787</td>
+      <td class="nbHitsCovered">&nbsp;1266</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (log == <span class="keyword">null</span>) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;788</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;            log =  LogFactory.getLog(ValidatorAction.<span class="keyword">class</span>);</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;789</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;790</td>
+      <td class="nbHitsCovered">&nbsp;1266</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> log;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;791</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;792</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;}</pre></td>
+    </tr>
+  </table>
+<p><table cellpadding="0" cellspacing="0" class="report">  <tr class="report">    <td class="reportText"><span class="text">    This report is generated by <a href="http://www.jcoverage.com">jcoverage</a>, <a href="http://maven.apache.org">Maven</a> and <a href="http://maven.apache.org/reference/plugins/jcoverage/">Maven JCoverage Plugin</a>.    </span></td>  </tr></table>
+</body>
+</html>

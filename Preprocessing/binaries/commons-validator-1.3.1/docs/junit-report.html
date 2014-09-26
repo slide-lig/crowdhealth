@@ -1,0 +1,2700 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head><title>JUnit Test Results - Validator</title><style type="text/css" media="all">
+          @import url("./style/maven-base.css");
+          
+          @import url("./style/maven-theme.css");@import url("./style/project.css");</style><link rel="stylesheet" href="./style/print.css" type="text/css" media="print"></link><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></meta></head><body class="composite"><div id="banner"><a href="http://jakarta.apache.org" id="organizationLogo"><img alt="The Apache Software Foundation" src="http://jakarta.apache.org/images/original-jakarta-logo.gif"></img></a><a href="http://jakarta.apache.org/commons/validator/" id="projectLogo"><img alt="Validator" src="./images/logo.png"></img></a><div class="clear"><hr></hr></div></div><div id="breadcrumbs"><div class="xleft">Last published: 28 November 2006
+                <span class="separator">|</span> Doc for  1.3.1
+                </div><div class="xright">
+        
+        <a href="http://www.apache.org" class="externalLink" title="External Link">Apache</a>
+      
+        
+          
+            <span class="separator">|</span>
+          
+        
+        <a href="http://jakarta.apache.org" class="externalLink" title="External Link">Jakarta</a>
+      
+        
+          
+            <span class="separator">|</span>
+          
+        
+        <a href="http://jakarta.apache.org/commons/" class="externalLink" title="External Link">Commons</a>
+      </div><div class="clear"><hr></hr></div></div><div id="leftColumn"><div id="navcolumn"><div id="menuValidator"><h5>Validator</h5><ul><li class="none"><a href="index.html">Overview</a></li><li class="none"><a href="downloads.html">Download</a></li><li class="expanded"><a href="">Documentation</a><ul><li class="none"><a href="changes-report.html">Release Notes</a></li><li class="none"><a href="dependencies.html">Dependencies</a></li><li class="none"><a href="license.html">License</a></li><li class="none"><a href="apidocs/org/apache/commons/validator/package-summary.html#package_description">Framework</a></li><li class="none"><a href="apidocs/org/apache/commons/validator/routines/package-summary.html#package_description">Routines</a></li><li class="none"><a href="http://wiki.apache.org/jakarta-commons/Validator" class="externalLink" title="External Link">Wiki</a></li></ul></li><li class="expanded"><a href="">JavaDocs</a><ul><li class="none"><a href="http://jakarta.apache.org/commons/validator/api-release/" class="externalLink" title="External Link">Current Release</a></li><li class="none"><a href="http://jakarta.apache.org/commons/validator/api-1.3.0/" class="externalLink" title="External Link">1.3.0 Release</a></li><li class="none"><a href="http://jakarta.apache.org/commons/validator/api-1.2.0/" class="externalLink" title="External Link">1.2.0 Release</a></li><li class="none"><a href="http://jakarta.apache.org/commons/validator/api-1.1.4/" class="externalLink" title="External Link">1.1.4 Release</a></li><li class="none"><a href="http://jakarta.apache.org/commons/validator/api-1.0.2/" class="externalLink" title="External Link">1.0.2 Release</a></li></ul></li><li class="none"><a href="javascript/org/apache/commons/validator/javascript/index.html">JavaScript Doc</a></li></ul></div><div id="menuDevelopment"><h5>Development</h5><ul><li class="none"><a href="mail-lists.html">Mailing Lists</a></li><li class="none"><a href="issue-tracking.html">Issue Tracking</a></li><li class="none"><a href="apidocs/index.html">Latest JavaDoc</a></li><li class="none"><a href="cvs-usage.html">Source Repository</a></li><li class="none"><a href="building.html">Building</a></li></ul></div><div id="menuProject_Documentation"><h5>Project Documentation</h5><ul><li class="none"><a href="index.html">About</a></li><li class="collapsed"><a href="project-info.html">Project Info</a></li><li class="expanded"><a href="maven-reports.html">Project Reports</a><ul><li class="none"><a href="checkstyle-report.html">Checkstyle</a></li><li class="none"><a href="changes-report.html">Changes</a></li><li class="none"><a href="changelog-report.html">Change Log</a></li><li class="none"><a href="apidocs/index.html" class="newWindow" title="New Window" target="_blank">JavaDocs</a></li><li class="none"><a href="javadoc.html">JavaDoc Report</a></li><li class="none"><a href="javadoc-warnings-report.html">JavaDoc Warnings Report</a></li><li class="none"><a href="xref/index.html" class="newWindow" title="New Window" target="_blank">Source Xref</a></li><li class="none"><a href="xref-test/index.html" class="newWindow" title="New Window" target="_blank">Test Xref</a></li><li class="none"><a href="license.html">Project License</a></li><li class="none"><strong><a href="junit-report.html">Unit Tests</a></strong></li><li class="none"><a href="jcoverage/index.html">JCoverage</a></li></ul></li><li class="none"><a href="http://jakarta.apache.org/commons/charter.html" class="externalLink" title="External Link">Development Process</a></li></ul></div><div id="menuCommons"><h5>Commons</h5><ul><li class="none"><a href="http://jakarta.apache.org/commons/" class="externalLink" title="External Link">Home</a></li><li class="collapsed"><a href="http://jakarta.apache.org/commons/components.html" class="externalLink" title="External Link">Components</a></li><li class="collapsed"><a href="http://jakarta.apache.org/commons/sandbox/index.html" class="externalLink" title="External Link">Sandbox</a></li><li class="collapsed"><a href="http://jakarta.apache.org/commons/dormant/index.html" class="externalLink" title="External Link">Dormant</a></li><li class="none"><a href="http://jakarta.apache.org/commons/volunteering.html" class="externalLink" title="External Link">Volunteering</a></li><li class="none"><a href="http://jakarta.apache.org/commons/patches.html" class="externalLink" title="External Link">Contributing Patches</a></li><li class="none"><a href="http://jakarta.apache.org/commons/building.html" class="externalLink" title="External Link">Building Components</a></li><li class="none"><a href="http://jakarta.apache.org/commons/releases/index.html" class="externalLink" title="External Link">Releasing Components</a></li><li class="none"><a href="http://wiki.apache.org/jakarta-commons/FrontPage" class="externalLink" title="External Link">Wiki</a></li></ul></div><div id="legend"><h5>Legend</h5><ul><li class="externalLink">External Link</li><li class="newWindow">Opens in a new window</li></ul></div></div></div><div id="bodyColumn"><div class="contentBox"><div class="section"><a name="Summary"></a><h2>Summary</h2>
+      <p>[
+        <a href="#Summary">summary</a>] [
+        <a href="#Package_List">package list</a>] [
+        <a href="#Test_Cases">test cases</a>]</p>
+      <table class="bodyTable">
+        <thead>
+          <tr class="b">
+            <th>Tests</th>
+            <th>Errors</th>
+            <th>Failures</th>
+            <th>Success rate</th>
+            <th>Time(s)</th>
+          </tr>
+        </thead>
+        <tr class="a">
+          <td>253</td>
+          <td>0</td>
+          <td>0</td>
+          <td>100.00%</td>
+          <td>24.84</td>
+        </tr>
+      </table>
+      <p>Note:
+        <i>failures</i>are anticipated and checked for with assertions while
+        <i>errors</i>are unanticipated.</p>
+    </div><div class="section"><a name="Package_List"></a><h2>Package List</h2>
+      <p>[
+        <a href="#Summary">summary</a>] [
+        <a href="#Package_List">package list</a>] [
+        <a href="#Test_Cases">test cases</a>]</p>
+      <table class="bodyTable">
+        <thead>
+          <tr class="b">
+            <th>Package</th>
+            <th>Tests</th>
+            <th>Errors</th>
+            <th>Failures</th>
+            <th>Success Rate</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tr class="a">
+          <td>
+            <a href="#org_apache_commons_validator">org.apache.commons.validator</a>
+          </td>
+          <td>121</td>
+          <td>0</td>
+          <td>0</td>
+          <td>100.00%</td>
+          <td>22.74</td>
+        </tr>
+        <tr class="b">
+          <td>
+            <a href="#org_apache_commons_validator_routines">org.apache.commons.validator.routines</a>
+          </td>
+          <td>121</td>
+          <td>0</td>
+          <td>0</td>
+          <td>100.00%</td>
+          <td>1.95</td>
+        </tr>
+        <tr class="a">
+          <td>
+            <a href="#org_apache_commons_validator_util">org.apache.commons.validator.util</a>
+          </td>
+          <td>11</td>
+          <td>0</td>
+          <td>0</td>
+          <td>100.00%</td>
+          <td>0.16</td>
+        </tr>
+      </table>
+      <p>Note: package statistics are not computed recursively, they only sum up all of its testsuites numbers.</p>
+      <a name="org_apache_commons_validator">
+      </a>
+      <div class="subsection"><a name="org_apache_commons_validator"></a><h3>org.apache.commons.validator</h3>
+        <table class="bodyTable">
+          <thead>
+            <tr class="b">
+              <th colspan="2">Class</th>
+              <th>Tests</th>
+              <th>Errors</th>
+              <th>Failures</th>
+              <th>Success Rate</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tr class="a">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#ByteTest">ByteTest</a>
+            </td>
+            <td>8</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.578</td>
+          </tr>
+          <tr class="b">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#CreditCardValidatorTest">CreditCardValidatorTest</a>
+            </td>
+            <td>2</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.156</td>
+          </tr>
+          <tr class="a">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#CustomValidatorResourcesTest">CustomValidatorResourcesTest</a>
+            </td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.406</td>
+          </tr>
+          <tr class="b">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#DateTest">DateTest</a>
+            </td>
+            <td>2</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.438</td>
+          </tr>
+          <tr class="a">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#DoubleTest">DoubleTest</a>
+            </td>
+            <td>6</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.547</td>
+          </tr>
+          <tr class="b">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#EmailTest">EmailTest</a>
+            </td>
+            <td>9</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.625</td>
+          </tr>
+          <tr class="a">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#EntityImportTest">EntityImportTest</a>
+            </td>
+            <td>2</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.422</td>
+          </tr>
+          <tr class="b">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#ExceptionTest">ExceptionTest</a>
+            </td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.406</td>
+          </tr>
+          <tr class="a">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#ExtensionTest">ExtensionTest</a>
+            </td>
+            <td>8</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.562</td>
+          </tr>
+          <tr class="b">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#FieldTest">FieldTest</a>
+            </td>
+            <td>9</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.140</td>
+          </tr>
+          <tr class="a">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#FloatTest">FloatTest</a>
+            </td>
+            <td>6</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.547</td>
+          </tr>
+          <tr class="b">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#GenericValidatorTest">GenericValidatorTest</a>
+            </td>
+            <td>2</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.156</td>
+          </tr>
+          <tr class="a">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#IntegerTest">IntegerTest</a>
+            </td>
+            <td>8</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.594</td>
+          </tr>
+          <tr class="b">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#ISBNValidatorTest">ISBNValidatorTest</a>
+            </td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.157</td>
+          </tr>
+          <tr class="a">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#LocaleTest">LocaleTest</a>
+            </td>
+            <td>5</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.500</td>
+          </tr>
+          <tr class="b">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#LongTest">LongTest</a>
+            </td>
+            <td>8</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.593</td>
+          </tr>
+          <tr class="a">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#MultipleConfigFilesTest">MultipleConfigFilesTest</a>
+            </td>
+            <td>5</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.516</td>
+          </tr>
+          <tr class="b">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#ParameterTest">ParameterTest</a>
+            </td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.407</td>
+          </tr>
+          <tr class="a">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#RequiredIfTest">RequiredIfTest</a>
+            </td>
+            <td>5</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.500</td>
+          </tr>
+          <tr class="b">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#RequiredNameTest">RequiredNameTest</a>
+            </td>
+            <td>6</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.516</td>
+          </tr>
+          <tr class="a">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#RetrieveFormTest">RetrieveFormTest</a>
+            </td>
+            <td>5</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.500</td>
+          </tr>
+          <tr class="b">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#ShortTest">ShortTest</a>
+            </td>
+            <td>6</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.547</td>
+          </tr>
+          <tr class="a">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#TypeTest">TypeTest</a>
+            </td>
+            <td>3</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.485</td>
+          </tr>
+          <tr class="b">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#UrlTest">UrlTest</a>
+            </td>
+            <td>5</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>11.375</td>
+          </tr>
+          <tr class="a">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#ValidatorResultsTest">ValidatorResultsTest</a>
+            </td>
+            <td>2</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.438</td>
+          </tr>
+          <tr class="b">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#ValidatorTest">ValidatorTest</a>
+            </td>
+            <td>4</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.219</td>
+          </tr>
+          <tr class="a">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#VarTest">VarTest</a>
+            </td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.406</td>
+          </tr>
+        </table>
+      </div>
+      <a name="org_apache_commons_validator_routines">
+      </a>
+      <div class="subsection"><a name="org_apache_commons_validator_routines"></a><h3>org.apache.commons.validator.routines</h3>
+        <table class="bodyTable">
+          <thead>
+            <tr class="b">
+              <th colspan="2">Class</th>
+              <th>Tests</th>
+              <th>Errors</th>
+              <th>Failures</th>
+              <th>Success Rate</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tr class="a">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#BigDecimalValidatorTest">BigDecimalValidatorTest</a>
+            </td>
+            <td>11</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.156</td>
+          </tr>
+          <tr class="b">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#BigIntegerValidatorTest">BigIntegerValidatorTest</a>
+            </td>
+            <td>11</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.156</td>
+          </tr>
+          <tr class="a">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#ByteValidatorTest">ByteValidatorTest</a>
+            </td>
+            <td>11</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.140</td>
+          </tr>
+          <tr class="b">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#CalendarValidatorTest">CalendarValidatorTest</a>
+            </td>
+            <td>9</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.172</td>
+          </tr>
+          <tr class="a">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#CurrencyValidatorTest">CurrencyValidatorTest</a>
+            </td>
+            <td>6</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.156</td>
+          </tr>
+          <tr class="b">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#DateValidatorTest">DateValidatorTest</a>
+            </td>
+            <td>7</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.157</td>
+          </tr>
+          <tr class="a">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#DoubleValidatorTest">DoubleValidatorTest</a>
+            </td>
+            <td>11</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.141</td>
+          </tr>
+          <tr class="b">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#FloatValidatorTest">FloatValidatorTest</a>
+            </td>
+            <td>12</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.140</td>
+          </tr>
+          <tr class="a">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#IntegerValidatorTest">IntegerValidatorTest</a>
+            </td>
+            <td>11</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.140</td>
+          </tr>
+          <tr class="b">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#LongValidatorTest">LongValidatorTest</a>
+            </td>
+            <td>11</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.140</td>
+          </tr>
+          <tr class="a">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#PercentValidatorTest">PercentValidatorTest</a>
+            </td>
+            <td>3</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.156</td>
+          </tr>
+          <tr class="b">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#ShortValidatorTest">ShortValidatorTest</a>
+            </td>
+            <td>11</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.141</td>
+          </tr>
+          <tr class="a">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#TimeValidatorTest">TimeValidatorTest</a>
+            </td>
+            <td>7</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.156</td>
+          </tr>
+        </table>
+      </div>
+      <a name="org_apache_commons_validator_util">
+      </a>
+      <div class="subsection"><a name="org_apache_commons_validator_util"></a><h3>org.apache.commons.validator.util</h3>
+        <table class="bodyTable">
+          <thead>
+            <tr class="b">
+              <th colspan="2">Class</th>
+              <th>Tests</th>
+              <th>Errors</th>
+              <th>Failures</th>
+              <th>Success Rate</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tr class="a">
+            <td>
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td>
+              <a href="#FlagsTest">FlagsTest</a>
+            </td>
+            <td>11</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+            <td>0.157</td>
+          </tr>
+        </table>
+      </div>
+    </div><div class="section"><a name="Test_Cases"></a><h2>Test Cases</h2>
+      <p>[
+        <a href="#Summary">summary</a>] [
+        <a href="#Package_List">package list</a>] [
+        <a href="#Test_Cases">test cases</a>]</p>
+      <a name="ByteTest">
+      </a>
+      <div class="subsection"><a name="ByteTest"></a><h3>ByteTest</h3>
+        <table class="bodyTable">
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testByte</td>
+            <td style="width:60px">0.28</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testByteMin</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testByteMax</td>
+            <td style="width:60px">0.03</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testByteFailure</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testByteBeyondMin</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testByteBeyondMax</td>
+            <td style="width:60px">0.05</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testNumber</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testNumberFailure</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+        </table>
+      </div>
+      <a name="CreditCardValidatorTest">
+      </a>
+      <div class="subsection"><a name="CreditCardValidatorTest"></a><h3>CreditCardValidatorTest</h3>
+        <table class="bodyTable">
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testIsValid</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testAddAllowedCardType</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+        </table>
+      </div>
+      <a name="CustomValidatorResourcesTest">
+      </a>
+      <div class="subsection"><a name="CustomValidatorResourcesTest"></a><h3>CustomValidatorResourcesTest</h3>
+        <table class="bodyTable">
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testCustomResources</td>
+            <td style="width:60px">0.27</td>
+          </tr>
+        </table>
+      </div>
+      <a name="DateTest">
+      </a>
+      <div class="subsection"><a name="DateTest"></a><h3>DateTest</h3>
+        <table class="bodyTable">
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidDate</td>
+            <td style="width:60px">0.28</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testInvalidDate</td>
+            <td style="width:60px">0.03</td>
+          </tr>
+        </table>
+      </div>
+      <a name="DoubleTest">
+      </a>
+      <div class="subsection"><a name="DoubleTest"></a><h3>DoubleTest</h3>
+        <table class="bodyTable">
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testDouble</td>
+            <td style="width:60px">0.28</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testDoubleMin</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testDoubleMax</td>
+            <td style="width:60px">0.03</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testDoubleFailure</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testNumber</td>
+            <td style="width:60px">0.03</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testNumberFailure</td>
+            <td style="width:60px">0.03</td>
+          </tr>
+        </table>
+      </div>
+      <a name="EmailTest">
+      </a>
+      <div class="subsection"><a name="EmailTest"></a><h3>EmailTest</h3>
+        <table class="bodyTable">
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testEmail</td>
+            <td style="width:60px">0.30</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testEmailWithNumericAddress</td>
+            <td style="width:60px">0.03</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testEmailExtension</td>
+            <td style="width:60px">0.03</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testEmailWithDash</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testEmailWithDotEnd</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testEmailWithBogusCharacter</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testEmailWithCommas</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testEmailWithSpaces</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testEmailWithControlChars</td>
+            <td style="width:60px">0.05</td>
+          </tr>
+        </table>
+      </div>
+      <a name="EntityImportTest">
+      </a>
+      <div class="subsection"><a name="EntityImportTest"></a><h3>EntityImportTest</h3>
+        <table class="bodyTable">
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testEntityImport</td>
+            <td style="width:60px">0.25</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testParseURL</td>
+            <td style="width:60px">0.03</td>
+          </tr>
+        </table>
+      </div>
+      <a name="ExceptionTest">
+      </a>
+      <div class="subsection"><a name="ExceptionTest"></a><h3>ExceptionTest</h3>
+        <table class="bodyTable">
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidatorException</td>
+            <td style="width:60px">0.27</td>
+          </tr>
+        </table>
+      </div>
+      <a name="ExtensionTest">
+      </a>
+      <div class="subsection"><a name="ExtensionTest"></a><h3>ExtensionTest</h3>
+        <table class="bodyTable">
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testRequired</td>
+            <td style="width:60px">0.28</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testRequiredFirstNameBlank</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testRequiredFirstName</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testRequiredLastNameBlank</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testRequiredLastName</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testRequiredName</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testOverrideRule</td>
+            <td style="width:60px">0.05</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testOrder</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+        </table>
+      </div>
+      <a name="FieldTest">
+      </a>
+      <div class="subsection"><a name="FieldTest"></a><h3>FieldTest</h3>
+        <table class="bodyTable">
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testEmptyArgs</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testDefaultPositionImplied</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testDefaultUsingPositions</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testDefaultOnePosition</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testDefaultSomePositions</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testOverrideUsingPositionA</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testOverrideUsingPositionB</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testOverridePositionImplied</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testOverrideSomePosition</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+        </table>
+      </div>
+      <a name="FloatTest">
+      </a>
+      <div class="subsection"><a name="FloatTest"></a><h3>FloatTest</h3>
+        <table class="bodyTable">
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testFloat</td>
+            <td style="width:60px">0.28</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testFloatMin</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testFloatMax</td>
+            <td style="width:60px">0.03</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testFloatFailure</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testNumber</td>
+            <td style="width:60px">0.03</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testNumberFailure</td>
+            <td style="width:60px">0.03</td>
+          </tr>
+        </table>
+      </div>
+      <a name="GenericValidatorTest">
+      </a>
+      <div class="subsection"><a name="GenericValidatorTest"></a><h3>GenericValidatorTest</h3>
+        <table class="bodyTable">
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testMinLength</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testMaxLength</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+        </table>
+      </div>
+      <a name="IntegerTest">
+      </a>
+      <div class="subsection"><a name="IntegerTest"></a><h3>IntegerTest</h3>
+        <table class="bodyTable">
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testInt</td>
+            <td style="width:60px">0.28</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testIntMin</td>
+            <td style="width:60px">0.03</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testIntegerMax</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testIntFailure</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testIntBeyondMin</td>
+            <td style="width:60px">0.03</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testIntBeyondMax</td>
+            <td style="width:60px">0.03</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testNumber</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testNumberFailure</td>
+            <td style="width:60px">0.03</td>
+          </tr>
+        </table>
+      </div>
+      <a name="ISBNValidatorTest">
+      </a>
+      <div class="subsection"><a name="ISBNValidatorTest"></a><h3>ISBNValidatorTest</h3>
+        <table class="bodyTable">
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testIsValid</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+        </table>
+      </div>
+      <a name="LocaleTest">
+      </a>
+      <div class="subsection"><a name="LocaleTest"></a><h3>LocaleTest</h3>
+        <table class="bodyTable">
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testLocale1</td>
+            <td style="width:60px">0.28</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testLocale2</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testLocale3</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testLocale4</td>
+            <td style="width:60px">0.03</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testLocale5</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+        </table>
+      </div>
+      <a name="LongTest">
+      </a>
+      <div class="subsection"><a name="LongTest"></a><h3>LongTest</h3>
+        <table class="bodyTable">
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testLong</td>
+            <td style="width:60px">0.28</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testLongMin</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testLongMax</td>
+            <td style="width:60px">0.03</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testLongFailure</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testLongBeyondMin</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testLongBeyondMax</td>
+            <td style="width:60px">0.05</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testNumber</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testNumberFailure</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+        </table>
+      </div>
+      <a name="MultipleConfigFilesTest">
+      </a>
+      <div class="subsection"><a name="MultipleConfigFilesTest"></a><h3>MultipleConfigFilesTest</h3>
+        <table class="bodyTable">
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testMergedConfig</td>
+            <td style="width:60px">0.26</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testBothBlank</td>
+            <td style="width:60px">0.05</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testRequiredFirstNameBlankLastNameShort</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testRequiredLastNameShort</td>
+            <td style="width:60px">0.03</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testRequiredLastNameLong</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+        </table>
+      </div>
+      <a name="ParameterTest">
+      </a>
+      <div class="subsection"><a name="ParameterTest"></a><h3>ParameterTest</h3>
+        <table class="bodyTable">
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testAllValid</td>
+            <td style="width:60px">0.27</td>
+          </tr>
+        </table>
+      </div>
+      <a name="RequiredIfTest">
+      </a>
+      <div class="subsection"><a name="RequiredIfTest"></a><h3>RequiredIfTest</h3>
+        <table class="bodyTable">
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testRequired</td>
+            <td style="width:60px">0.28</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testRequiredFirstNameBlank</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testRequiredFirstName</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testRequiredLastNameBlank</td>
+            <td style="width:60px">0.03</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testRequiredLastName</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+        </table>
+      </div>
+      <a name="RequiredNameTest">
+      </a>
+      <div class="subsection"><a name="RequiredNameTest"></a><h3>RequiredNameTest</h3>
+        <table class="bodyTable">
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testRequired</td>
+            <td style="width:60px">0.28</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testRequiredFirstNameBlank</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testRequiredFirstName</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testRequiredLastNameBlank</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testRequiredLastName</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testRequiredName</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+        </table>
+      </div>
+      <a name="RetrieveFormTest">
+      </a>
+      <div class="subsection"><a name="RetrieveFormTest"></a><h3>RetrieveFormTest</h3>
+        <table class="bodyTable">
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testDefaultForm</td>
+            <td style="width:60px">0.26</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testLanguageForm</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testLanguageCountryForm</td>
+            <td style="width:60px">0.03</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testLanguageCountryVariantForm</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testFormNotFound</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+        </table>
+      </div>
+      <a name="BigDecimalValidatorTest">
+      </a>
+      <div class="subsection"><a name="BigDecimalValidatorTest"></a><h3>BigDecimalValidatorTest</h3>
+        <table class="bodyTable">
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testBigDecimalValidatorMethods</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testBigDecimalRangeMinMax</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testFormatType</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidateMinMax</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testInvalidStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testInvalidNotStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidNotStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidateLocale</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testFormat</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testRangeMinMax</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+        </table>
+      </div>
+      <a name="BigIntegerValidatorTest">
+      </a>
+      <div class="subsection"><a name="BigIntegerValidatorTest"></a><h3>BigIntegerValidatorTest</h3>
+        <table class="bodyTable">
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testBigIntegerValidatorMethods</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testBigIntegerRangeMinMax</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testFormatType</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidateMinMax</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testInvalidStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testInvalidNotStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidNotStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidateLocale</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testFormat</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testRangeMinMax</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+        </table>
+      </div>
+      <a name="ByteValidatorTest">
+      </a>
+      <div class="subsection"><a name="ByteValidatorTest"></a><h3>ByteValidatorTest</h3>
+        <table class="bodyTable">
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testByteValidatorMethods</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testByteRangeMinMax</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testFormatType</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidateMinMax</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testInvalidStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testInvalidNotStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidNotStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidateLocale</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testFormat</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testRangeMinMax</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+        </table>
+      </div>
+      <a name="CalendarValidatorTest">
+      </a>
+      <div class="subsection"><a name="CalendarValidatorTest"></a><h3>CalendarValidatorTest</h3>
+        <table class="bodyTable">
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testCalendarValidatorMethods</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testCompare</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testDateTimeStyle</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testFormat</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testAdjustToTimeZone</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testPatternValid</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testPatternInvalid</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testLocaleValid</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testLocaleInvalid</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+        </table>
+      </div>
+      <a name="CurrencyValidatorTest">
+      </a>
+      <div class="subsection"><a name="CurrencyValidatorTest"></a><h3>CurrencyValidatorTest</h3>
+        <table class="bodyTable">
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testFormatType</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValid</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testInvalid</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testIntegerValid</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testIntegerInvalid</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testPattern</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+        </table>
+      </div>
+      <a name="DateValidatorTest">
+      </a>
+      <div class="subsection"><a name="DateValidatorTest"></a><h3>DateValidatorTest</h3>
+        <table class="bodyTable">
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testDateValidatorMethods</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testCompare</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testPatternValid</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testPatternInvalid</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testLocaleValid</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testLocaleInvalid</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testFormat</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+        </table>
+      </div>
+      <a name="DoubleValidatorTest">
+      </a>
+      <div class="subsection"><a name="DoubleValidatorTest"></a><h3>DoubleValidatorTest</h3>
+        <table class="bodyTable">
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testDoubleValidatorMethods</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testDoubleRangeMinMax</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testFormatType</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidateMinMax</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testInvalidStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testInvalidNotStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidNotStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidateLocale</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testFormat</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testRangeMinMax</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+        </table>
+      </div>
+      <a name="FloatValidatorTest">
+      </a>
+      <div class="subsection"><a name="FloatValidatorTest"></a><h3>FloatValidatorTest</h3>
+        <table class="bodyTable">
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testFloatValidatorMethods</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testFloatSmallestValues</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testFloatRangeMinMax</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testFormatType</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidateMinMax</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testInvalidStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testInvalidNotStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidNotStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidateLocale</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testFormat</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testRangeMinMax</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+        </table>
+      </div>
+      <a name="IntegerValidatorTest">
+      </a>
+      <div class="subsection"><a name="IntegerValidatorTest"></a><h3>IntegerValidatorTest</h3>
+        <table class="bodyTable">
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testIntegerValidatorMethods</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testIntegerRangeMinMax</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testFormatType</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidateMinMax</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testInvalidStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testInvalidNotStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidNotStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidateLocale</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testFormat</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testRangeMinMax</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+        </table>
+      </div>
+      <a name="LongValidatorTest">
+      </a>
+      <div class="subsection"><a name="LongValidatorTest"></a><h3>LongValidatorTest</h3>
+        <table class="bodyTable">
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testLongValidatorMethods</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testLongRangeMinMax</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testFormatType</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidateMinMax</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testInvalidStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testInvalidNotStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidNotStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidateLocale</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testFormat</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testRangeMinMax</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+        </table>
+      </div>
+      <a name="PercentValidatorTest">
+      </a>
+      <div class="subsection"><a name="PercentValidatorTest"></a><h3>PercentValidatorTest</h3>
+        <table class="bodyTable">
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testFormatType</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValid</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testInvalid</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+        </table>
+      </div>
+      <a name="ShortValidatorTest">
+      </a>
+      <div class="subsection"><a name="ShortValidatorTest"></a><h3>ShortValidatorTest</h3>
+        <table class="bodyTable">
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testShortValidatorMethods</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testShortRangeMinMax</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testFormatType</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidateMinMax</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testInvalidStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testInvalidNotStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidNotStrict</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidateLocale</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testFormat</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testRangeMinMax</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+        </table>
+      </div>
+      <a name="TimeValidatorTest">
+      </a>
+      <div class="subsection"><a name="TimeValidatorTest"></a><h3>TimeValidatorTest</h3>
+        <table class="bodyTable">
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testPatternValid</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testPatternInvalid</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testLocaleValid</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testLocaleInvalid</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testTimeZone</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testFormat</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testCompare</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+        </table>
+      </div>
+      <a name="ShortTest">
+      </a>
+      <div class="subsection"><a name="ShortTest"></a><h3>ShortTest</h3>
+        <table class="bodyTable">
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testShortMin</td>
+            <td style="width:60px">0.28</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testShortMax</td>
+            <td style="width:60px">0.03</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testShortBeyondMin</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testShortBeyondMax</td>
+            <td style="width:60px">0.03</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testNumber</td>
+            <td style="width:60px">0.02</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testNumberFailure</td>
+            <td style="width:60px">0.03</td>
+          </tr>
+        </table>
+      </div>
+      <a name="TypeTest">
+      </a>
+      <div class="subsection"><a name="TypeTest"></a><h3>TypeTest</h3>
+        <table class="bodyTable">
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testType</td>
+            <td style="width:60px">0.28</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testUSLocale</td>
+            <td style="width:60px">0.03</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testFRLocale</td>
+            <td style="width:60px">0.03</td>
+          </tr>
+        </table>
+      </div>
+      <a name="UrlTest">
+      </a>
+      <div class="subsection"><a name="UrlTest"></a><h3>UrlTest</h3>
+        <table class="bodyTable">
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testIsValid</td>
+            <td style="width:60px">11.24</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testIsValidScheme</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidator202</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidator204</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testValidateUrl</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+        </table>
+      </div>
+      <a name="FlagsTest">
+      </a>
+      <div class="subsection"><a name="FlagsTest"></a><h3>FlagsTest</h3>
+        <table class="bodyTable">
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testHashCode</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testGetFlags</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testIsOnOff</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testTurnOnOff</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testTurnOff</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testTurnOffAll</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testClear</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testTurnOnAll</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testClone</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testEqualsObject</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testToString</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+        </table>
+      </div>
+      <a name="ValidatorResultsTest">
+      </a>
+      <div class="subsection"><a name="ValidatorResultsTest"></a><h3>ValidatorResultsTest</h3>
+        <table class="bodyTable">
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testAllValid</td>
+            <td style="width:60px">0.27</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testErrors</td>
+            <td style="width:60px">0.03</td>
+          </tr>
+        </table>
+      </div>
+      <a name="ValidatorTest">
+      </a>
+      <div class="subsection"><a name="ValidatorTest"></a><h3>ValidatorTest</h3>
+        <table class="bodyTable">
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testManualObject</td>
+            <td style="width:60px">0.08</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testOnlyReturnErrors</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testOnlyValidateField</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+          <tr class="a">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testManualBoolean</td>
+            <td style="width:60px">0.00</td>
+          </tr>
+        </table>
+      </div>
+      <a name="VarTest">
+      </a>
+      <div class="subsection"><a name="VarTest"></a><h3>VarTest</h3>
+        <table class="bodyTable">
+          <tr class="b">
+            <td style="width:20px">
+              <img height="15" width="15" alt="Success" src="images/icon_success_sml.gif"></img>
+            </td>
+            <td style="width:98%">testVars</td>
+            <td style="width:60px">0.27</td>
+          </tr>
+        </table>
+      </div>
+    </div></div></div><div class="clear"><hr></hr></div><div id="footer"><div class="xright">© 2002-2006, The Apache Software Foundation</div><div class="clear"><hr></hr></div></div></body></html>
