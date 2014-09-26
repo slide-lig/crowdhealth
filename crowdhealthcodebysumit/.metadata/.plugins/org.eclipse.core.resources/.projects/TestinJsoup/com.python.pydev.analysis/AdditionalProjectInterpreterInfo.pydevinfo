@@ -1,0 +1,34 @@
+-- VERSION_3
+-- START DISKCACHE
+/media/windows/crowdhealthcodebysumit/.metadata/.plugins/org.eclipse.core.resources/.projects/TestinJsoup/com.python.pydev.analysis/v1_indexcache
+.v1_indexcache
+GettingNutritionKeywords.__init__|0|/media/windows/crowdhealthcodebysumit/TestinJsoup/GettingNutritionKeywords/__init__.py
+GettingNutritionKeywords.KeyWordExtraction|0|/media/windows/crowdhealthcodebysumit/TestinJsoup/GettingNutritionKeywords/KeyWordExtraction.py
+JSoupTesting.__init__|0|/media/windows/crowdhealthcodebysumit/TestinJsoup/JSoupTesting/__init__.py
+JSoupTesting.GettingHealthKeywords|0|/media/windows/crowdhealthcodebysumit/TestinJsoup/JSoupTesting/GettingHealthKeywords.py
+-- END DISKCACHE
+-- START DICTIONARY
+2
+2=GettingNutritionKeywords.KeyWordExtraction
+1=JSoupTesting.GettingHealthKeywords
+-- END DICTIONARY
+-- START TREE 1
+14
+bod|1|bodyoftable!11@
+dra|1|drange2!10@
+f|2|f!11@f!19@
+fil|1|file!19@
+foo|1|fooditems!11@
+inc|1|incrementer!11@
+j|1|j!11@
+myd|1|mydivs!11@
+nut|1|nutrient!11@
+pag|2|page!11@page!19@
+sou|2|soup!11@soup!19@
+tab|1|table!19@
+tda|2|tdata!11@tdata!19@
+uni|1|uniqueFood!11@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

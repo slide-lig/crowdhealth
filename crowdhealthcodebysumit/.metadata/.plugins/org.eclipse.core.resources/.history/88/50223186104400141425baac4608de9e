@@ -1,0 +1,34 @@
+'''
+Created on Sep 23, 2014
+
+@author: sumit
+'''
+from BeautifulSoup import BeautifulSoup
+from BeautifulSoup import BeautifulStoneSoup
+import BeautifulSoup
+
+from BeautifulSoup import BeautifulSoup
+import re
+import urllib2
+
+
+page = urllib2.urlopen("http://ndb.nal.usda.gov/ndb/search/list")
+soup = BeautifulSoup(page)
+
+mydivs = soup("div", { "class" : "wbox" })
+incrementer = 0
+for body in mydivs:
+    bodyoftable = body.findAll("tbody")
+    for tabledata in bodyoftable:
+        tdata = tabledata.findAll("td")
+        for i in tdata:
+            j = i.findAll('a')
+            
+            for k in j:
+                incrementer = incrementer+1
+                if incrementer%2 == 1:
+                    print incrementer
+                    print k.string
+                
+            
+

@@ -1,0 +1,10 @@
+INSTUPGettingNutritionKeywords.KeyWordExtraction
+/media/windows/crowdhealthcodebysumit/TestinJsoup/GettingNutritionKeywords/KeyWordExtraction.py
+INFOS:&&3|1|2|0&&3|3|2|0&&3|4|2|0&&3|5|2|0&&3|6|2|0&&3|7|2|0
+f=7
+GettingNutritionKeywords.KeyWordExtraction=2
+page=1
+tdata=6
+file=4
+table=5
+soup=3
