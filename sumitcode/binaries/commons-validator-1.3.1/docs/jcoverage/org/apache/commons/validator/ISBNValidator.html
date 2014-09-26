@@ -1,0 +1,691 @@
+<html>
+<head>
+<title>unit tests coverage</title>
+<link rel ="stylesheet" type="text/css" href="../../../../style.css" title="Style">
+</head>
+<body>
+<span class="title">Coverage report</span>
+<p>
+  <table cellspacing="0" cellpadding="0" class="report">
+  <tr class="report">
+    <th class="report">&nbsp;</th>
+    <th class="report">%line</th>
+    <th class="report">%branch</th>
+  </tr>
+  <tr class="report">
+    <td class="reportText"><span class="text">org.apache.commons.validator.ISBNValidator</span></td>
+    <td class="reportValue"><table class="percentGraph" cellpadding="0" cellspacing="0" align="right"><tr><td><span class="text">100%&nbsp;</span></td><td><table class="percentGraph" cellpadding="0" cellspacing="0"><tr><td class="percentCovered" width="100"></td><td class="percentUnCovered" width="0.0"></td></tr></table></td></tr></table></td>
+    <td class="reportValue"><table class="percentGraph" cellpadding="0" cellspacing="0" align="right"><tr><td><span class="text">100%&nbsp;</span></td><td><table class="percentGraph" cellpadding="0" cellspacing="0"><tr><td class="percentCovered" width="100"></td><td class="percentUnCovered" width="0.0"></td></tr></table></td></tr></table></td>
+  </tr>
+  </table>
+  <p>
+  <table cellspacing="0" cellpadding="0" class="src">
+    <tr>
+      <td class="numLine">&nbsp;1</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">/*</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;2</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * Licensed to the Apache Software Foundation (ASF) under one or more</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;3</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * contributor license agreements.  See the NOTICE file distributed with</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;4</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * this work for additional information regarding copyright ownership.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;5</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * The ASF licenses this file to You under the Apache License, Version 2.0</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;6</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * (the "License"); you may not use this file except in compliance with</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;7</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * the License.  You may obtain a copy of the License at</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;8</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;9</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *      http://www.apache.org/licenses/LICENSE-2.0</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;10</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;11</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * Unless required by applicable law or agreed to in writing, software</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;12</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * distributed under the License is distributed on an "AS IS" BASIS,</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;13</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;14</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * See the License for the specific language governing permissions and</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;15</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * limitations under the License.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;16</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;17</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">package</span> org.apache.commons.validator;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;18</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;19</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> org.apache.oro.text.perl.Perl5Util;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;20</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;21</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;22</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * A class for validating 10 digit ISBN codes.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;23</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * Based on this </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;24</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;a href="http://www.isbn.org/standards/home/isbn/international/html/usm4.htm"&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;25</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * algorithm&#60;/a&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;26</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;27</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * @version $Revision: 478334 $ $Date: 2006-11-22 21:31:54 +0000 (Wed, 22 Nov 2006) $</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;28</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * @since Validator 1.2.0</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;29</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;30</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">public</span> <span class="keyword">class</span> ISBNValidator {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;31</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;32</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String SEP = <span class="string">"(&#92;&#92;-|&#92;&#92;s)"</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;33</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String GROUP = <span class="string">"(&#92;&#92;d{1,5})"</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;34</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String PUBLISHER = <span class="string">"(&#92;&#92;d{1,7})"</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;35</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String TITLE = <span class="string">"(&#92;&#92;d{1,6})"</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;36</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String CHECK = <span class="string">"([0-9X])"</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;37</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;38</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;39</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * ISBN consists of 4 groups of numbers separated by either dashes (-)</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;40</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * or spaces.  The first group is 1-5 characters, second 1-7, third 1-6,</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;41</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * and fourth is 1 digit or an X.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;42</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;43</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String ISBN_PATTERN =</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;44</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="string">"/^"</span> + GROUP + SEP + PUBLISHER + SEP + TITLE + SEP + CHECK + <span class="string">"$/"</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;45</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;46</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;47</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Default Constructor.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;48</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;49</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> ISBNValidator() {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;50</td>
+      <td class="nbHitsCovered">&nbsp;1</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">super</span>();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;51</td>
+      <td class="nbHitsCovered">&nbsp;1</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;52</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;53</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;54</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * If the ISBN is formatted with space or dash separators its format is</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;55</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * validated.  Then the digits in the number are weighted, summed, and</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;56</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * divided by 11 according to the ISBN algorithm.  If the result is zero,</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;57</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * the ISBN is valid.  This method accepts formatted or raw ISBN codes.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;58</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;59</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param isbn Candidate ISBN number to be validated. &#60;code&#62;null&#60;/code&#62; is</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;60</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * considered invalid.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;61</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return true if the string is a valid ISBN code.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;62</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;63</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">boolean</span> isValid(String isbn) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;64</td>
+      <td class="nbHitsCovered">&nbsp;15</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (isbn == <span class="keyword">null</span> || isbn.length() &#60; 10 || isbn.length() &#62; 13) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;65</td>
+      <td class="nbHitsCovered">&nbsp;9</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> false;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;66</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;67</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;68</td>
+      <td class="nbHitsCovered">&nbsp;6</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (isFormatted(isbn) &#38;&#38; !isValidPattern(isbn)) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;69</td>
+      <td class="nbHitsCovered">&nbsp;1</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> false;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;70</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;71</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;72</td>
+      <td class="nbHitsCovered">&nbsp;5</td>
+      <td class="src"><pre class="src">&nbsp;        isbn = clean(isbn);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;73</td>
+      <td class="nbHitsCovered">&nbsp;5</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (isbn.length() != 10) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;74</td>
+      <td class="nbHitsCovered">&nbsp;1</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> false;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;75</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;76</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;77</td>
+      <td class="nbHitsCovered">&nbsp;4</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> (sum(isbn) % 11) == 0;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;78</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;79</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    </pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;80</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;81</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Returns the sum of the weighted ISBN characters.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;82</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;83</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">int</span> sum(String isbn) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;84</td>
+      <td class="nbHitsCovered">&nbsp;4</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">int</span> total = 0;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;85</td>
+      <td class="nbHitsCovered">&nbsp;40</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &#60; 9; i++) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;86</td>
+      <td class="nbHitsCovered">&nbsp;36</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">int</span> weight = 10 - i;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;87</td>
+      <td class="nbHitsCovered">&nbsp;36</td>
+      <td class="src"><pre class="src">&nbsp;            total += (weight * toInt(isbn.charAt(i)));</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;88</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;89</td>
+      <td class="nbHitsCovered">&nbsp;4</td>
+      <td class="src"><pre class="src">&nbsp;        total += toInt(isbn.charAt(9)); <span class="comment">// add check digit</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;90</td>
+      <td class="nbHitsCovered">&nbsp;4</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> total;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;91</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;92</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;93</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;94</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Removes all non-digit characters except for 'X' which is a valid ISBN</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;95</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * character. </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;96</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;97</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> String clean(String isbn) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;98</td>
+      <td class="nbHitsCovered">&nbsp;5</td>
+      <td class="src"><pre class="src">&nbsp;        StringBuffer buf = <span class="keyword">new</span> StringBuffer(10);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;99</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        </pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;100</td>
+      <td class="nbHitsCovered">&nbsp;66</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &#60; isbn.length(); i++) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;101</td>
+      <td class="nbHitsCovered">&nbsp;61</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">char</span> digit = isbn.<span <span class="keyword">class</span>="keyword">char</span>At(i);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;102</td>
+      <td class="nbHitsCovered">&nbsp;61</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">if</span> (Character.isDigit(digit) || (digit == 'X')) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;103</td>
+      <td class="nbHitsCovered">&nbsp;40</td>
+      <td class="src"><pre class="src">&nbsp;                buf.append(digit);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;104</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;105</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;106</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;107</td>
+      <td class="nbHitsCovered">&nbsp;5</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> buf.toString();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;108</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;109</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;110</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;111</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Returns the numeric value represented by the character.  If the </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;112</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * character is not a digit but an 'X', 10 is returned.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;113</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;114</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">int</span> toInt(<span class="keyword">char</span> ch) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;115</td>
+      <td class="nbHitsCovered">&nbsp;40</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> (ch == 'X') ? 10 : Character.getNumericValue(ch);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;116</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;117</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    </pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;118</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;119</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Returns true if the ISBN contains one of the separator characters space</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;120</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * or dash.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;121</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;122</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">boolean</span> isFormatted(String isbn) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;123</td>
+      <td class="nbHitsCovered">&nbsp;6</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> ((isbn.indexOf('-') != -1) || (isbn.indexOf(' ') != -1));</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;124</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;125</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;126</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;127</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Returns true if the ISBN is formatted properly.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;128</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;129</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">boolean</span> isValidPattern(String isbn) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;130</td>
+      <td class="nbHitsCovered">&nbsp;4</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> <span class="keyword">new</span> Perl5Util().match(ISBN_PATTERN, isbn);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;131</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;132</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;133</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;}</pre></td>
+    </tr>
+  </table>
+<p><table cellpadding="0" cellspacing="0" class="report">  <tr class="report">    <td class="reportText"><span class="text">    This report is generated by <a href="http://www.jcoverage.com">jcoverage</a>, <a href="http://maven.apache.org">Maven</a> and <a href="http://maven.apache.org/reference/plugins/jcoverage/">Maven JCoverage Plugin</a>.    </span></td>  </tr></table>
+</body>
+</html>

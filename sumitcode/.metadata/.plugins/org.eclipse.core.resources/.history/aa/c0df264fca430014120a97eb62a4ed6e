@@ -1,0 +1,48 @@
+package RemovalofURL;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.FileWriter;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+
+import org.apache.commons.validator.UrlValidator;
+
+import LangDetect.EnglishLanguageDetection;
+
+
+public class RemoveURLfromTweets {
+	
+	
+	UrlValidator urlValidator = new UrlValidator();
+	public void removeURLSFromDataSet()
+	{
+		try{
+			  FileInputStream fstream = new FileInputStream("/media/Sumit/finalenglish");
+			  DataInputStream in = new DataInputStream(fstream);
+			  BufferedReader br = new BufferedReader(new InputStreamReader(in));
+			  String strLine;
+			  PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("/media/Sumit/finalenglishwithoutURLs", true)));
+			  while ((strLine = br.readLine()) != null)   {
+			EnglishLanguageDetection englLanguageDetection = new EnglishLanguageDetection();
+			  int indexoflastTab = strLine.lastIndexOf("\t");
+			  if(indexoflastTab == -1)
+				  continue;
+			  String language = englLanguageDetection.languageDetect(strLine.substring(strLine.lastIndexOf("\t"))); 
+			  if(language.equalsIgnoreCase("en"))
+			  {
+				  out.println(strLine);				  
+			  }
+			  }
+			  in.close();
+			    }catch (Exception e){
+			  System.err.println("Error: " + e.getMessage());
+			  }
+		
+	}
+	
+	
+
+}

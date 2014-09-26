@@ -1,0 +1,72 @@
+#   Licensed to the Apache Software Foundation (ASF) under one or more
+#   contributor license agreements.  See the NOTICE file distributed with
+#   this work for additional information regarding copyright ownership.
+#   The ASF licenses this file to You under the Apache License, Version 2.0
+#   (the "License"); you may not use this file except in compliance with
+#   the License.  You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+#   Unless required by applicable law or agreed to in writing, software
+#   distributed under the License is distributed on an "AS IS" BASIS,
+#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#   See the License for the specific language governing permissions and
+#   limitations under the License.
+
+# $Id: build.properties.sample 478334 2006-11-22 21:31:54Z niallp $
+# $Rev: 478334 $
+# $Date: 2006-11-22 21:31:54 +0000 (Wed, 22 Nov 2006) $
+# -----------------------------------------------------------------------------
+# This is an example "build.properties" file.  Make any changes you need, 
+# and rename this file to "build.properties" in the same directory that 
+# contains the "build.xml" file.
+# -----------------------------------------------------------------------------
+apache.dir=D:/Java/Programs/Apache
+
+# The JAR file containing the Dojo Custom Rhino jar for compressing JavaScript files
+# See Bug 37580 and http://dojotoolkit.org/docs/compressor_system.html
+# 
+# N.B. This jar needs to be downloaded
+dojo_custom_rhino.jar=/dojo-0.1.0/custom_rhino.jar
+
+
+# The JAR file containing version 1.7.0 (or later) of the Beanutils package
+# from the Jakarta Commons project.
+commons-beanutils.jar=../beanutils/dist/commons-beanutils.jar
+
+# The JAR file containing version 1.6 (or later) of the Digester package
+# from the Jakarta Commons project.
+commons-digester.jar=../digester/dist/commons-digester.jar
+
+# The JAR file containing version 1.0.3 (or later) of the Logging package
+# from the Jakarta Commons project.
+commons-logging.jar=../logging/dist/commons-logging.jar
+
+# The JAR file containing version 2.08 (or later) of
+# the the Jakarta ORO project.
+oro.jar=${apache.dir}/jakarta-oro-2.0.8/jakarta-oro-2.0.8.jar
+
+# The JAR file containing version 3.8.1 (or later) of
+# JUnit Unit Testing (http://www.junit.org)
+junit.jar=D:/java/Lib/junit3.8.1/junit.jar
+
+# Needed for building the version Javadocs
+xerces.jar=${apache.dir}/xerces-2_5_0/xercesImpl.jar
+
+# jsdoc 1.5.2 or Newer is needed for building the Javascript Javadocs
+jsdoc.home=/cygdrive/d/Projects/Sourceforge/JsDoc/JSDoc-1.5.2
+
+#############################Maven Variables #######################################
+# CVS Start Change Log date
+maven.changelog.range=2000
+
+
+# If you are using ssh tunneling & have a .cvspass file setup
+cvs.developer.host=localhost
+# Maven deploy user
+cvs.developer.id=rleland
+
+######## Maven Variables located in your $HOME/build.properties ####
+# maven.username=rleland
+# maven.mode.online=true
+# maven.debugOn=true

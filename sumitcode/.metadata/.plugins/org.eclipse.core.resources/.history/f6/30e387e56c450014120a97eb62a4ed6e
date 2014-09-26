@@ -1,0 +1,7 @@
+'''
+Created on Sep 26, 2014
+
+@author: sumit
+'''
+f = open('/media/Sumit/output')
+

@@ -1,0 +1,11 @@
+'''
+Created on Sep 26, 2014
+
+@author: sumit
+'''
+f = open('/media/Sumit/output')
+
+lines = [line for line in f if line.strip()]
+f.close()
+lines.sort()
+print lines + "\n"

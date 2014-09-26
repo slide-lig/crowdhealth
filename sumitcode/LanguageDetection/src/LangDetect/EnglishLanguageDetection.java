@@ -8,10 +8,21 @@ import com.cybozu.labs.langdetect.LangDetectException;
 import java.io.*;
 
 public class EnglishLanguageDetection extends java.lang.Object {
-	
+/*
+ * This class detects English Language.
+ * Uses the library at https://code.google.com/p/language-detection/wiki/Tutorial
+ *	
+ */
 	
 	public String languageDetect(String str)
 	{
+		/*
+		 * This function detects the language
+		 * detector can be created by the static method create 
+		 * of DetectorFactory class.
+		 * detect method helps to detect the language
+		 * en is the code for English Language
+		 */
 
 		String language = "";
 		try {
@@ -30,6 +41,14 @@ public class EnglishLanguageDetection extends java.lang.Object {
 	}
 	public static void main(String[] args)
 	{
+		/*
+		 * First we need to load the profile.
+		 * First we read each line of tweets.
+		 * Extract the tweet text by extracting text after last tab.
+		 * Then see what is the language of that tweet text.
+		 * if it is english write the file into new file.
+		 * 
+		 */
 		try {
 			DetectorFactory.loadProfile("/home/andreas/Downloads/langdetect-09-13-2011/profiles");
 		} catch (LangDetectException e1) {
@@ -37,29 +56,25 @@ public class EnglishLanguageDetection extends java.lang.Object {
 			e1.printStackTrace();
 		}
 		try{
-			  // Open the file that is 	the first 
-			  // command line parameter
-			  FileInputStream fstream = new FileInputStream("/home/andreas/Nutrition Project/Datasets/1mbchunk.tsv");
-			  // Get the object of DataInputStream
+			  FileInputStream fstream = new FileInputStream("/home/andreas/Nutrition Project/Datasets/20140719_052319:No_Query_Terms.tsv");
+
 			  DataInputStream in = new DataInputStream(fstream);
 			  BufferedReader br = new BufferedReader(new InputStreamReader(in));
 			  String strLine;
-			  PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("/home/andreas/Nutrition Project/Datasets/onlyEnglishTweetsExtracted", true)));
-			  //Read File Line By Line
+			  PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("/media/C284B5B784B5ADF3/onlyEnglishTweetsExtracted", true)));
 			  while ((strLine = br.readLine()) != null)   {
-			  // Print the content on the console
 			EnglishLanguageDetection englLanguageDetection = new EnglishLanguageDetection();
-			  String language = englLanguageDetection.languageDetect(strLine.substring(strLine.lastIndexOf("\t")));
-			 // System.out.print(strLine.substring(strLine.lastIndexOf("\t"))+":   ");
-			  //System.out.println(language);  
+			  int indexoflastTab = strLine.lastIndexOf("\t");
+			  if(indexoflastTab == -1)
+				  continue;
+			  String language = englLanguageDetection.languageDetect(strLine.substring(strLine.lastIndexOf("\t"))); 
 			  if(language.equalsIgnoreCase("en"))
 			  {
 				  out.println(strLine);				  
 			  }
 			  }
-			  //Close the input stream
 			  in.close();
-			    }catch (Exception e){//Catch exception if any
+			    }catch (Exception e){
 			  System.err.println("Error: " + e.getMessage());
 			  }
 	}

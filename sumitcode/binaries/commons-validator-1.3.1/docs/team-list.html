@@ -1,0 +1,566 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head><title>Project Team - Validator</title><style type="text/css" media="all">
+          @import url("./style/maven-base.css");
+          
+          @import url("./style/maven-theme.css");@import url("./style/project.css");</style><link rel="stylesheet" href="./style/print.css" type="text/css" media="print"></link><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></meta><script type="text/javascript">
+            function offsetDate(id, offset) {
+              var now = new Date() ;
+              var nowTime = now.getTime() ;
+              var localOffset = now.getTimezoneOffset() ;
+              var developerTime = nowTime + (offset * 60 * 60 * 1000) + (localOffset * 60 * 1000) ;
+              var developerDate = new Date(developerTime) ;
+
+              document.getElementById(id).innerHTML = developerDate;
+            }
+
+            function init() {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            }
+        </script></head><body class="composite" onload="init();"><div id="banner"><a href="http://jakarta.apache.org" id="organizationLogo"><img alt="The Apache Software Foundation" src="http://jakarta.apache.org/images/original-jakarta-logo.gif"></img></a><a href="http://jakarta.apache.org/commons/validator/" id="projectLogo"><img alt="Validator" src="./images/logo.png"></img></a><div class="clear"><hr></hr></div></div><div id="breadcrumbs"><div class="xleft">Last published: 28 November 2006
+                <span class="separator">|</span> Doc for  1.3.1
+                </div><div class="xright">
+        
+        <a href="http://www.apache.org" class="externalLink" title="External Link">Apache</a>
+      
+        
+          
+            <span class="separator">|</span>
+          
+        
+        <a href="http://jakarta.apache.org" class="externalLink" title="External Link">Jakarta</a>
+      
+        
+          
+            <span class="separator">|</span>
+          
+        
+        <a href="http://jakarta.apache.org/commons/" class="externalLink" title="External Link">Commons</a>
+      </div><div class="clear"><hr></hr></div></div><div id="leftColumn"><div id="navcolumn"><div id="menuValidator"><h5>Validator</h5><ul><li class="none"><a href="index.html">Overview</a></li><li class="none"><a href="downloads.html">Download</a></li><li class="expanded"><a href="">Documentation</a><ul><li class="none"><a href="changes-report.html">Release Notes</a></li><li class="none"><a href="dependencies.html">Dependencies</a></li><li class="none"><a href="license.html">License</a></li><li class="none"><a href="apidocs/org/apache/commons/validator/package-summary.html#package_description">Framework</a></li><li class="none"><a href="apidocs/org/apache/commons/validator/routines/package-summary.html#package_description">Routines</a></li><li class="none"><a href="http://wiki.apache.org/jakarta-commons/Validator" class="externalLink" title="External Link">Wiki</a></li></ul></li><li class="expanded"><a href="">JavaDocs</a><ul><li class="none"><a href="http://jakarta.apache.org/commons/validator/api-release/" class="externalLink" title="External Link">Current Release</a></li><li class="none"><a href="http://jakarta.apache.org/commons/validator/api-1.3.0/" class="externalLink" title="External Link">1.3.0 Release</a></li><li class="none"><a href="http://jakarta.apache.org/commons/validator/api-1.2.0/" class="externalLink" title="External Link">1.2.0 Release</a></li><li class="none"><a href="http://jakarta.apache.org/commons/validator/api-1.1.4/" class="externalLink" title="External Link">1.1.4 Release</a></li><li class="none"><a href="http://jakarta.apache.org/commons/validator/api-1.0.2/" class="externalLink" title="External Link">1.0.2 Release</a></li></ul></li><li class="none"><a href="javascript/org/apache/commons/validator/javascript/index.html">JavaScript Doc</a></li></ul></div><div id="menuDevelopment"><h5>Development</h5><ul><li class="none"><a href="mail-lists.html">Mailing Lists</a></li><li class="none"><a href="issue-tracking.html">Issue Tracking</a></li><li class="none"><a href="apidocs/index.html">Latest JavaDoc</a></li><li class="none"><a href="cvs-usage.html">Source Repository</a></li><li class="none"><a href="building.html">Building</a></li></ul></div><div id="menuProject_Documentation"><h5>Project Documentation</h5><ul><li class="none"><a href="index.html">About</a></li><li class="expanded"><a href="project-info.html">Project Info</a><ul><li class="none"><a href="mail-lists.html">Mailing Lists</a></li><li class="none"><strong><a href="team-list.html">Project Team</a></strong></li><li class="none"><a href="dependencies.html">Dependencies</a></li><li class="none"><a href="cvs-usage.html">Source Repository</a></li><li class="none"><a href="issue-tracking.html">Issue Tracking</a></li></ul></li><li class="collapsed"><a href="maven-reports.html">Project Reports</a></li><li class="none"><a href="http://jakarta.apache.org/commons/charter.html" class="externalLink" title="External Link">Development Process</a></li></ul></div><div id="menuCommons"><h5>Commons</h5><ul><li class="none"><a href="http://jakarta.apache.org/commons/" class="externalLink" title="External Link">Home</a></li><li class="collapsed"><a href="http://jakarta.apache.org/commons/components.html" class="externalLink" title="External Link">Components</a></li><li class="collapsed"><a href="http://jakarta.apache.org/commons/sandbox/index.html" class="externalLink" title="External Link">Sandbox</a></li><li class="collapsed"><a href="http://jakarta.apache.org/commons/dormant/index.html" class="externalLink" title="External Link">Dormant</a></li><li class="none"><a href="http://jakarta.apache.org/commons/volunteering.html" class="externalLink" title="External Link">Volunteering</a></li><li class="none"><a href="http://jakarta.apache.org/commons/patches.html" class="externalLink" title="External Link">Contributing Patches</a></li><li class="none"><a href="http://jakarta.apache.org/commons/building.html" class="externalLink" title="External Link">Building Components</a></li><li class="none"><a href="http://jakarta.apache.org/commons/releases/index.html" class="externalLink" title="External Link">Releasing Components</a></li><li class="none"><a href="http://wiki.apache.org/jakarta-commons/FrontPage" class="externalLink" title="External Link">Wiki</a></li></ul></div><div id="legend"><h5>Legend</h5><ul><li class="externalLink">External Link</li><li class="newWindow">Opens in a new window</li></ul></div></div></div><div id="bodyColumn"><div class="contentBox"><div class="section"><a name="The_Team"></a><h2>The Team</h2>
+            <p>
+                A successful project requires many people to play many roles. Some members write code or documentation, while others are valuable as testers, submitting patches and suggestions.
+            </p>
+
+            <p>
+                The team is comprised of Members and Contributors. Members have direct access to the source of a project and actively evolve the code-base. Contributors improve the project through submission of patches and suggestions to the Members. The number of Contributors to the project is unbounded. Get involved today. All contributions to the project are greatly appreciated.
+            </p>
+
+            <div class="subsection"><a name="Members"></a><h3>Members</h3>
+                                <p>
+                    The following is a list of developers with commit privileges that have directly contributed to the project in one way or another.  
+                </p>
+                <table class="bodyTable">
+                    <thead>
+                        <tr class="b">
+                            <th>
+                                Name
+                            </th>
+                            <th>
+                                Id
+                            </th>
+                            <th>
+                                Email
+                            </th>
+                            <th>
+                                Organization
+                            </th>
+                            <th>
+                                Roles
+                            </th>
+                            <th>
+                                TZ Offset
+                            </th>
+                            <th>
+                                Time
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                                <tr class="a">
+                                                        <td>Don Brown</td>
+                                                        <td>
+                                <a name="mrdon"></a>
+                                mrdon
+                            </td>
+                            <td>
+                                <a href="mailto:mrdon@apache.org">
+                                    mrdon@apache.org
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                                            </td>
+                            <td></td>
+                            <td>
+                                <span id="developer-mrdon">
+                                    Unknown
+                                </span>
+                            </td>
+                        </tr>
+                                                <tr class="b">
+                                                        <td>Martin Cooper</td>
+                                                        <td>
+                                <a name="martinc"></a>
+                                martinc
+                            </td>
+                            <td>
+                                <a href="mailto:martinc@apache.org">
+                                    martinc@apache.org
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                                            </td>
+                            <td></td>
+                            <td>
+                                <span id="developer-martinc">
+                                    Unknown
+                                </span>
+                            </td>
+                        </tr>
+                                                <tr class="a">
+                                                        <td>David Graham</td>
+                                                        <td>
+                                <a name="dgraham"></a>
+                                dgraham
+                            </td>
+                            <td>
+                                <a href="mailto:dgraham@apache.org">
+                                    dgraham@apache.org
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                                            </td>
+                            <td></td>
+                            <td>
+                                <span id="developer-dgraham">
+                                    Unknown
+                                </span>
+                            </td>
+                        </tr>
+                                                <tr class="b">
+                                                        <td>Ted Husted</td>
+                                                        <td>
+                                <a name="husted"></a>
+                                husted
+                            </td>
+                            <td>
+                                <a href="mailto:husted@apache.org">
+                                    husted@apache.org
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                                            </td>
+                            <td></td>
+                            <td>
+                                <span id="developer-husted">
+                                    Unknown
+                                </span>
+                            </td>
+                        </tr>
+                                                <tr class="a">
+                                                        <td>Rob Leland</td>
+                                                        <td>
+                                <a name="rleland"></a>
+                                rleland
+                            </td>
+                            <td>
+                                <a href="mailto:rleland at apache.org">
+                                    rleland at apache.org
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                                            </td>
+                            <td></td>
+                            <td>
+                                <span id="developer-rleland">
+                                    Unknown
+                                </span>
+                            </td>
+                        </tr>
+                                                <tr class="b">
+                                                        <td>Craig McClanahan</td>
+                                                        <td>
+                                <a name="craigmcc"></a>
+                                craigmcc
+                            </td>
+                            <td>
+                                <a href="mailto:craigmcc@apache.org">
+                                    craigmcc@apache.org
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                                            </td>
+                            <td></td>
+                            <td>
+                                <span id="developer-craigmcc">
+                                    Unknown
+                                </span>
+                            </td>
+                        </tr>
+                                                <tr class="a">
+                                                        <td>James Mitchell</td>
+                                                        <td>
+                                <a name="jmitchell"></a>
+                                jmitchell
+                            </td>
+                            <td>
+                                <a href="mailto:jmitchell NOSPAM apache.org">
+                                    jmitchell NOSPAM apache.org
+                                </a>
+                            </td>
+                            <td>EdgeTech, Inc</td>
+                            <td>
+                                                            </td>
+                            <td></td>
+                            <td>
+                                <span id="developer-jmitchell">
+                                    Unknown
+                                </span>
+                            </td>
+                        </tr>
+                                                <tr class="b">
+                                                        <td>Niall Pemberton</td>
+                                                        <td>
+                                <a name="niallp"></a>
+                                niallp
+                            </td>
+                            <td>
+                                <a href="mailto:">
+                                    
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                                            </td>
+                            <td></td>
+                            <td>
+                                <span id="developer-niallp">
+                                    Unknown
+                                </span>
+                            </td>
+                        </tr>
+                                                <tr class="a">
+                                                        <td>James Turner</td>
+                                                        <td>
+                                <a name="turner"></a>
+                                turner
+                            </td>
+                            <td>
+                                <a href="mailto:turner@apache.org">
+                                    turner@apache.org
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                                            </td>
+                            <td></td>
+                            <td>
+                                <span id="developer-turner">
+                                    Unknown
+                                </span>
+                            </td>
+                        </tr>
+                                                <tr class="b">
+                                                        <td>David Winterfeldt</td>
+                                                        <td>
+                                <a name="dwinterfeldt"></a>
+                                dwinterfeldt
+                            </td>
+                            <td>
+                                <a href="mailto:dwinterfeldt@apache.org">
+                                    dwinterfeldt@apache.org
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                                            </td>
+                            <td></td>
+                            <td>
+                                <span id="developer-dwinterfeldt">
+                                    Unknown
+                                </span>
+                            </td>
+                        </tr>
+                                                <tr class="a">
+                                                        <td>Henri Yandell</td>
+                                                        <td>
+                                <a name="bayard"></a>
+                                bayard
+                            </td>
+                            <td>
+                                <a href="mailto:">
+                                    
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                                            </td>
+                            <td></td>
+                            <td>
+                                <span id="developer-bayard">
+                                    Unknown
+                                </span>
+                            </td>
+                        </tr>
+                                            </tbody>
+                </table>
+                            </div>
+            <div class="subsection"><a name="Contributors"></a><h3>Contributors</h3>
+                                <p>
+                    The following additional people have contributed to this project through the way of suggestions, patches or documentation.
+                </p>
+                <table class="bodyTable">
+                    <thead>
+                        <tr class="b">
+                            <th>
+                                Name
+                            </th>
+                            <th>
+                                Email
+                            </th>
+                            <th>
+                                Organization
+                            </th>
+                            <th>
+                                Roles
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                                <tr class="a">
+                            <td>Saul Q Yuan Add</td>
+                            <td>
+                                <a href="mailto:">
+                                    
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                                            </td>
+                        </tr>
+                                                <tr class="b">
+                            <td>Shane Bailey</td>
+                            <td>
+                                <a href="mailto:">
+                                    
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                                            </td>
+                        </tr>
+                                                <tr class="a">
+                            <td>Dave Derry</td>
+                            <td>
+                                <a href="mailto:">
+                                    
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                                            </td>
+                        </tr>
+                                                <tr class="b">
+                            <td>Tim O'Brien</td>
+                            <td>
+                                <a href="mailto:">
+                                    
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                                            </td>
+                        </tr>
+                                                <tr class="a">
+                            <td>Scott Clasen</td>
+                            <td>
+                                <a href="mailto:ticktock@speakeasy.net&gt;">
+                                    ticktock@speakeasy.net&gt;
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                                            </td>
+                        </tr>
+                                                <tr class="b">
+                            <td>Marcus Brito Finish</td>
+                            <td>
+                                <a href="mailto:">
+                                    
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                                            </td>
+                        </tr>
+                                                <tr class="a">
+                            <td>Padma Ginnaram</td>
+                            <td>
+                                <a href="mailto:">
+                                    
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                                            </td>
+                        </tr>
+                                                <tr class="b">
+                            <td>Thomas Jacob</td>
+                            <td>
+                                <a href="mailto:thomas.jacob@sinnerschrader.com">
+                                    thomas.jacob@sinnerschrader.com
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                                            </td>
+                        </tr>
+                                                <tr class="a">
+                            <td>Adam Kramer</td>
+                            <td>
+                                <a href="mailto:">
+                                    
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                                            </td>
+                        </tr>
+                                                <tr class="b">
+                            <td>Greg Ludington</td>
+                            <td>
+                                <a href="mailto:">
+                                    
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                                            </td>
+                        </tr>
+                                                <tr class="a">
+                            <td>Bjorn-H. Moritz</td>
+                            <td>
+                                <a href="mailto:">
+                                    
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                                            </td>
+                        </tr>
+                                                <tr class="b">
+                            <td>David Neuer</td>
+                            <td>
+                                <a href="mailto:DavidNeuer@nascopgh.com">
+                                    DavidNeuer@nascopgh.com
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                                            </td>
+                        </tr>
+                                                <tr class="a">
+                            <td>Kurt Post</td>
+                            <td>
+                                <a href="mailto:">
+                                    
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                                            </td>
+                        </tr>
+                                                <tr class="b">
+                            <td>Arun Mammen Thomas</td>
+                            <td>
+                                <a href="mailto:">
+                                    
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                                            </td>
+                        </tr>
+                                                <tr class="a">
+                            <td>Steven Fines</td>
+                            <td>
+                                <a href="mailto:steven.fines@cotelligent.com">
+                                    steven.fines@cotelligent.com
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                                            </td>
+                        </tr>
+                                                <tr class="b">
+                            <td>Didier Romelot</td>
+                            <td>
+                                <a href="mailto:didier.romelot@renault.com">
+                                    didier.romelot@renault.com
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                                            </td>
+                        </tr>
+                                                <tr class="a">
+                            <td>Steve Stair</td>
+                            <td>
+                                <a href="mailto:">
+                                    
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                                            </td>
+                        </tr>
+                                                <tr class="b">
+                            <td>Jeremy Tan</td>
+                            <td>
+                                <a href="mailto:jeremytan@scualum.com">
+                                    jeremytan@scualum.com
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                                            </td>
+                        </tr>
+                                                <tr class="a">
+                            <td>94RGt2</td>
+                            <td>
+                                <a href="mailto:lmagee@biziworks.com.au">
+                                    lmagee@biziworks.com.au
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                                            </td>
+                        </tr>
+                                                <tr class="b">
+                            <td>Nacho G. Mac Dowell</td>
+                            <td>
+                                <a href="mailto:">
+                                    
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                                            </td>
+                        </tr>
+                                                <tr class="a">
+                            <td>Mark Lowe</td>
+                            <td>
+                                <a href="mailto:mark.lowe@boxstuff.com">
+                                    mark.lowe@boxstuff.com
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                                            </td>
+                        </tr>
+                                            </tbody>
+                </table>
+                            </div>
+        </div></div></div><div class="clear"><hr></hr></div><div id="footer"><div class="xright">© 2002-2006, The Apache Software Foundation</div><div class="clear"><hr></hr></div></div></body></html>

@@ -1,7 +1,7 @@
 '''
 Created on Sep 21, 2014
 
-@author: andreas
+@author: sumit
 '''
 from __future__ import division
 
@@ -10,7 +10,6 @@ import re
 import enchant
 d = enchant.Dict("en_US")
 fileTobeWritten=open('/home/andreas/Nutrition Project/Datasets/Weight0.9','w')
-#a = d.check("peculiar")
 with open("/home/andreas/Nutrition Project/Datasets/1mbchunk.tsv") as f:
     for line in f:
         lasttab = line.rfind("\t")
@@ -23,12 +22,7 @@ with open("/home/andreas/Nutrition Project/Datasets/1mbchunk.tsv") as f:
             if re.match("^[A-Za-z]*$", word):
                 if word:
                     a=d.check(word)
-                    #print word + ":"+ str(a)
                     listofValidEnglishWords = listofValidEnglishWords + 1;
-                    
-        #print listofValidEnglishWords;
-        #print listofTotalWords;
-        #print listofValidEnglishWords/listofTotalWords;
         probabilityOfaTweetTexttobeinEnglishLanguage = listofValidEnglishWords/listofTotalWords;
         if probabilityOfaTweetTexttobeinEnglishLanguage > 0.9:
             print tweettext

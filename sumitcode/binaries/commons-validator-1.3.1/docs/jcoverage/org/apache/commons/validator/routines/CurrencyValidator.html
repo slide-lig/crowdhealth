@@ -1,0 +1,601 @@
+<html>
+<head>
+<title>unit tests coverage</title>
+<link rel ="stylesheet" type="text/css" href="../../../../../style.css" title="Style">
+</head>
+<body>
+<span class="title">Coverage report</span>
+<p>
+  <table cellspacing="0" cellpadding="0" class="report">
+  <tr class="report">
+    <th class="report">&nbsp;</th>
+    <th class="report">%line</th>
+    <th class="report">%branch</th>
+  </tr>
+  <tr class="report">
+    <td class="reportText"><span class="text">org.apache.commons.validator.routines.CurrencyValidator</span></td>
+    <td class="reportValue"><table class="percentGraph" cellpadding="0" cellspacing="0" align="right"><tr><td><span class="text">100%&nbsp;</span></td><td><table class="percentGraph" cellpadding="0" cellspacing="0"><tr><td class="percentCovered" width="100"></td><td class="percentUnCovered" width="0.0"></td></tr></table></td></tr></table></td>
+    <td class="reportValue"><table class="percentGraph" cellpadding="0" cellspacing="0" align="right"><tr><td><span class="text">100%&nbsp;</span></td><td><table class="percentGraph" cellpadding="0" cellspacing="0"><tr><td class="percentCovered" width="100"></td><td class="percentUnCovered" width="0.0"></td></tr></table></td></tr></table></td>
+  </tr>
+  </table>
+  <p>
+  <table cellspacing="0" cellpadding="0" class="src">
+    <tr>
+      <td class="numLine">&nbsp;1</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">/*</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;2</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * Licensed to the Apache Software Foundation (ASF) under one or more</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;3</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * contributor license agreements.  See the NOTICE file distributed with</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;4</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * this work for additional information regarding copyright ownership.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;5</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * The ASF licenses this file to You under the Apache License, Version 2.0</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;6</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * (the "License"); you may not use this file except in compliance with</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;7</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * the License.  You may obtain a copy of the License at</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;8</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;9</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *      http://www.apache.org/licenses/LICENSE-2.0</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;10</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;11</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * Unless required by applicable law or agreed to in writing, software</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;12</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * distributed under the License is distributed on an "AS IS" BASIS,</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;13</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;14</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * See the License for the specific language governing permissions and</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;15</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * limitations under the License.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;16</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;17</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">package</span> org.apache.commons.validator.routines;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;18</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;19</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.text.DecimalFormat;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;20</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.text.Format;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;21</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;22</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;23</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;p&#62;&#60;b&#62;Currency Validation&#60;/b&#62; and Conversion routines (&#60;code&#62;java.math.BigDecimal&#60;/code&#62;).&#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;24</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;25</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;p&#62;This is one implementation of a currency validator that has the following features:&#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;26</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *    &#60;ul&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;27</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *       &#60;li&#62;It is &#60;i&#62;lenient&#60;/i&#62; about the the presence of the &#60;i&#62;currency symbol&#60;/i&#62;&#60;/li&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;28</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *       &#60;li&#62;It converts the currency to a &#60;code&#62;java.math.BigDecimal&#60;/code&#62;&#60;/li&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;29</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *    &#60;/ul&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;30</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;31</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;p&#62;However any of the &#60;i&#62;number&#60;/i&#62; validators can be used for &#60;i&#62;currency&#60;/i&#62; validation.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;32</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *    For example, if you wanted a &#60;i&#62;currency&#60;/i&#62; validator that converts to a</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;33</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *    &#60;code&#62;java.lang.Integer&#60;/code&#62; then you can simply instantiate an</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;34</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *    &#60;code&#62;IntegerValidator&#60;/code&#62; with the appropriate &#60;i&#62;format type&#60;/i&#62;:&#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;35</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *    </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;36</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *    &#60;p&#62;&#60;code&#62;... = new IntegerValidator(false, IntegerValidator.CURRENCY_FORMAT);&#60;/code&#62;&#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;37</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;38</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;p&#62;Pick the appropriate validator, depending on the type (e.g Float, Double, Integer, Long etc)</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;39</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *    you want the currency converted to. One thing to note - only the CurrencyValidator</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;40</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *    implements &#60;i&#62;lenient&#60;/i&#62; behaviour regarding the currency symbol.&#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;41</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;42</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * @version $Revision: 478334 $ $Date: 2006-11-22 21:31:54 +0000 (Wed, 22 Nov 2006) $</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;43</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * @since Validator 1.3.0</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;44</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;45</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">public</span> <span class="keyword">class</span> CurrencyValidator <span class="keyword">extends</span> BigDecimalValidator {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;46</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;47</td>
+      <td class="nbHitsCovered">&nbsp;1</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> CurrencyValidator VALIDATOR = <span class="keyword">new</span> CurrencyValidator();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;48</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;49</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">* DecimalFormat's currency symbol */</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;50</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">char</span> CURRENCY_SYMBOL = '\u00A4';</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;51</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;52</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;53</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Return a singleton instance of this validator.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;54</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return A singleton instance of the CurrencyValidator.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;55</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;56</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">static</span> BigDecimalValidator getInstance() {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;57</td>
+      <td class="nbHitsCovered">&nbsp;5</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> VALIDATOR;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;58</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;59</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;60</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;61</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Construct a &#60;i&#62;strict&#60;/i&#62; instance.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;62</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;63</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> CurrencyValidator() {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;64</td>
+      <td class="nbHitsCovered">&nbsp;2</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>(<span class="keyword">true</span>, <span <span class="keyword">class</span>="keyword">true</span>);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;65</td>
+      <td class="nbHitsCovered">&nbsp;2</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;66</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;67</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;68</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Construct an instance with the specified strict setting.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;69</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;70</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param strict &#60;code&#62;true&#60;/code&#62; if strict </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;71</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *        &#60;code&#62;Format&#60;/code&#62; parsing should be used.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;72</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param allowFractions &#60;code&#62;true&#60;/code&#62; if fractions are</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;73</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *        allowed or &#60;code&#62;false&#60;/code&#62; if integers only.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;74</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;75</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> CurrencyValidator(<span class="keyword">boolean</span> strict, <span <span class="keyword">class</span>="keyword">boolean</span> allowFractions) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;76</td>
+      <td class="nbHitsCovered">&nbsp;3</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">super</span>(strict, CURRENCY_FORMAT, allowFractions);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;77</td>
+      <td class="nbHitsCovered">&nbsp;3</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;78</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;79</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;80</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;p&#62;Parse the value with the specified &#60;code&#62;Format&#60;/code&#62;.&#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;81</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;82</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;p&#62;This implementation is lenient whether the currency symbol</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;83</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *    is present or not. The default &#60;code&#62;NumberFormat&#60;/code&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;84</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *    behaviour is for the parsing to "fail" if the currency</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;85</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *    symbol is missing. This method re-parses with a format</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;86</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *    without the currency symbol if it fails initially.&#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;87</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * </span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;88</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param value The value to be parsed.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;89</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param formatter The Format to parse the value with.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;90</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return The parsed value if valid or &#60;code&#62;null&#60;/code&#62; if invalid.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;91</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;92</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">protected</span> Object parse(String value, Format formatter) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;93</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;94</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// Initial parse of the value</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;95</td>
+      <td class="nbHitsCovered">&nbsp;36</td>
+      <td class="src"><pre class="src">&nbsp;        Object parsedValue = <span class="keyword">super</span>.parse(value, formatter);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;96</td>
+      <td class="nbHitsCovered">&nbsp;36</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (parsedValue != <span class="keyword">null</span> || !(formatter instanceof DecimalFormat)) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;97</td>
+      <td class="nbHitsCovered">&nbsp;20</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> parsedValue;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;98</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;99</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;100</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// Re-parse using a pattern without the currency symbol</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;101</td>
+      <td class="nbHitsCovered">&nbsp;16</td>
+      <td class="src"><pre class="src">&nbsp;        DecimalFormat decimalFormat = (DecimalFormat)formatter;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;102</td>
+      <td class="nbHitsCovered">&nbsp;16</td>
+      <td class="src"><pre class="src">&nbsp;        String pattern = decimalFormat.toPattern();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;103</td>
+      <td class="nbHitsCovered">&nbsp;16</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (pattern.indexOf(CURRENCY_SYMBOL) &#62;= 0) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;104</td>
+      <td class="nbHitsCovered">&nbsp;16</td>
+      <td class="src"><pre class="src">&nbsp;            StringBuffer buffer = <span class="keyword">new</span> StringBuffer(pattern.length());</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;105</td>
+      <td class="nbHitsCovered">&nbsp;304</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &#60; pattern.length(); i++) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;106</td>
+      <td class="nbHitsCovered">&nbsp;288</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">if</span> (pattern.charAt(i) != CURRENCY_SYMBOL) {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;107</td>
+      <td class="nbHitsCovered">&nbsp;261</td>
+      <td class="src"><pre class="src">&nbsp;                    buffer.append(pattern.charAt(i));</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;108</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;109</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;110</td>
+      <td class="nbHitsCovered">&nbsp;16</td>
+      <td class="src"><pre class="src">&nbsp;            decimalFormat.applyPattern(buffer.toString());</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;111</td>
+      <td class="nbHitsCovered">&nbsp;16</td>
+      <td class="src"><pre class="src">&nbsp;            parsedValue = <span class="keyword">super</span>.parse(value, decimalFormat);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;112</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;113</td>
+      <td class="nbHitsCovered">&nbsp;16</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> parsedValue;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;114</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;115</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;}</pre></td>
+    </tr>
+  </table>
+<p><table cellpadding="0" cellspacing="0" class="report">  <tr class="report">    <td class="reportText"><span class="text">    This report is generated by <a href="http://www.jcoverage.com">jcoverage</a>, <a href="http://maven.apache.org">Maven</a> and <a href="http://maven.apache.org/reference/plugins/jcoverage/">Maven JCoverage Plugin</a>.    </span></td>  </tr></table>
+</body>
+</html>
