@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CrowdHealth Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="lib/timeline/timeline.css">
+
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap-responsive.css" >
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="dist/css/dvf.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/example.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/ui.css" type="text/css" media="screen" />
+    <!--<script src="http://d3js.org/d3.v3.min.js"></script>-->
+    <script type="text/javascript" src="http://d3js.org/d3.v2.js"></script>
+
+
+	<style>   
+		body {
+			overflow-x: hidden;
+		}   
+        
+  a.hovertext {
+    position: relative;
+    width: 500px;
+    text-decoration: none !important;
+    text-align: center;
+  }
+  a.hovertext:after {
+    content: attr(title);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 0.5em 20px;
+    width: 460px;
+    background: rgba(0,0,0,0.8);
+    text-decoration: none !important;
+    color: #fff;
+    opacity: 0;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+  }
+  a.hovertext:hover:after, a.hovertext:focus:after {
+    opacity: 1.0;
+  }
+
+
+		#gallery-wrapper {
+            opacity:0;
+			position: absolute;
+			top: 52px;
+			right: 10px;
+			width: 300px;
+			height: 300px;
+			overflow-y: scroll;
+			overflow-x: hidden;
+			z-index: 20000;
+			border: solid 1px rgba(0, 0, 0, 0.7);
+			border-right-width: 10px;
+			border-left-width: 10px;
+			border-radius: 10px;
+			background-color: rgba(0, 0, 0, 0.5);
+			box-shadow: 2px 2px 3px rgba(100, 100, 100, 0.5);
+		}
+		#gallery {
+            opacity:0;
+			width: 300px;
+			height: 300px;
+			z-index: 20000;
+		}
+		
+		#gallery img {
+            opacity:0;
+			vertical-align: middle;
+			cursor: pointer;
+		}
+		
+		#timeline {
+			height: 1%;
+			width: 99.99%;
+			padding: 0px;
+			margin: 0px;
+		}
+     
+      	#timeline img.photo {
+      		height: 20px !important;
+      		width: auto !important;
+			opacity: 0;
+			box-shadow: none;
+			-moz-transition: opacity 0.5s; /* Firefox 4 */
+			-webkit-transition: opacity 0.5s; /* Safari and Chrome */
+			-o-transition: opacity 0.5s;
+			transition: opacity 0.5s;
+			padding: 0px;
+			margin: 0px;
+		}
+		
+		div.timeline-event-box {
+			padding: 0px !important;
+			margin: 0px !important;
+			box-shadow: 2px 2px 3px rgba(100, 100, 100, 0.4);
+			border: solid 1px rgba(150, 150, 150, 0.2);
+			background-color: white;
+			border-radius: 0px;
+		}
+		
+		div.timeline-event-content {
+			margin: 2px;
+		}
+		
+		div.container-fluid {
+			margin: 0px;
+			padding: 0px;
+		}
+		
+		.search-query {
+			width: 400px;
+		}
+		
+		#map {
+			width: 100%;
+			height:100%;
+		}
+        .bar {fill: burlywood;}
+        .bar.cough {fill: yellow;}
+        .bar.disorders {fill: red;}
+        .bar.fibrosis {fill: lightsteelblue;}
+        .bar.gallstones {fill: slategray;}
+        .bar.infection {fill: royalblue;}
+        .bar.jaundice {fill: goldenrod;}
+        .bar.migraine {fill: olivedrab;}
+        .bar.overweight {fill: green;}
+        .bar.premenstrual {fill: green;}
+        .bar.sores {fill: orange;}
+        .bar.cancer {fill: red;}
+        .bar.malaria {fill: orange;}
+        .bar.typhoid {fill: yellow;}
+        .bar.flu {fill: purple;}
+        .bar.measles {fill: navajowhite;}
+        .bar.small-pox {fill: steelblue;}
+        .bar.cold {fill: plum;}
+        .bar.diabetes {fill: mediumslateblue;}
+        .bar.hepatitis {fill: darkgray;}
+        .bar.hernia {fill: ghostwhite;}
+        .bar.fever {fill: lightsteelblue;}
+        .bar.bronchitis {fill: slategray;}
+        .bar.dengue {fill: royalblue;}
+        .bar.mumps {fill: goldenrod;}
+        .bar.cholera {fill: olivedrab;}
+        .bar.banana{fill: red}
+        .bar.oranges{fill: yellow}
+        .bar.greens{fill: green}
+        .bar.peppers{fill: lightsteelblue}
+	.bar.garlic{fill: red}
+	.bar.pears{fill: green}
+	.bar.eggs{fill: yellow}
+	.bar.beef{fill: red}
+	.bar.olive{fill: red}
+	.bar.papaya{fill: yellow}
+	.bar.corn{fill: brown}
+	.bar.cheese{fill: pink}
+	.bar.potatoes{fill: lightsteelblue}
+	.bar.milk{fill: green}
+        .bar.chiken{fill: red}
+	.bar.peard{fill: yellow}
+
+        .bar.Utility {fill: plum;}
+		.bar.category1 { fill: green; }
+		.bar.category2 { fill: lightgreen; }
+		.bar.category3 { fill: rosybrown; }
+		.bar.plums { fill: lightskyblue; }
+
+    </style>
+</head>
+
+<body>
+	<div class="navbar navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Social_Health&Nutrition</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">SLIDE-LIG</a></li>
+            </ul>
+          </div>  
+          <form class="navbar-search pull-right">
+                          <input type="text" class="search-query" placeholder="Search">
+                        </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid" style="position:relative">
+		<div id="map"></div>
+		<div id="timeline"></div>
+	 
+	 <div id="hUsers" style="position:absolute;color:green;align:left; left:78%; top:45%;font-weight:bold; ">HEALTH USER PROFILING </br> #Users- <health> </health> #Tweets- <healthTweets> </healthTweets></div> 
+     <div id="health_pie_container" style="position:absolute; left:65%; top:45%; margin: 0 auto"></div> 
+     <div id="nUsers" style="position:absolute;color:red; left:3%; top:45%;font-weight:bold; ">NUTRITION USER PROFILING </br> #Users-<nutrition> </nutrition><nutritionTweets>#Tweets-</nutritionTweets></div> 
+	 <div id="nutrition_pie_container" style="position:absolute; left:0%; top:45%; margin: 0 auto"></div> 
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script>
+	<script type="text/javascript" src="lib/timeline/timeline.js"></script>
+	<script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<script type="text/javascript" src="lib/date.format.min.js"></script>
+	<script type="text/javascript" src="dist/leaflet-dvf.js"></script>
+	<script type="text/javascript" src="src/leaflet.dvf.datalayer.js"></script>
+	<script type="text/javascript" src="js/chromaticgallery.min.js"></script>
+	<script type="text/javascript" src="js/panoramio.js"></script>
+    <script type="text/javascript" src ="bar.js"></script> 
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <script type="text/javascript" src ="pie.js"></script>
+</body>
+</html>
