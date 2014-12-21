@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename local variable &apos;tweetText&apos; in &apos;PrepareTweetstoPreprocess.RemoveNonEnglishTweets.main(...)&apos; to &apos;tweetWithouttheTweetText&apos;&#x0A;- Original project: &apos;Preprocess&apos;&#x0A;- Original element: &apos;PrepareTweetstoPreprocess.RemoveNonEnglishTweets.main(String[]).tweetText&apos;&#x0A;- Renamed element: &apos;tweetText&apos;&#x0A;- Update references to refactored element" description="Rename local variable &apos;tweetText&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;PrepareTweetstoPreprocess{RemoveNonEnglishTweets.java[RemoveNonEnglishTweets~main~\[QString;@tweetText!777!833!784!792!QString;!0!false" name="tweetWithouttheTweetText" references="true" stamp="1411310183039" version="1.0"/>
-</session>

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring accessors="true" comment="Delete element from project &apos;Preprocess&apos;&#x0A;- Original project: &apos;Preprocess&apos;&#x0A;- Original element: &apos;Preprocess/src/prepareTweetstobeLabeled&apos;" description="Delete element" element1="/src&lt;prepareTweetstobeLabeled" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1411119577594" subPackages="false" version="1.0"/>
-</session>

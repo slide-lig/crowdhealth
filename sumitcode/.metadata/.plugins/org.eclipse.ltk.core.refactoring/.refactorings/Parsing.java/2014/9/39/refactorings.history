@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy element &apos;stemmer.java&apos; to &apos;TweetFilteringonBasisofHealthKeyWords/src/TweetFilter&apos;&#x0A;- Original project: &apos;Parsing.java&apos;&#x0A;- Destination element: &apos;TweetFilteringonBasisofHealthKeyWords/src/TweetFilter&apos;&#x0A;- Original element: &apos;stemmer.java&apos;" description="Copy compilation unit" destination="=TweetFilteringonBasisofHealthKeyWords/src&lt;TweetFilter" element1="/src&lt;{stemmer.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1411660102621" units="1" version="1.0"/>
-</session>

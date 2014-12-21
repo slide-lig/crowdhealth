@@ -1,8 +1,0 @@
-'''
-Created on Sep 21, 2014
-
-@author: andreas
-'''
-import sys
-
-print sys.api_version

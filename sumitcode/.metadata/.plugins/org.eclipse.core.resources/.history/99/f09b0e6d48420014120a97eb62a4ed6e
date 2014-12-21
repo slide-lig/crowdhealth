@@ -1,9 +1,0 @@
-package LangDetect;
-
-import com.cybozu.labs.langdetect.*;
-
-public class EnglishLanguageDetection {
-	
-	DetectorFactory.loadProfile("/home/andreas/Downloads/langdetect-09-13-2011/profiles");
-	
-}
