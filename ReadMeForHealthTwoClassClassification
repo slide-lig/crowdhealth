@@ -1,0 +1,29 @@
+1. You will need to install libsvm in your octave core of ubuntu - Instructions are ubuntu specific.
+	Steps (Pull the latest changes in git hub repository)
+	a) cd <yourlocal git hub repository>/Health
+	c) sudo apt-get install octave
+	d) sudo apt-get install octave-pkg-dev
+	e) Put(Copy-Paste) libsvm package in <yourlocal git hub repository>/Health  Download it from here - http://1drv.ms/1v7icUv (zip file)
+	f) Extract libsvm package from zipped file
+	g) Hit 'Octave' - You are now in octave command prompt
+	h) Hit 'make' 
+	k) There are some warnings but libsvm gets installed in <your local git hub repository>/Health folder
+	l) Copy paste Codefor100000WithStopWordsRemovedLowerCase.m (kept in <yourlocal git hub repository>/<Health/Classification/OneClassClassification) and TwoClassClassificationInsideIdtonne.m (kept in /home/sumit/crowdhealth/Health/Classification/TwoClassClasification) to <your local git hub repository>/Health/libsvm-3.20/matlab
+
+2.  Download all files from this link http://1drv.ms/1vcnpLF and keep in your local crowdhealth(github) folder. You will have to unzip binaries.zip, DataSets.zip and DataSetsForFoodItems.zip.
+
+3. You will need a StartFile in your crowdhealth(github) folder  to start. Steps for creating StartFile - 
+	a) Log into your idtonne account.
+	b) Execute the following command without the quotes - "psql -U twitter twitterdb"
+	c)  Let k be the answer to following query -  "select count from tweet;"
+		Then using this 'k'-
+	d) \copy (select * from tweet join twitter_user on tweet.user_id = twitter_user.user_id where twitter_user.lang_id = 2 			limit k) to $HOME/StartFile delimiter ' ' csv header
+	e) The file generated is the StartFile and keep it in your local crowdhealth(github) folder.
+
+4. You will need to copy paste 'stanford-corenlp-3.2.0-models.jar' 'stanford-corenlp-3.3.1.jar' 'stanford-corenlp-3.5.0.jar' 'stanford-postagger-full-2014-01-04' in folder <yourlocal git hub repository>/Health/TopicModels/   All are downloadable here - 
+
+5. cd <<yourlocal git hub repository>/Health/>
+
+6 ./crowdhealth.sh - Takes care of everything.
+
+7. If everything goes well file for visualization is generated  <yourlocal git hub repository> by the name of healthfileforvisualization.

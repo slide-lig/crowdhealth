@@ -1,5 +1,6 @@
+#!/usr/bin/octave -qf
 disp('Starting Training for 100000 Tweets')
-[TrainingLabels,InstanceMatrix] = libsvmread('/home/slide/sidana/OneClassClassificationStopWordsRemovedLowerCase/TrainFile')
+[TrainingLabels,InstanceMatrix] = libsvmread('../../../TrainFile')
 
  modelsvm = svmtrain(TrainingLabels, InstanceMatrix,'-s 2 -t 0 -n 0.1')
  disp('Training Finished')
@@ -7,10 +8,10 @@ disp('Starting Training for 100000 Tweets')
  disp('Testing Started')
 
  disp('Reading Test File')
-[TestLabels,TestSet] = libsvmread('/home/slide/sidana/OneClassClassificationStopWordsRemovedLowerCase/InputFile')
+[TestLabels,TestSet] = libsvmread('../../../InputFile')
  disp('Completed Reading Test File')
 [predicted_label,accuracy,decisionValue] = svmpredict(TestLabels,TestSet,modelsvm)
 disp('Testing Finished and Labels Predicted');
 disp('Writing Predicted Labels')
-dlmwrite('/home/slide/sidana/OneClassClassificationStopWordsRemovedLowerCase/predictedlabelsOptimizedParameter',predicted_label)
+dlmwrite('../../../predictedlabels',predicted_label)
 disp('Writing the model')

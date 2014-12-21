@@ -1,0 +1,3 @@
+1. Download all files from this link http://1drv.ms/1vcnpLF and keep in your local crowdhealth(github) folder. You will have to unzip binaries.zip, DataSets.zip and DataSetsForFoodItems.zip.
+2. cd <<yourlocal git hub repository>/Nutrition/>
+3. ./crowdnutrition.sh

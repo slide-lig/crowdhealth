@@ -38,7 +38,7 @@ echo 'Creating Test File'
 sed -i '1,5070d' ../InputFile
 
 echo 'Changing directory to where libsvm is installed'
-cd /home/sumit/matlab/bin/libsvm-3.20/matlab/ #directory where libsvm is installed
+cd libsvm-3.20/matlab/ #directory where libsvm is installed
 
 echo  ' Running Classifier - Might Take some Time ...'
 ./TwoClassClassificationInsideIdtonne.m
