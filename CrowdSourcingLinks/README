@@ -1,0 +1,14 @@
+1. Place sidana folder in root folder of your web server.
+2. Import tweet_crowd.sql into mysql database of your website.
+3. Put the data files in sidana/admin/data/
+4. Format of the data files is <TweetId,TweetText>
+5. Hit the following url for Health
+	http://localhost/sidana/admin/UploadDataSet.php?dataSetFilePath=data/<datafilename>dataSetName=test_health 
+   Hit the following URL for Nutrition
+	http://localhost/sidana/admin/UploadDataSet.php?dataSetFilePath=data/<datafilename>&dataSetName=test_nutrition
+6. You will see the tweets to be uploaded into master_tweets.
+7. Make appropriate changes in html files mentioned below - to point to your website.
+8. Hit the url <YourWebsiteRootFolder>/sidana/user/nutrition.html (For nutrition)
+   Hit the url <YourWebsiteRootFolder>/sidana/user/health.html (For health)
+   Hit the url <YourWebsiteRootFolder>/sidana/user/webnutrition.html
+   Hit the url <YourWebsiteRootFolder>/sidana/user/webhealth.html

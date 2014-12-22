@@ -1,0 +1,15 @@
+html {
+    vertical-align: top;
+}
+table,tr,td{
+    vertical-align: top;
+    align-self: center;
+	width : 50%;
+    border: solid thin black;
+    text-align: center;
+}
+p,label {
+    vertical-align: top;
+    float: left;
+    text-align: left;
+}
